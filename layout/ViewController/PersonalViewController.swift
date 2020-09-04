@@ -1,0 +1,84 @@
+//
+//  PersonalViewController.swift
+//  layout
+//
+//  Created by Rama Agastya on 18/08/20.
+//  Copyright © 2020 Rama Agastya. All rights reserved.
+//
+
+import UIKit
+
+class PersonalViewController: UIViewController {
+    
+    var dataUser:UserSingle!
+
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var PhoneLabel: UILabel!
+    @IBOutlet weak var JobLabel: UILabel!
+    @IBOutlet weak var SkillLabel: UILabel!
+    @IBOutlet weak var FeeLabel: UILabel!
+    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var AddressLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getData {
+            print(self.dataUser!.user.name)
+            let sourceFormat = DateFormatter()
+            sourceFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+            let destinationFormat = DateFormatter()
+            destinationFormat.dateFormat = "dd MMM yyyy"
+
+            let dateJoin = destinationFormat.string(from: sourceFormat.date(from: self.dataUser!.user.date_of_join)!)
+
+            let formatter = NumberFormatter()
+            formatter.locale = Locale(identifier: "id_ID")
+            formatter.numberStyle = .currency
+            let formattedFee = formatter.string(from: NSNumber(value: Int(self.dataUser!.user.fee_engineer_count)) as NSNumber)
+
+            self.NameLabel.text? = self.dataUser!.user.name
+            self.PhoneLabel.text? = self.dataUser!.user.phone
+            self.EmailLabel.text? = self.dataUser!.user.email
+            self.JobLabel.text? = "Job Applied: " + String(self.dataUser!.user.job_engineer_count) + " Jobs"
+            self.SkillLabel.text? = "Skills: " + self.dataUser!.user.category_engineer
+            self.DateLabel.text? = "Join Date: " + dateJoin
+            self.FeeLabel.text? = "Engineer's Fee: " + formattedFee!
+        }
+    }
+    
+    func getData(completed: @escaping () -> ()){
+            
+            let url = GlobalVariable.urlGetAccount
+            
+            let components = URLComponents(string: url)!
+//            components.queryItems = [
+//                URLQueryItem(name: "id_job", value: String(self.jobFromSegue!.id))
+//            ]
+//            components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+            
+    //        var request = URLRequeqqqqst(url:url!)
+            var request = URLRequest(url:components.url!)
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+            
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if error == nil {
+                    do {
+//                        print(data!)
+                        self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
+                        
+//                        print(self.dataUser!)
+                        DispatchQueue.main.async {
+                            completed()
+                        }
+                    } catch {
+                        print("JSON Error")
+                    }
+                }
+            }.resume()
+        }
+
+}

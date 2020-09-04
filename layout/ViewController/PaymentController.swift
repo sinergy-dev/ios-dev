@@ -1,0 +1,93 @@
+//
+//  PaymentController.swift
+//  layout
+//
+//  Created by Rama Agastya on 24/08/20.
+//  Copyright © 2020 Rama Agastya. All rights reserved.
+//
+
+import UIKit
+
+class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
+    @IBOutlet weak var TVPayment: UITableView!
+    
+    var paymentList:Payment!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getData {
+//            print("Successfull")
+            self.TVPayment.reloadData()
+        }
+                    
+        TVPayment.delegate = self
+        TVPayment.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.paymentList == nil {
+            return 0
+        }
+        return self.paymentList.payment!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentCell") as? PaymentCell else { return UITableViewCell() }
+        if self.paymentList == nil {
+            return cell
+        }
+        cell.JobLabel.text = paymentList.payment![indexPath.row].job.job_name
+        cell.StatusLabel.text = paymentList.payment![indexPath.row].lastest_progress.activity
+        
+        
+        if paymentList.payment![indexPath.row].lastest_progress.activity == "Update Payment"{
+            DispatchQueue.main.async {
+                cell.IVPayment.image = UIImage(named: "payment_update")
+            }
+        } else if paymentList.payment![indexPath.row].lastest_progress.activity == "Make Payment"{
+            DispatchQueue.main.async {
+                cell.IVPayment.image = UIImage(named: "make_payment")
+            }
+        } else {
+            DispatchQueue.main.async {
+                cell.IVPayment.image = UIImage(named: "payment_complete")
+            }
+        }
+        
+        
+        return cell
+    }
+    
+    func getData(completed: @escaping () -> ()){
+        
+        let url = URL(string: GlobalVariable.urlGetPayment)
+        
+        var request = URLRequest(url:url!)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+            
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    self.paymentList = try JSONDecoder().decode(Payment.self, from: data!)
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                } catch {
+                    print("JSON Error")
+                }
+            }
+        }.resume()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toPaymentDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PaymentDetailController {
+            destination.paymentFromSegue = paymentList.payment![(TVPayment.indexPathForSelectedRow?.row)!]
+        }
+    }
+}
