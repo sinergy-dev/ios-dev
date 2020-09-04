@@ -1,0 +1,6 @@
+framework module Pods_layout_layoutUITests {
+  umbrella header "Pods-layout-layoutUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
