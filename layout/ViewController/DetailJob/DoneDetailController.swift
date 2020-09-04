@@ -69,7 +69,7 @@ class DoneDetailController: UIViewController {
                     self.jobDetail = try JSONDecoder().decode(JobSingle.self, from: data!)
                     
                     var jobTemp = try JSONDecoder().decode(JobSingle.self, from: data!)
-                    jobTemp.job!.progress = jobTemp.job!.progress!.filter{$0.id_activity == "5"}
+                    jobTemp.job!.progress = jobTemp.job!.progress!.filter{$0.id_activity == "5" || $0.id_activity == "6"}
                     var dateTemp = [String]()
                     var tempDetail_activity = String()
                     var jobProgresTemp = [JobProgress]()
