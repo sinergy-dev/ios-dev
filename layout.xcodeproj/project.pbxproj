@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E54344B250236F80016969B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344A250236F80016969B /* DashboardViewController.swift */; };
 		487172563FA27B265AB16F44 /* Pods_layout_layoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C2BE10452E6A632DF7513 /* Pods_layout_layoutUITests.framework */; };
 		6AF3193262E5DB5ECEF932FB /* Pods_layoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
@@ -86,6 +87,7 @@
 		0C3C2BE10452E6A632DF7513 /* Pods_layout_layoutUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layout_layoutUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7C374CC2E8240B3F39DF85 /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E54344A250236F80016969B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		548BDD50525186B85C2B235E /* Pods_layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642372A9C70FDB41D71F34D0 /* Pods-layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout.debug.xcconfig"; path = "Target Support Files/Pods-layout/Pods-layout.debug.xcconfig"; sourceTree = "<group>"; };
 		74EDB09A5FA2EDDCBF497CBD /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E54344925022D210016969B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3E54344A250236F80016969B /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		76D824C65F389DEAE806CC0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +259,7 @@
 		ADD3384424EBCC7300295B40 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3E54344925022D210016969B /* Dashboard */,
 				AD01193E24FDE58800DB1DEC /* DetailJob */,
 				ADD3384524EBCC8500295B40 /* TableCell */,
 				ADD3384124EBAFDC00295B40 /* PersonalDetailController.swift */,
@@ -611,6 +622,7 @@
 				ADD3384024EBAE1A00295B40 /* PersonalDetailCell.swift in Sources */,
 				AD45CCB724FE41780005A6BB /* JobPIC.swift in Sources */,
 				AD38A7AD24F3C510005D0D5C /* PaymentCell.swift in Sources */,
+				3E54344B250236F80016969B /* DashboardViewController.swift in Sources */,
 				AD34C21E24EBDDBA00B028FB /* User.swift in Sources */,
 				ADC0248024FF3A4400A376A8 /* AcceptedDetailController.swift in Sources */,
 				ADC218E824F35FB60044DE42 /* JobCustomerLocation.swift in Sources */,
