@@ -22,6 +22,19 @@ class SupportDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if let imageURL = URL(string: supportFromSegue.picture_support_url) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        self.IVBukti.image = image
+                    }
+                }
+            }
+        }
+        
         self.JobLabel.text? = self.supportFromSegue.job.job_name
         self.ProblemLabel.text? = self.supportFromSegue.problem_support
         self.ReasonLabel.text? = self.supportFromSegue.reason_support
@@ -32,17 +45,6 @@ class SupportDetailController: UIViewController {
                     let image = UIImage(data: data)
                     DispatchQueue.main.async {
                         self.IVSupportDetail.image = image
-                    }
-                }
-            }
-        }
-        if let imageURL = URL(string: supportFromSegue.picture_support_url) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        self.IVBukti.image = image
                     }
                 }
             }
