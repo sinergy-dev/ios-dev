@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E54344B250236F80016969B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344A250236F80016969B /* DashboardViewController.swift */; };
+		3E54344D250245E10016969B /* JobCategoryAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344C250245E10016969B /* JobCategoryAllViewController.swift */; };
+		3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344E250247090016969B /* JobCategoryListAll.swift */; };
+		3E543451250247500016969B /* JobCategoryMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E543450250247500016969B /* JobCategoryMain.swift */; };
 		487172563FA27B265AB16F44 /* Pods_layout_layoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C2BE10452E6A632DF7513 /* Pods_layout_layoutUITests.framework */; };
 		6AF3193262E5DB5ECEF932FB /* Pods_layoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
@@ -88,6 +91,9 @@
 		0C7C374CC2E8240B3F39DF85 /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E54344A250236F80016969B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3E54344C250245E10016969B /* JobCategoryAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryAllViewController.swift; sourceTree = "<group>"; };
+		3E54344E250247090016969B /* JobCategoryListAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryListAll.swift; sourceTree = "<group>"; };
+		3E543450250247500016969B /* JobCategoryMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryMain.swift; sourceTree = "<group>"; };
 		548BDD50525186B85C2B235E /* Pods_layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642372A9C70FDB41D71F34D0 /* Pods-layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout.debug.xcconfig"; path = "Target Support Files/Pods-layout/Pods-layout.debug.xcconfig"; sourceTree = "<group>"; };
 		74EDB09A5FA2EDDCBF497CBD /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 		3E54344925022D210016969B /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				3E54344C250245E10016969B /* JobCategoryAllViewController.swift */,
 				3E54344A250236F80016969B /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
@@ -233,6 +240,8 @@
 		ADD3384324EBCC6400295B40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E54344E250247090016969B /* JobCategoryListAll.swift */,
+				3E543450250247500016969B /* JobCategoryMain.swift */,
 				ADD3383D24EBAB2100295B40 /* DetailPersonal.swift */,
 				AD34C21D24EBDDBA00B028FB /* User.swift */,
 				AD32BB9124ECDB0100D78982 /* UserSingle.swift */,
@@ -595,6 +604,7 @@
 			files = (
 				AD33053224FDFCA9004C9B1F /* AcceptedCell.swift in Sources */,
 				AD38A7AF24F3C5AB005D0D5C /* PaymentController.swift in Sources */,
+				3E543451250247500016969B /* JobCategoryMain.swift in Sources */,
 				AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */,
 				ADC218EA24F35FD30044DE42 /* JobLocation.swift in Sources */,
 				AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */,
@@ -603,6 +613,7 @@
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,
 				AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */,
+				3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */,
 				ADC218EC24F35FED0044DE42 /* JobLevel.swift in Sources */,
 				AD47DA7324FCE2250097F283 /* DetailController.swift in Sources */,
 				AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */,
@@ -637,6 +648,7 @@
 				AD47DA7924FCEDC40097F283 /* ProgressController.swift in Sources */,
 				ADD3383E24EBAB2100295B40 /* DetailPersonal.swift in Sources */,
 				ADC218EE24F360040044DE42 /* JobSingle.swift in Sources */,
+				3E54344D250245E10016969B /* JobCategoryAllViewController.swift in Sources */,
 				ADD3384A24EBD3AA00295B40 /* GlobalVariable.swift in Sources */,
 				AD36C91B24FF7E4D001DDA72 /* ProgressJobCell.swift in Sources */,
 				ADD3384724EBCCBD00295B40 /* PersonalViewController.swift in Sources */,

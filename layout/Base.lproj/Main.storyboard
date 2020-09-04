@@ -859,7 +859,7 @@
         <!--Job Category All-->
         <scene sceneID="jJ8-bo-Vgd">
             <objects>
-                <viewController id="rJX-vX-5cC" sceneMemberID="viewController">
+                <viewController id="rJX-vX-5cC" customClass="JobCategoryAllViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46W-q8-M94">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
