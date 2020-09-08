@@ -22,6 +22,7 @@
 		AD34C21E24EBDDBA00B028FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C21D24EBDDBA00B028FB /* User.swift */; };
 		AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */; };
 		AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34DB492500ECC200BA8FC6 /* DoneDetailController.swift */; };
+		AD34FEFA2505EE9900A19FC7 /* JobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34FEF92505EE9900A19FC7 /* JobListCell.swift */; };
 		AD36C91B24FF7E4D001DDA72 /* ProgressJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91A24FF7E4D001DDA72 /* ProgressJobCell.swift */; };
 		AD36C91D24FF7F84001DDA72 /* ProgressDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91C24FF7F84001DDA72 /* ProgressDetailController.swift */; };
 		AD36C91F24FF89B0001DDA72 /* JobProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91E24FF89B0001DDA72 /* JobProgress.swift */; };
@@ -107,6 +108,7 @@
 		AD34C21D24EBDDBA00B028FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDetailCell.swift; sourceTree = "<group>"; };
 		AD34DB492500ECC200BA8FC6 /* DoneDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDetailController.swift; sourceTree = "<group>"; };
+		AD34FEF92505EE9900A19FC7 /* JobListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCell.swift; sourceTree = "<group>"; };
 		AD36C91A24FF7E4D001DDA72 /* ProgressJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressJobCell.swift; sourceTree = "<group>"; };
 		AD36C91C24FF7F84001DDA72 /* ProgressDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDetailController.swift; sourceTree = "<group>"; };
 		AD36C91E24FF89B0001DDA72 /* JobProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProgress.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				AD33053524FE026C004C9B1F /* DoneCell.swift */,
 				AD36C91A24FF7E4D001DDA72 /* ProgressJobCell.swift */,
 				AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */,
+				AD34FEF92505EE9900A19FC7 /* JobListCell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				ADC218EA24F35FD30044DE42 /* JobLocation.swift in Sources */,
 				AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */,
 				AD33053424FE0261004C9B1F /* ProgressCell.swift in Sources */,
+				AD34FEFA2505EE9900A19FC7 /* JobListCell.swift in Sources */,
 				ADC218F024F3609A0044DE42 /* JobList.swift in Sources */,
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,

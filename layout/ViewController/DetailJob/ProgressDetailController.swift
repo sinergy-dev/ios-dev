@@ -172,4 +172,3 @@ extension ProgressDetailController: UITableViewDelegate {
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
-
