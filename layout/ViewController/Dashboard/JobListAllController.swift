@@ -76,5 +76,15 @@ class JobListAllController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }.resume()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailJobListAll", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailJobListController {
+            destination.jobListFromSegue = jobList.job![(TVJobListAll.indexPathForSelectedRow?.row)!]
+        }
+    }
 
 }
