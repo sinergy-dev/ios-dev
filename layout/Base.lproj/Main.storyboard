@@ -771,7 +771,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="110"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RUF-U2-BId">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RUF-U2-BId">
                                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="110"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW8-n0-0D5">
@@ -794,7 +794,7 @@
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="7Uf-Q0-VGw" firstAttribute="leading" secondItem="oW8-n0-0D5" secondAttribute="leading" constant="10" id="Fty-rU-s2J"/>
-                                                                                <constraint firstAttribute="height" constant="50" id="Mnx-Tp-awU"/>
+                                                                                <constraint firstAttribute="height" priority="750" constant="50" id="Mnx-Tp-awU"/>
                                                                                 <constraint firstItem="cOc-6d-BAE" firstAttribute="leading" secondItem="7Uf-Q0-VGw" secondAttribute="trailing" constant="10" id="fXj-9q-4aV"/>
                                                                                 <constraint firstItem="7Uf-Q0-VGw" firstAttribute="top" secondItem="oW8-n0-0D5" secondAttribute="top" constant="10" id="gVq-m4-Fot"/>
                                                                                 <constraint firstItem="cOc-6d-BAE" firstAttribute="centerY" secondItem="7Uf-Q0-VGw" secondAttribute="centerY" id="kTV-df-y6t"/>
@@ -835,7 +835,7 @@
                                                                                 <constraint firstItem="X1v-Kw-itC" firstAttribute="leading" secondItem="VDm-KC-Uzu" secondAttribute="leading" id="O2l-UY-c4B"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="9y1-qF-Ylg" secondAttribute="trailing" constant="20" id="biP-NW-Nrf"/>
                                                                                 <constraint firstItem="9y1-qF-Ylg" firstAttribute="centerY" secondItem="X1v-Kw-itC" secondAttribute="centerY" id="g0m-yD-pth"/>
-                                                                                <constraint firstAttribute="height" constant="60" id="h4y-FX-d6X"/>
+                                                                                <constraint firstAttribute="height" priority="750" constant="60" id="h4y-FX-d6X"/>
                                                                                 <constraint firstItem="VDm-KC-Uzu" firstAttribute="top" secondItem="ocD-l7-6jZ" secondAttribute="bottom" constant="3" id="kaR-Ie-dFx"/>
                                                                                 <constraint firstItem="X1v-Kw-itC" firstAttribute="top" secondItem="VDm-KC-Uzu" secondAttribute="bottom" constant="3" id="m9i-1F-mhZ"/>
                                                                                 <constraint firstItem="ocD-l7-6jZ" firstAttribute="top" secondItem="U5H-6N-MzO" secondAttribute="top" constant="8" id="teD-bT-YHg"/>
