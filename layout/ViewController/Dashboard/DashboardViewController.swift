@@ -147,10 +147,23 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
                 expandedCellPaths.remove(indexPath)
             } else {
                 expandedCellPaths.insert(indexPath)
+                performSegue(withIdentifier: "toDetailJobList", sender: self)
             }
             tableView.beginUpdates()
             tableView.endUpdates()
             tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? DetailJobListController {
+////            destination.jobListFromSegue = jobList.job![(TVJobList.indexPathForSelectedRow?.row)!]
+////            print(jobList.job![(TVJobList.indexPathForSelectedRow?.row)!])
+//        }
+        if let destination = segue.destination as? DetailJobListController {
+//            print(TVJobList.indexPathForSelectedRow?.row)
+            destination.jobListFromSegue = jobList.job![1]
         }
     }
 }

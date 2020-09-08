@@ -17,6 +17,7 @@ enum GlobalVariable {
     static var urlGetSupport = hostServer + "/api/job/getJobSupport"
     static var urlGetProgressJob = hostServer + "/api/job/getJobProgress"
     static var urlGetJobListSumm = hostServer + "/dashboard/getJobListAndSumary"
+    static var urlGetJobOpen = hostServer + "/job/getJobOpen"
     
     static let tempToken = "Bearer 6d554ebe8194d899ab309e4dda558c85d2ae311a847bee2a4472d3484277b477"
 }
