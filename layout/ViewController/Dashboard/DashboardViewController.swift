@@ -12,7 +12,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var TVJobList: UITableView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var NameLabel: UILabel!
+    
     var jobList:Job!
+    var dataUser:UserSingle!
     
     var expandedCellPaths = Set<IndexPath>()
     
@@ -40,8 +43,35 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
             self.TVJobList.reloadData()
         }
         
+        getUser {
+            self.NameLabel.text? = self.dataUser!.user.name
+        }
+        
         TVJobList.delegate = self
         TVJobList.dataSource = self
+    }
+    
+    func getUser(completed: @escaping () -> ()){
+        let url = URL(string: GlobalVariable.urlGetAccount)
+            
+        var request = URLRequest(url:url!)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+            
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    
+                    self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                } catch {
+                    print("JSON Error")
+                }
+            }
+        }.resume()
     }
     
     private func setupView(){
