@@ -50,6 +50,29 @@ class ProgressDetailController: UIViewController{
         TVProgressJob.estimatedRowHeight = 280.0
     }
     
+    @IBAction func btnProgress(_ sender: Any) {
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: "Job Progress", message: "Please Insert your progress", preferredStyle: .alert)
+        // Add text field
+        dialogMessage.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Add Progress Here"
+        })
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){
+            (action) -> Void in print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(submit)
+        dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
     func getData(completed: @escaping () -> ()){
                 
         let url = GlobalVariable.urlGetProgressJob
