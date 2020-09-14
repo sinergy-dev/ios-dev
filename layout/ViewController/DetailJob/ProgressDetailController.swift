@@ -63,8 +63,8 @@ class ProgressDetailController: UIViewController{
             print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
         })
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel){
-            (action) -> Void in print("Cancel button tapped")
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+            print("Cancel button tapped")
         }
         
         dialogMessage.addAction(submit)

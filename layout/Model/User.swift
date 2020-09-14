@@ -18,6 +18,6 @@ struct User:Decodable {
     let fee_engineer_count:Int
     let category_engineer:String
     let date_of_join:String
-    
+    let photo_image_url:String
 }
 

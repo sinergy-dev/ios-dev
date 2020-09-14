@@ -20,6 +20,7 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var FeeLabel: UILabel!
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var AddressLabel: UILabel!
+    @IBOutlet weak var IVProfile: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,18 @@ class PersonalViewController: UIViewController {
             self.SkillLabel.text? = "Skills: " + self.dataUser!.user.category_engineer
             self.DateLabel.text? = "Join Date: " + dateJoin
             self.FeeLabel.text? = "Engineer's Fee: " + formattedFee!
+            
+            if let imageURL = URL(string: self.dataUser!.user.photo_image_url) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: imageURL)
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        DispatchQueue.main.async {
+                            self.IVProfile.image = image
+                        }
+                    }
+                }
+            }
         }
     }
     
