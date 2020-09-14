@@ -21,6 +21,15 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var AddressLabel: UILabel!
     @IBOutlet weak var IVProfile: UIImageView!
+    @IBAction func btnEdit(_ sender: Any) {
+        //performSegue(withgIdentifier: "toEditProfile", sender: sender)
+        //if let destinationViewController = segue.destination as? EditProfileController {
+          //if let button = sender as? UIButton {
+            //      EditProfileController.<buttonIndex> = button.tag
+                  // Note: add/define var buttonIndex: Int = 0 in <YourDestinationViewController> and print there in viewDidLoad.
+          //}
+        //}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +56,7 @@ class PersonalViewController: UIViewController {
             self.SkillLabel.text? = "Skills: " + self.dataUser!.user.category_engineer
             self.DateLabel.text? = "Join Date: " + dateJoin
             self.FeeLabel.text? = "Engineer's Fee: " + formattedFee!
+            self.AddressLabel.text? = self.dataUser!.user.address
             
             if let imageURL = URL(string: self.dataUser!.user.photo_image_url) {
                 DispatchQueue.global().async {
@@ -64,34 +74,26 @@ class PersonalViewController: UIViewController {
     
     func getData(completed: @escaping () -> ()){
             
-            let url = GlobalVariable.urlGetAccount
-            
-            let components = URLComponents(string: url)!
-//            components.queryItems = [
-//                URLQueryItem(name: "id_job", value: String(self.jobFromSegue!.id))
-//            ]
-//            components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
-            
-    //        var request = URLRequeqqqqst(url:url!)
-            var request = URLRequest(url:components.url!)
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
-            
-            URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if error == nil {
-                    do {
-//                        print(data!)
-                        self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
-                        
-//                        print(self.dataUser!)
-                        DispatchQueue.main.async {
-                            completed()
-                        }
-                    } catch {
-                        print("JSON Error")
+        let url = GlobalVariable.urlGetAccount
+        
+        let components = URLComponents(string: url)!
+        var request = URLRequest(url:components.url!)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        completed()
                     }
+                } catch {
+                    print("JSON Error")
                 }
-            }.resume()
-        }
+            }
+        }.resume()
+    }
 
 }
