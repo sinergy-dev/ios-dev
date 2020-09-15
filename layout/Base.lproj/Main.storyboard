@@ -1140,10 +1140,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListAllCell" id="X1w-OI-dTb" customClass="JobListAllCell" customModule="layout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="89.666664123535156"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X1w-OI-dTb" id="dtf-Fa-Ptz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666664123535156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tB-Py-Ylx">
@@ -1169,13 +1169,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-1f-JsU">
-                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="16.333333333333336"/>
+                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="16.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peD-yH-xDe">
-                                                    <rect key="frame" x="80" y="71" width="324" height="15.666666666666671"/>
+                                                    <rect key="frame" x="80" y="71.333333333333329" width="324" height="15.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15.666666666666671" id="N2x-Mm-8Dh"/>
                                                     </constraints>
@@ -2790,6 +2790,36 @@
             </objects>
             <point key="canvasLocation" x="1153.6231884057972" y="3186.8303571428569"/>
         </scene>
+        <!--Detail Image Payment Controller-->
+        <scene sceneID="L39-ot-OeH">
+            <objects>
+                <viewController storyboardIdentifier="DetailImagePaymentController" id="fAp-hr-5ki" customClass="DetailImagePaymentController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qpu-sd-U6J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZV-dK-uf7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NZV-dK-uf7" firstAttribute="top" secondItem="Zlu-i3-O4t" secondAttribute="top" id="11j-7N-wdO"/>
+                            <constraint firstItem="NZV-dK-uf7" firstAttribute="leading" secondItem="Zlu-i3-O4t" secondAttribute="leading" id="k31-YW-Jdp"/>
+                            <constraint firstItem="NZV-dK-uf7" firstAttribute="trailing" secondItem="Zlu-i3-O4t" secondAttribute="trailing" id="mr5-r6-XPj"/>
+                            <constraint firstItem="NZV-dK-uf7" firstAttribute="bottom" secondItem="Zlu-i3-O4t" secondAttribute="bottom" id="w8Q-1H-CAw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zlu-i3-O4t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kb0-Y6-1cx"/>
+                    <connections>
+                        <outlet property="ImagePayment" destination="NZV-dK-uf7" id="aAN-4r-J6u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJY-oi-Rg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715.9420289855075" y="3186.8303571428569"/>
+        </scene>
         <!--Progress Job-->
         <scene sceneID="FBX-CJ-QOj">
             <objects>
@@ -3657,6 +3687,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQP-92-CZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="1705"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KyZ-cP-fR2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LN9-zd-wBe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u6t-RP-lXq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fAp-hr-5ki" kind="relationship" relationship="rootViewController" id="VBR-14-hVf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uN-LS-Jyo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="3186.8303571428569"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

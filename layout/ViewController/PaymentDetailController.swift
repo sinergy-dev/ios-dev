@@ -14,25 +14,30 @@ class PaymentDetailController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var IVPayment: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
     @IBOutlet weak var TVPaymentDetail: UITableView!
+    @available(iOS 13.0, *)
     @IBAction func btnImage(_ sender: Any) {
-        let dialogMessage = UIAlertController(title: "Transfer", message: paymentFromSegue.job.job_name, preferredStyle: .alert)
+        /*let dialogMessage = UIAlertController(title: "Transfer", message: paymentFromSegue.job.job_name, preferredStyle: .alert)
         
         let image = URL(string: paymentFromSegue.payment_invoice_URL)
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: image!)
                 if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
+                   let image = UIImage(data: data)
+                   DispatchQueue.main.async {
                         dialogMessage.addImage(image: image!)
                     }
                 }
             }
         
-        //dialogMessage.addImage(image: image!)
-        
         dialogMessage.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
         
-        self.present(dialogMessage, animated: true, completion: nil)
+        self.present(dialogMessage, animated: true, completion: nil)*/
+        
+        let ImageView:DetailImagePaymentController = self.storyboard?.instantiateViewController(identifier: "DetailImagePaymentController") as! DetailImagePaymentController
+        
+        ImageView.selectedImage = self.paymentFromSegue.payment_invoice_URL
+        
+        self.navigationController?.pushViewController(ImageView, animated: true)
     }
     
     var paymentFromSegue:PaymentList!
