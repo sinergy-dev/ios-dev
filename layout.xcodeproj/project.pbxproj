@@ -27,6 +27,7 @@
 		AD36C91B24FF7E4D001DDA72 /* ProgressJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91A24FF7E4D001DDA72 /* ProgressJobCell.swift */; };
 		AD36C91D24FF7F84001DDA72 /* ProgressDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91C24FF7F84001DDA72 /* ProgressDetailController.swift */; };
 		AD36C91F24FF89B0001DDA72 /* JobProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36C91E24FF89B0001DDA72 /* JobProgress.swift */; };
+		AD3756FC25109B2B0012B48D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3756FB25109B2B0012B48D /* UIImage.swift */; };
 		AD38A7AD24F3C510005D0D5C /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38A7AC24F3C510005D0D5C /* PaymentCell.swift */; };
 		AD38A7AF24F3C5AB005D0D5C /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38A7AE24F3C5AB005D0D5C /* PaymentController.swift */; };
 		AD3A533924F78DD400F3D80E /* SupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A533824F78DD400F3D80E /* SupportController.swift */; };
@@ -45,6 +46,7 @@
 		AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568C24F5FDBD008E596D /* PaymentList.swift */; };
 		AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */; };
 		AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B569424F64280008E596D /* PaymentProgress.swift */; };
+		AD732A992510740800374459 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD732A982510740800374459 /* AlertController.swift */; };
 		AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3325075D410025A866 /* DetailJobListController.swift */; };
 		AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3525077B760025A866 /* JobListAllCell.swift */; };
 		AD9FCB3825077BFC0025A866 /* JobListAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3725077BFC0025A866 /* JobListAllController.swift */; };
@@ -117,6 +119,7 @@
 		AD36C91A24FF7E4D001DDA72 /* ProgressJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressJobCell.swift; sourceTree = "<group>"; };
 		AD36C91C24FF7F84001DDA72 /* ProgressDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDetailController.swift; sourceTree = "<group>"; };
 		AD36C91E24FF89B0001DDA72 /* JobProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProgress.swift; sourceTree = "<group>"; };
+		AD3756FB25109B2B0012B48D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		AD38A7AC24F3C510005D0D5C /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		AD38A7AE24F3C5AB005D0D5C /* PaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
 		AD3A533824F78DD400F3D80E /* SupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportController.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		AD6B568C24F5FDBD008E596D /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
 		AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLastestProgress.swift; sourceTree = "<group>"; };
 		AD6B569424F64280008E596D /* PaymentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProgress.swift; sourceTree = "<group>"; };
+		AD732A982510740800374459 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; };
 		AD9FCB3525077B760025A866 /* JobListAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllCell.swift; sourceTree = "<group>"; };
 		AD9FCB3725077BFC0025A866 /* JobListAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllController.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				AD3A533824F78DD400F3D80E /* SupportController.swift */,
 				AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */,
 				AD2D5D78250F57EC0045735C /* EditProfileController.swift */,
+				AD732A982510740800374459 /* AlertController.swift */,
+				AD3756FB25109B2B0012B48D /* UIImage.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -629,6 +635,7 @@
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,
 				AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */,
+				AD732A992510740800374459 /* AlertController.swift in Sources */,
 				3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */,
 				ADC218EC24F35FED0044DE42 /* JobLevel.swift in Sources */,
 				AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */,
@@ -642,6 +649,7 @@
 				AD36C91F24FF89B0001DDA72 /* JobProgress.swift in Sources */,
 				ADBC403824F76BBB00A90810 /* SupportCell.swift in Sources */,
 				ADD3384224EBAFDD00295B40 /* PersonalDetailController.swift in Sources */,
+				AD3756FC25109B2B0012B48D /* UIImage.swift in Sources */,
 				AD3A533B24F78F1400F3D80E /* Support.swift in Sources */,
 				AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */,
 				ADD55AFE24C5548A0063BC99 /* SceneDelegate.swift in Sources */,

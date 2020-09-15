@@ -10,10 +10,30 @@ import UIKit
 
 class PaymentDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var IVTransfer: UIImageView!
     @IBOutlet weak var IVPayment: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
-    @IBOutlet weak var IVTransfer: UIImageView!
     @IBOutlet weak var TVPaymentDetail: UITableView!
+    @IBAction func btnImage(_ sender: Any) {
+        let dialogMessage = UIAlertController(title: "Transfer", message: paymentFromSegue.job.job_name, preferredStyle: .alert)
+        
+        let image = URL(string: paymentFromSegue.payment_invoice_URL)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: image!)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        dialogMessage.addImage(image: image!)
+                    }
+                }
+            }
+        
+        //dialogMessage.addImage(image: image!)
+        
+        dialogMessage.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
     
     var paymentFromSegue:PaymentList!
     

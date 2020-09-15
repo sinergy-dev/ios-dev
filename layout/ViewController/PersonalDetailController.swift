@@ -56,7 +56,7 @@ class PersonalDetailController: UIViewController, UITableViewDelegate, UITableVi
             
         return cell
     }
-        
+    
     func getData(completed: @escaping () -> ()){
             
         let url = URL(string: GlobalVariable.urlGetJobList)
