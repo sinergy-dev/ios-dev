@@ -56,6 +56,7 @@ class ProgressDetailController: UIViewController{
     
     func setupButtons() {
         let progress = ActionButtonItem(title: "Progress", image: #imageLiteral(resourceName: "job_on_progress"))
+        progress.action = { item in self.Progress()}
         let request = ActionButtonItem(title: "Request", image: #imageLiteral(resourceName: "job_request"))
         let done = ActionButtonItem(title: "Job Done", image: #imageLiteral(resourceName: "job_done"))
         let support = ActionButtonItem(title: "Get Support", image: #imageLiteral(resourceName: "get_help"))
@@ -64,6 +65,29 @@ class ProgressDetailController: UIViewController{
         actionButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         actionButton.action = { button in button.toggleMenu()}
         
+    }
+    
+    func Progress() {
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: "Job Progress", message: "Please Insert your progress", preferredStyle: .alert)
+        // Add text field
+        dialogMessage.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Add Progress Here"
+        })
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        dialogMessage.addAction(submit)
+        dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
     }
     
     @IBAction func btnProgress(_ sender: Any) {
