@@ -15,6 +15,7 @@
 		6AF3193262E5DB5ECEF932FB /* Pods_layoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
 		AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D5D78250F57EC0045735C /* EditProfileController.swift */; };
+		AD311B8425132409005D2920 /* RequestItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD311B8325132409005D2920 /* RequestItemController.swift */; };
 		AD32BB9224ECDB0100D78982 /* UserSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32BB9124ECDB0100D78982 /* UserSingle.swift */; };
 		AD33053224FDFCA9004C9B1F /* AcceptedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33053124FDFCA9004C9B1F /* AcceptedCell.swift */; };
 		AD33053424FE0261004C9B1F /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33053324FE0261004C9B1F /* ProgressCell.swift */; };
@@ -43,6 +44,8 @@
 		AD47DA7524FCECBC0097F283 /* AcceptedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47DA7424FCECBC0097F283 /* AcceptedController.swift */; };
 		AD47DA7724FCEDB50097F283 /* DoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47DA7624FCEDB50097F283 /* DoneController.swift */; };
 		AD47DA7924FCEDC40097F283 /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47DA7824FCEDC40097F283 /* ProgressController.swift */; };
+		AD4B4E8E251336D2000EC2FA /* SupportItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B4E8D251336D2000EC2FA /* SupportItemController.swift */; };
+		AD4B4E90251336F6000EC2FA /* JobDoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B4E8F251336F6000EC2FA /* JobDoneController.swift */; };
 		AD6B568B24F5FD92008E596D /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568A24F5FD92008E596D /* Payment.swift */; };
 		AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568C24F5FDBD008E596D /* PaymentList.swift */; };
 		AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */; };
@@ -110,6 +113,7 @@
 		8637C962757333A4DAD78F54 /* Pods-layout-layoutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.debug.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedCell.swift; sourceTree = "<group>"; };
 		AD2D5D78250F57EC0045735C /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
+		AD311B8325132409005D2920 /* RequestItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestItemController.swift; sourceTree = "<group>"; };
 		AD32BB9124ECDB0100D78982 /* UserSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingle.swift; sourceTree = "<group>"; };
 		AD33053124FDFCA9004C9B1F /* AcceptedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedCell.swift; sourceTree = "<group>"; };
 		AD33053324FE0261004C9B1F /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		AD47DA7424FCECBC0097F283 /* AcceptedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedController.swift; sourceTree = "<group>"; };
 		AD47DA7624FCEDB50097F283 /* DoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneController.swift; sourceTree = "<group>"; };
 		AD47DA7824FCEDC40097F283 /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
+		AD4B4E8D251336D2000EC2FA /* SupportItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportItemController.swift; sourceTree = "<group>"; };
+		AD4B4E8F251336F6000EC2FA /* JobDoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDoneController.swift; sourceTree = "<group>"; };
 		AD6B568A24F5FD92008E596D /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		AD6B568C24F5FDBD008E596D /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
 		AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLastestProgress.swift; sourceTree = "<group>"; };
@@ -255,6 +261,9 @@
 				ADC0247F24FF3A4400A376A8 /* AcceptedDetailController.swift */,
 				AD36C91C24FF7F84001DDA72 /* ProgressDetailController.swift */,
 				AD34DB492500ECC200BA8FC6 /* DoneDetailController.swift */,
+				AD311B8325132409005D2920 /* RequestItemController.swift */,
+				AD4B4E8D251336D2000EC2FA /* SupportItemController.swift */,
+				AD4B4E8F251336F6000EC2FA /* JobDoneController.swift */,
 			);
 			path = DetailJob;
 			sourceTree = "<group>";
@@ -634,6 +643,7 @@
 			files = (
 				AD33053224FDFCA9004C9B1F /* AcceptedCell.swift in Sources */,
 				AD38A7AF24F3C5AB005D0D5C /* PaymentController.swift in Sources */,
+				AD311B8425132409005D2920 /* RequestItemController.swift in Sources */,
 				3E543451250247500016969B /* JobCategoryMain.swift in Sources */,
 				AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */,
 				ADC218EA24F35FD30044DE42 /* JobLocation.swift in Sources */,
@@ -669,12 +679,14 @@
 				AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */,
 				AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */,
 				AD468EF124F7BA2000EF2CD8 /* PaymentDetailController.swift in Sources */,
+				AD4B4E8E251336D2000EC2FA /* SupportItemController.swift in Sources */,
 				ADD3384024EBAE1A00295B40 /* PersonalDetailCell.swift in Sources */,
 				AD45CCB724FE41780005A6BB /* JobPIC.swift in Sources */,
 				AD38A7AD24F3C510005D0D5C /* PaymentCell.swift in Sources */,
 				3E54344B250236F80016969B /* DashboardViewController.swift in Sources */,
 				AD34C21E24EBDDBA00B028FB /* User.swift in Sources */,
 				ADC0248024FF3A4400A376A8 /* AcceptedDetailController.swift in Sources */,
+				AD4B4E90251336F6000EC2FA /* JobDoneController.swift in Sources */,
 				ADC218E824F35FB60044DE42 /* JobCustomerLocation.swift in Sources */,
 				AD47DA6D24FCE04E0097F283 /* AppliedController.swift in Sources */,
 				ADC218E624F35F940044DE42 /* JobCustomer.swift in Sources */,

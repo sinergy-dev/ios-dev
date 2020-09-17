@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ProgressDetailController: UIViewController{
     
     var actionButton : ActionButton!
@@ -56,15 +57,33 @@ class ProgressDetailController: UIViewController{
     
     func setupButtons() {
         let progress = ActionButtonItem(title: "Progress", image: #imageLiteral(resourceName: "job_on_progress"))
-        progress.action = { item in self.Progress()}
+        progress.action = { item in self.Progress() }
         let request = ActionButtonItem(title: "Request", image: #imageLiteral(resourceName: "job_request"))
+        request.action = { item in self.RequestItem() }
         let done = ActionButtonItem(title: "Job Done", image: #imageLiteral(resourceName: "job_done"))
+        done.action = { item in self.JobDone() }
         let support = ActionButtonItem(title: "Get Support", image: #imageLiteral(resourceName: "get_help"))
+        support.action = { item in self.SupportItem() }
         actionButton = ActionButton(attachedToView: self.view, items: [progress, request, support, done])
         actionButton.setTitle("+", forState: UIControl.State())
         actionButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         actionButton.action = { button in button.toggleMenu()}
         
+    }
+    
+    func RequestItem() {
+        let request = self.storyboard?.instantiateViewController(identifier: "RequestItemController") as! RequestItemController
+        self.present(request, animated: true, completion: nil)
+    }
+    
+    func SupportItem() {
+        let support = self.storyboard?.instantiateViewController(identifier: "SupportItemController") as! SupportItemController
+        self.present(support, animated: true, completion: nil)
+    }
+    
+    func JobDone() {
+        let job_done = self.storyboard?.instantiateViewController(identifier: "JobDoneController") as! JobDoneController
+        self.present(job_done, animated: true, completion: nil)
     }
     
     func Progress() {
@@ -174,6 +193,7 @@ class ProgressDetailController: UIViewController{
     }
 }
 
+@available(iOS 13.0, *)
 extension ProgressDetailController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.jobDetail == nil {
@@ -215,6 +235,7 @@ extension ProgressDetailController : UITableViewDataSource {
     }
 }
 
+@available(iOS 13.0, *)
 extension ProgressDetailController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
