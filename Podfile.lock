@@ -1,16 +1,20 @@
 PODS:
   - CarbonKit (2.3.1)
+  - Floaty (4.2.0)
 
 DEPENDENCIES:
   - CarbonKit
+  - Floaty
 
 SPEC REPOS:
   trunk:
     - CarbonKit
+    - Floaty
 
 SPEC CHECKSUMS:
   CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
 
-PODFILE CHECKSUM: a300750d5b91469ea414d0fe028e9508e820cfb5
+PODFILE CHECKSUM: 7a1b8bd1a7ff1009ae272247992c1fd7916427d0
 
 COCOAPODS: 1.9.3

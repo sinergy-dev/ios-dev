@@ -5,6 +5,7 @@ target 'layout' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'CarbonKit'
+pod 'Floaty'
   # Pods for layout
 
   target 'layoutTests' do

@@ -61,6 +61,8 @@
 		ADC218EE24F360040044DE42 /* JobSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC218ED24F360040044DE42 /* JobSingle.swift */; };
 		ADC218F024F3609A0044DE42 /* JobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC218EF24F3609A0044DE42 /* JobList.swift */; };
 		ADC218F224F360BC0044DE42 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC218F124F360BC0044DE42 /* Job.swift */; };
+		ADCCA5C62511FEE700536170 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCA5C52511FEE700536170 /* ActionButton.swift */; };
+		ADCCA5C82511FF2F00536170 /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */; };
 		ADD3383E24EBAB2100295B40 /* DetailPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3383D24EBAB2100295B40 /* DetailPersonal.swift */; };
 		ADD3384024EBAE1A00295B40 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3383F24EBAE1A00295B40 /* PersonalDetailCell.swift */; };
 		ADD3384224EBAFDD00295B40 /* PersonalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3384124EBAFDC00295B40 /* PersonalDetailController.swift */; };
@@ -154,6 +156,8 @@
 		ADC218ED24F360040044DE42 /* JobSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSingle.swift; sourceTree = "<group>"; };
 		ADC218EF24F3609A0044DE42 /* JobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobList.swift; sourceTree = "<group>"; };
 		ADC218F124F360BC0044DE42 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		ADCCA5C52511FEE700536170 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		ADD3383D24EBAB2100295B40 /* DetailPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonal.swift; sourceTree = "<group>"; };
 		ADD3383F24EBAE1A00295B40 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
 		ADD3384124EBAFDC00295B40 /* PersonalDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailController.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				AD732A982510740800374459 /* AlertController.swift */,
 				AD3756FB25109B2B0012B48D /* UIImage.swift */,
 				AD3756FD2510A53D0012B48D /* DetailImagePaymentController.swift */,
+				ADCCA5C52511FEE700536170 /* ActionButton.swift */,
+				ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				AD732A992510740800374459 /* AlertController.swift in Sources */,
 				3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */,
 				ADC218EC24F35FED0044DE42 /* JobLevel.swift in Sources */,
+				ADCCA5C82511FF2F00536170 /* ActionButtonItem.swift in Sources */,
 				AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */,
 				AD47DA7324FCE2250097F283 /* DetailController.swift in Sources */,
 				AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */,
@@ -657,6 +664,7 @@
 				AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */,
 				ADD55AFE24C5548A0063BC99 /* SceneDelegate.swift in Sources */,
 				AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */,
+				ADCCA5C62511FEE700536170 /* ActionButton.swift in Sources */,
 				AD47DA7724FCEDB50097F283 /* DoneController.swift in Sources */,
 				AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */,
 				AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */,

@@ -9,6 +9,8 @@
 import UIKit
 
 class ProgressDetailController: UIViewController{
+    
+    var actionButton : ActionButton!
 
     @IBOutlet weak var IVProgressDetail: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
@@ -48,6 +50,20 @@ class ProgressDetailController: UIViewController{
         
         TVProgressJob.rowHeight = UITableView.automaticDimension
         TVProgressJob.estimatedRowHeight = 280.0
+        
+        setupButtons()
+    }
+    
+    func setupButtons() {
+        let progress = ActionButtonItem(title: "Progress", image: #imageLiteral(resourceName: "job_on_progress"))
+        let request = ActionButtonItem(title: "Request", image: #imageLiteral(resourceName: "job_request"))
+        let done = ActionButtonItem(title: "Job Done", image: #imageLiteral(resourceName: "job_done"))
+        let support = ActionButtonItem(title: "Get Support", image: #imageLiteral(resourceName: "get_help"))
+        actionButton = ActionButton(attachedToView: self.view, items: [progress, request, support, done])
+        actionButton.setTitle("+", forState: UIControl.State())
+        actionButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        actionButton.action = { button in button.toggleMenu()}
+        
     }
     
     @IBAction func btnProgress(_ sender: Any) {
@@ -122,8 +138,6 @@ class ProgressDetailController: UIViewController{
 //                        print("Date " + progressTemp.date_time)
 //                        print("Activity \n" + progressTemp.detail_activity)
 //                    }
-                    
-                    
                     
                     DispatchQueue.main.async {
                         completed()

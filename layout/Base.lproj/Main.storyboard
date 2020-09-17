@@ -1140,10 +1140,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListAllCell" id="X1w-OI-dTb" customClass="JobListAllCell" customModule="layout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="89.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X1w-OI-dTb" id="dtf-Fa-Ptz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tB-Py-Ylx">
@@ -1169,13 +1169,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-1f-JsU">
-                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="16.666666666666664"/>
+                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="15.999999999999993"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peD-yH-xDe">
-                                                    <rect key="frame" x="80" y="71.333333333333329" width="324" height="15.666666666666671"/>
+                                                    <rect key="frame" x="80" y="70.666666666666671" width="324" height="15.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15.666666666666671" id="N2x-Mm-8Dh"/>
                                                     </constraints>
@@ -2249,7 +2249,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qm2-49-QuT">
-                                                <rect key="frame" x="0.0" y="249" width="414" height="751"/>
+                                                <rect key="frame" x="0.0" y="249" width="414" height="731"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProgressJobCell" id="SLH-wB-paT" customClass="ProgressJobCell" customModule="layout" customModuleProvider="target">
@@ -2385,7 +2385,7 @@
                                             <constraint firstItem="5xh-wc-0qC" firstAttribute="leading" secondItem="ENg-6Y-IEo" secondAttribute="leading" id="l2F-O3-793"/>
                                             <constraint firstItem="Bfd-zP-hAb" firstAttribute="leading" secondItem="5xh-wc-0qC" secondAttribute="leading" id="q3Z-Fu-PvW"/>
                                             <constraint firstItem="16c-gs-gII" firstAttribute="centerY" secondItem="Bfd-zP-hAb" secondAttribute="centerY" id="qUH-PW-OLG"/>
-                                            <constraint firstAttribute="bottom" secondItem="qm2-49-QuT" secondAttribute="bottom" id="qkZ-3f-Th8"/>
+                                            <constraint firstAttribute="bottom" secondItem="qm2-49-QuT" secondAttribute="bottom" constant="20" id="qkZ-3f-Th8"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dy2-xm-XDy" secondAttribute="trailing" constant="20" symbolic="YES" id="rcP-Ke-kfM"/>
                                             <constraint firstItem="Flk-SJ-d4K" firstAttribute="centerY" secondItem="A7q-29-gjT" secondAttribute="centerY" id="siw-wa-znq"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5xh-wc-0qC" secondAttribute="trailing" constant="20" symbolic="YES" id="tKn-sf-02m"/>
