@@ -9,7 +9,7 @@
 import Foundation
 
 enum GlobalVariable {
-    static let hostServer = "https://sinergy-dev.xyz:2096"
+    static let hostServer = "https://development-api.sifoma.id"
     static var urlGetJobList = hostServer + "/api/job/getJobByCategory"
     static var urlGetJobDetail = hostServer + "/api/job/getJobOpen"
     static var urlGetAccount = hostServer + "/api/users/getProfileDetail"
@@ -18,6 +18,8 @@ enum GlobalVariable {
     static var urlGetProgressJob = hostServer + "/api/job/getJobProgress"
     static var urlGetJobListSumm = hostServer + "/dashboard/getJobListAndSumary"
     static var urlGetJobOpen = hostServer + "/job/getJobOpen"
+    
+    static var urlUpdateJobProgress = hostServer + "/api/job/postJobUpdate"
     
     static let tempToken = "Bearer 6d554ebe8194d899ab309e4dda558c85d2ae311a847bee2a4472d3484277b477"
 }
