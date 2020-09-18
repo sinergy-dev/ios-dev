@@ -23,6 +23,7 @@ class ProgressDetailController: UIViewController{
     var jobDetail:JobSingle!
     
     var expandedIndexSet : IndexSet = []
+    var dayCounter=[String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +97,9 @@ class ProgressDetailController: UIViewController{
         
         let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            self.updateJobProgress(updateNote: (dialogMessage.textFields?.first?.text ?? "")){
+                self.TVProgressJob.reloadData()
+            }
             print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
         })
         
@@ -109,27 +113,45 @@ class ProgressDetailController: UIViewController{
         self.present(dialogMessage, animated: true, completion: nil)
     }
     
+    func updateJobProgress(updateNote:String, completed: @escaping () -> ()){
+        let url = GlobalVariable.urlUpdateJobProgress
+
+        var components = URLComponents(string: url)!
+        components.queryItems = [
+            URLQueryItem(name: "id_job", value: String(jobProgressFromSegue!.id)),
+            URLQueryItem(name: "detail_activity", value: updateNote)
+        ]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+
+        var request = URLRequest(url:components.url!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    print(data!)
+                    let jobProgressTemp:JobProgress = try JSONDecoder().decode(JobProgress.self, from: data!)
+                    print(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10))
+                    print(jobProgressTemp.date_time.prefix(10))
+                    if(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10) == jobProgressTemp.date_time.prefix(10)){
+                        self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity = self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity + " - " +  String(jobProgressTemp.detail_activity.components(separatedBy: " - ")[1])
+                    } else {
+                        self.jobDetail.job!.progress?.append(jobProgressTemp)
+                    }
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                } catch {
+                    print("JSON Error")
+                }
+            }
+        }.resume()
+    }
+    
     @IBAction func btnProgress(_ sender: Any) {
-        // Declare Alert message
-        let dialogMessage = UIAlertController(title: "Job Progress", message: "Please Insert your progress", preferredStyle: .alert)
-        // Add text field
-        dialogMessage.addTextField(configurationHandler: { textField in
-            textField.placeholder = "Add Progress Here"
-        })
-        
-        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
-            print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
-        })
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
-            print("Cancel button tapped")
-        }
-        
-        dialogMessage.addAction(submit)
-        dialogMessage.addAction(cancel)
-        
-        self.present(dialogMessage, animated: true, completion: nil)
+        self.Progress()
     }
     
     func getData(completed: @escaping () -> ()){
@@ -170,6 +192,7 @@ class ProgressDetailController: UIViewController{
                                     detail_activity: " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
                                 )
                             )
+                            self.dayCounter.append("Day 13")
                         } else {
                             tempDetail_activity += " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
                             jobProgresTemp[jobProgresTemp.count - 1].detail_activity = tempDetail_activity
@@ -217,7 +240,7 @@ extension ProgressDetailController : UITableViewDataSource {
         
         let dateTime = destinationFormat.string(from: sourceFormat.date(from:self.jobDetail.job!.progress![indexPath.row].date_time)!)
     
-        cell.DayLabel.text = "Day"
+        cell.DayLabel.text = dayCounter[indexPath.row]
         cell.DateLabel.text = dateTime
         cell.ActivityLabel.text = jobDetail.job!.progress![indexPath.row].detail_activity
         //if the cell is expanded
