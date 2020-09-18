@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpE-7P-wNU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpE-7P-wNU">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1140,10 +1139,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListAllCell" id="X1w-OI-dTb" customClass="JobListAllCell" customModule="layout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="89.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="89.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X1w-OI-dTb" id="dtf-Fa-Ptz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.333335876464844"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666664123535156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0tB-Py-Ylx">
@@ -1169,13 +1168,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-1f-JsU">
-                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="15.999999999999993"/>
+                                                    <rect key="frame" x="80" y="51.666666666666664" width="304" height="16.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peD-yH-xDe">
-                                                    <rect key="frame" x="80" y="70.666666666666671" width="324" height="15.666666666666671"/>
+                                                    <rect key="frame" x="80" y="71" width="324" height="15.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15.666666666666671" id="N2x-Mm-8Dh"/>
                                                     </constraints>
@@ -2259,8 +2258,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="73.333335876464844"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sv-Q1-3xE">
-                                                                    <rect key="frame" x="20" y="20" width="40" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sv-Q1-3xE">
+                                                                    <rect key="frame" x="20" y="20" width="60" height="18"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2279,6 +2278,7 @@
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="vYr-nK-aKu" firstAttribute="leading" secondItem="7Sv-Q1-3xE" secondAttribute="trailing" constant="10" id="2Kx-wx-nOV"/>
                                                                 <constraint firstItem="vYr-nK-aKu" firstAttribute="top" secondItem="Du5-qd-cZs" secondAttribute="top" constant="20" id="3UL-Wf-2EI"/>
                                                                 <constraint firstItem="u4U-eu-eR5" firstAttribute="leading" secondItem="vYr-nK-aKu" secondAttribute="leading" id="7wg-EY-coF"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vYr-nK-aKu" secondAttribute="trailing" constant="20" symbolic="YES" id="8Ec-dO-TRY"/>
@@ -2288,7 +2288,6 @@
                                                                 <constraint firstItem="u4U-eu-eR5" firstAttribute="leading" secondItem="Du5-qd-cZs" secondAttribute="leadingMargin" constant="70" id="eZA-vK-EZW"/>
                                                                 <constraint firstItem="u4U-eu-eR5" firstAttribute="top" secondItem="vYr-nK-aKu" secondAttribute="bottom" constant="8" id="hVZ-oc-iOE"/>
                                                                 <constraint firstItem="vYr-nK-aKu" firstAttribute="baseline" secondItem="7Sv-Q1-3xE" secondAttribute="baseline" id="l83-TQ-Hun"/>
-                                                                <constraint firstItem="vYr-nK-aKu" firstAttribute="leading" secondItem="7Sv-Q1-3xE" secondAttribute="trailing" constant="30" id="n27-2F-jts"/>
                                                                 <constraint firstAttribute="trailing" secondItem="u4U-eu-eR5" secondAttribute="trailing" constant="20" id="plr-0j-rja"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
@@ -2353,7 +2352,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="aWw-AH-4sE" kind="show" id="jcH-Kf-pMV"/>
+                                                    <segue destination="aWw-AH-4sE" kind="show" identifier="toJobDoneView" id="jcH-Kf-pMV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -3737,15 +3736,12 @@
             <point key="canvasLocation" x="1957.9710144927537" y="3186.8303571428569"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="iah-Yx-tYl"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="book" catalog="system" width="64" height="50"/>
         <image name="calender" width="48" height="48"/>
         <image name="calender_black" width="96" height="96"/>
         <image name="card" width="72" height="72"/>
-        <image name="cloud.fill" catalog="system" width="128" height="84"/>
+        <image name="cloud.fill" catalog="system" width="64" height="42"/>
         <image name="files" width="72" height="72"/>
         <image name="flag" width="124" height="92"/>
         <image name="home" width="120" height="112"/>
@@ -3754,12 +3750,15 @@
         <image name="mail" width="96" height="96"/>
         <image name="maps" width="48" height="48"/>
         <image name="path_money" width="53" height="87"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
         <image name="phone" width="96" height="96"/>
         <image name="profile" width="112" height="112"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="square.and.arrow.up.on.square" catalog="system" width="58" height="64"/>
         <image name="star" width="72" height="72"/>
         <image name="upload" width="1356" height="1136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iah-Yx-tYl"/>
+    </inferredMetricsTieBreakers>
 </document>
