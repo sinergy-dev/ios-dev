@@ -21,6 +21,7 @@
 		AD33053424FE0261004C9B1F /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33053324FE0261004C9B1F /* ProgressCell.swift */; };
 		AD33053624FE026C004C9B1F /* DoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33053524FE026C004C9B1F /* DoneCell.swift */; };
 		AD336A4124FE2D480032B25B /* AppliedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD336A4024FE2D480032B25B /* AppliedDetailController.swift */; };
+		AD33D6722514A62B00EA4B17 /* DetailImageSupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33D6712514A62B00EA4B17 /* DetailImageSupportController.swift */; };
 		AD34C21E24EBDDBA00B028FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C21D24EBDDBA00B028FB /* User.swift */; };
 		AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */; };
 		AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34DB492500ECC200BA8FC6 /* DoneDetailController.swift */; };
@@ -119,6 +120,7 @@
 		AD33053324FE0261004C9B1F /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		AD33053524FE026C004C9B1F /* DoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCell.swift; sourceTree = "<group>"; };
 		AD336A4024FE2D480032B25B /* AppliedDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedDetailController.swift; sourceTree = "<group>"; };
+		AD33D6712514A62B00EA4B17 /* DetailImageSupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageSupportController.swift; sourceTree = "<group>"; };
 		AD34C21D24EBDDBA00B028FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDetailCell.swift; sourceTree = "<group>"; };
 		AD34DB492500ECC200BA8FC6 /* DoneDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDetailController.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				AD468EF024F7BA2000EF2CD8 /* PaymentDetailController.swift */,
 				AD3A533824F78DD400F3D80E /* SupportController.swift */,
 				AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */,
+				AD33D6712514A62B00EA4B17 /* DetailImageSupportController.swift */,
 				AD2D5D78250F57EC0045735C /* EditProfileController.swift */,
 				AD732A982510740800374459 /* AlertController.swift */,
 				AD3756FB25109B2B0012B48D /* UIImage.swift */,
@@ -699,6 +702,7 @@
 				AD6B568B24F5FD92008E596D /* Payment.swift in Sources */,
 				AD47DA7924FCEDC40097F283 /* ProgressController.swift in Sources */,
 				ADD3383E24EBAB2100295B40 /* DetailPersonal.swift in Sources */,
+				AD33D6722514A62B00EA4B17 /* DetailImageSupportController.swift in Sources */,
 				ADC218EE24F360040044DE42 /* JobSingle.swift in Sources */,
 				3E54344D250245E10016969B /* JobCategoryAllViewController.swift in Sources */,
 				ADD3384A24EBD3AA00295B40 /* GlobalVariable.swift in Sources */,

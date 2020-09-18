@@ -18,6 +18,14 @@ class SupportDetailController: UIViewController {
     @IBOutlet weak var ReasonLabel: UILabel!
     @IBOutlet weak var IVBukti: UIImageView!
     
+    @available(iOS 13.0, *)
+    @IBAction func Button(_ sender: Any) {
+        let ImageView:DetailImageSupportController = self.storyboard?.instantiateViewController(identifier: "DetailImageSupportController") as! DetailImageSupportController
+        
+        ImageView.selectedImage = self.supportFromSegue.picture_support_url
+        
+        self.navigationController?.pushViewController(ImageView, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
