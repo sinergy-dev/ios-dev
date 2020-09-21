@@ -40,12 +40,16 @@ class DetailController: UIViewController, CarbonTabSwipeNavigationDelegate {
         guard let storyboard = storyboard else { return
             UIViewController() }
         if index == 0 {
+            print(index)
             return storyboard.instantiateViewController(identifier: "AppliedController")
         } else if index == 1 {
+            print(index)
             return storyboard.instantiateViewController(identifier: "AcceptedController")
         } else if index == 2{
+            print(index)
             return storyboard.instantiateViewController(identifier: "ProgressController")
         } else {
+            print(index)
             return storyboard.instantiateViewController(identifier: "DoneController")
         }
     }
