@@ -151,7 +151,7 @@
 		AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLastestProgress.swift; sourceTree = "<group>"; };
 		AD6B569424F64280008E596D /* PaymentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProgress.swift; sourceTree = "<group>"; };
 		AD732A982510740800374459 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; };
+		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD9FCB3525077B760025A866 /* JobListAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllCell.swift; sourceTree = "<group>"; };
 		AD9FCB3725077BFC0025A866 /* JobListAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllController.swift; sourceTree = "<group>"; };
 		ADBC403724F76BBB00A90810 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };

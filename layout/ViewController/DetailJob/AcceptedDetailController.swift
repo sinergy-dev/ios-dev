@@ -20,7 +20,6 @@ class AcceptedDetailController: UIViewController {
     @IBOutlet weak var PICLabel: UILabel!
     @IBOutlet weak var FeeLabel: UILabel!
     
-    @IBOutlet weak var btnStart2: UIButton!
     @IBAction func btnStart(_ sender: Any) {
         self.startJob {
             self.dialogMessage()
