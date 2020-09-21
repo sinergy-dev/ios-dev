@@ -83,8 +83,7 @@ class ProgressDetailController: UIViewController{
     }
     
     func JobDone() {
-        let job_done = self.storyboard?.instantiateViewController(identifier: "JobDoneController") as! JobDoneController
-        self.present(job_done, animated: true, completion: nil)
+        performSegue(withIdentifier: "toJobDoneView", sender: nil)
     }
     
     func Progress() {
