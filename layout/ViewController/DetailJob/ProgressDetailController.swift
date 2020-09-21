@@ -73,8 +73,7 @@ class ProgressDetailController: UIViewController{
     }
     
     func RequestItem() {
-        let request = self.storyboard?.instantiateViewController(identifier: "RequestItemController") as! RequestItemController
-        self.present(request, animated: true, completion: nil)
+        performSegue(withIdentifier: "toJobRequestItemView", sender: nil)
     }
     
     func SupportItem() {
