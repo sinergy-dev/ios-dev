@@ -60,15 +60,15 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
             
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error == nil {
+                let output = String(data: data!, encoding: String.Encoding.utf8) as String?
+                print(output!)
                 do {
-                    
                     self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
-                    
                     DispatchQueue.main.async {
                         completed()
                     }
                 } catch {
-                    print("JSON Error")
+                    print("JSON Error 2")
                 }
             }
         }.resume()
@@ -80,7 +80,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         buttonCategory.heightAnchor.constraint(equalToConstant: 50).isActive = true
         buttonCategory.widthAnchor.constraint(equalToConstant: 50).isActive = true
 
-        let url = URL(string: "https://development.sinergy-dev.xyz:2096/storage/android/image/category_image/ios.png")!
+        let url = URL(string: "https://development-api.sifoma.id/storage/android/image/category_image/ios.png")!
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
@@ -123,7 +123,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
                         completed()
                     }
                 } catch {
-                    print("JSON Error")
+                    print("JSON Error 3")
                 }
             }
         }.resume()
