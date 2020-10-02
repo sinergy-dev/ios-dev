@@ -70,7 +70,7 @@ class ProgressController: UIViewController, UITableViewDelegate, UITableViewData
 //            /Users/ramaagastya/StudioProjects/DispatcherApp
         var request = URLRequest(url:components.url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+        request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
         
         
             

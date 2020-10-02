@@ -78,7 +78,7 @@ class AcceptedDetailController: UIViewController {
         
         var request = URLRequest(url:components.url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+        request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error == nil {
