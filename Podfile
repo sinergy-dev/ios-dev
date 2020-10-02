@@ -5,6 +5,8 @@ target 'layout' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'CarbonKit'
+pod 'Firebase/Core'
+pod 'FirebaseUI/Auth'
 #pod 'Floaty'
   # Pods for layout
 

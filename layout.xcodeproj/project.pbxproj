@@ -58,6 +58,7 @@
 		AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3325075D410025A866 /* DetailJobListController.swift */; };
 		AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3525077B760025A866 /* JobListAllCell.swift */; };
 		AD9FCB3825077BFC0025A866 /* JobListAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3725077BFC0025A866 /* JobListAllController.swift */; };
+		ADB647BB2526FF41007A21A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB647BA2526FF41007A21A4 /* GoogleService-Info.plist */; };
 		ADBC403824F76BBB00A90810 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC403724F76BBB00A90810 /* SupportCell.swift */; };
 		ADC0248024FF3A4400A376A8 /* AcceptedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC0247F24FF3A4400A376A8 /* AcceptedDetailController.swift */; };
 		ADC218E424F35F760044DE42 /* JobCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC218E324F35F760044DE42 /* JobCategory.swift */; };
@@ -160,6 +161,7 @@
 		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD9FCB3525077B760025A866 /* JobListAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllCell.swift; sourceTree = "<group>"; };
 		AD9FCB3725077BFC0025A866 /* JobListAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllController.swift; sourceTree = "<group>"; };
+		ADB647BA2526FF41007A21A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADBC403724F76BBB00A90810 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
 		ADC0247F24FF3A4400A376A8 /* AcceptedDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedDetailController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		ADC218E324F35F760044DE42 /* JobCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategory.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				ADD55B0124C5548A0063BC99 /* Main.storyboard */,
 				ADD55B0424C5548C0063BC99 /* Assets.xcassets */,
 				ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */,
+				ADB647BA2526FF41007A21A4 /* GoogleService-Info.plist */,
 				ADD55B0924C5548C0063BC99 /* Info.plist */,
 			);
 			path = layout;
@@ -426,6 +429,7 @@
 				ADD55AF524C5548A0063BC99 /* Frameworks */,
 				ADD55AF624C5548A0063BC99 /* Resources */,
 				3EB829C3B09ACECA92FCC4F3 /* [CP] Embed Pods Frameworks */,
+				B6BA703B6A580451BAFA1EDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -464,6 +468,7 @@
 				ADD55B1624C5548C0063BC99 /* Frameworks */,
 				ADD55B1724C5548C0063BC99 /* Resources */,
 				DDB49A70081EDB7C29BFC854 /* [CP] Embed Pods Frameworks */,
+				318CBEAF40BC5BC75E2F931D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -524,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD55B0824C5548C0063BC99 /* LaunchScreen.storyboard in Resources */,
+				ADB647BB2526FF41007A21A4 /* GoogleService-Info.plist in Resources */,
 				ADD55B0524C5548C0063BC99 /* Assets.xcassets in Resources */,
 				ADD55B0324C5548A0063BC99 /* Main.storyboard in Resources */,
 			);
@@ -590,6 +596,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		318CBEAF40BC5BC75E2F931D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3EB829C3B09ACECA92FCC4F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,6 +650,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BA703B6A580451BAFA1EDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDB49A70081EDB7C29BFC854 /* [CP] Embed Pods Frameworks */ = {
