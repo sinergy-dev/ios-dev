@@ -39,7 +39,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
                     self.present(alert, animated: true)
                 } else {
-//                    self.performSegue(withIdentifier: "toWelcome", sender: self)
+                    
+                    UserDefaults.standard.set("Bearer " + self.loginObject.response.token!, forKey: "Token")
+                    UserDefaults.standard.set(self.loginObject.response.id_user, forKey: "id_user")
+                    
                     let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
                     UIApplication.shared.windows.first?.rootViewController = viewController
                     UIApplication.shared.windows.first?.makeKeyAndVisible()
