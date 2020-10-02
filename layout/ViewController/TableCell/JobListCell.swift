@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol JobListCellDelegate {
+    func didSeeMoreBtn(indexPath: Int)
+}
+
 class JobListCell: UITableViewCell {
     @IBOutlet weak var FeeLabel: UILabel!
     @IBOutlet weak var LocLabel: UILabel!
@@ -21,6 +25,9 @@ class JobListCell: UITableViewCell {
         }
     }
     
+    var delegate: JobListCellDelegate?
+    var indexPath: Int?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,5 +39,9 @@ class JobListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func seeMoreBtn(_ sender: Any) {
+        delegate?.didSeeMoreBtn(indexPath: indexPath!)
+    }
+    
 }

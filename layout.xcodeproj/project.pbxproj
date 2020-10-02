@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E24A129252727A100F4FDBD /* LoginObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E24A128252727A100F4FDBD /* LoginObject.swift */; };
+		3E24A12B252727AC00F4FDBD /* LoginObjectReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E24A12A252727AC00F4FDBD /* LoginObjectReturn.swift */; };
 		3E54344B250236F80016969B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344A250236F80016969B /* DashboardViewController.swift */; };
 		3E54344D250245E10016969B /* JobCategoryAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344C250245E10016969B /* JobCategoryAllViewController.swift */; };
 		3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344E250247090016969B /* JobCategoryListAll.swift */; };
@@ -14,8 +16,6 @@
 		487172563FA27B265AB16F44 /* Pods_layout_layoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C2BE10452E6A632DF7513 /* Pods_layout_layoutUITests.framework */; };
 		6AF3193262E5DB5ECEF932FB /* Pods_layoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */; };
 		AD007F582525BF160024DFCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F572525BF160024DFCB /* LoginViewController.swift */; };
-		AD007F5B2525C13F0024DFCB /* LoginObjectReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F592525C13F0024DFCB /* LoginObjectReturn.swift */; };
-		AD007F5C2525C13F0024DFCB /* LoginObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F5A2525C13F0024DFCB /* LoginObject.swift */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
 		AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D5D78250F57EC0045735C /* EditProfileController.swift */; };
 		AD311B8425132409005D2920 /* RequestItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD311B8325132409005D2920 /* RequestItemController.swift */; };
@@ -108,7 +108,9 @@
 		0C3C2BE10452E6A632DF7513 /* Pods_layout_layoutUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layout_layoutUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7C374CC2E8240B3F39DF85 /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		30FCA2D4BDB1118A6A3C268B /* Pods_layoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E54344A250236F80016969B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3E24A128252727A100F4FDBD /* LoginObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginObject.swift; sourceTree = "<group>"; };
+		3E24A12A252727AC00F4FDBD /* LoginObjectReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginObjectReturn.swift; sourceTree = "<group>"; };
+		3E54344A250236F80016969B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		3E54344C250245E10016969B /* JobCategoryAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryAllViewController.swift; sourceTree = "<group>"; };
 		3E54344E250247090016969B /* JobCategoryListAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryListAll.swift; sourceTree = "<group>"; };
 		3E543450250247500016969B /* JobCategoryMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryMain.swift; sourceTree = "<group>"; };
@@ -117,8 +119,6 @@
 		74EDB09A5FA2EDDCBF497CBD /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8637C962757333A4DAD78F54 /* Pods-layout-layoutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.debug.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD007F572525BF160024DFCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		AD007F592525C13F0024DFCB /* LoginObjectReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginObjectReturn.swift; path = ../../../../../Downloads/LoginObjectReturn.swift; sourceTree = "<group>"; };
-		AD007F5A2525C13F0024DFCB /* LoginObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginObject.swift; path = ../../../../../Downloads/LoginObject.swift; sourceTree = "<group>"; };
 		AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedCell.swift; sourceTree = "<group>"; };
 		AD2D5D78250F57EC0045735C /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		AD311B8325132409005D2920 /* RequestItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestItemController.swift; sourceTree = "<group>"; };
@@ -281,8 +281,8 @@
 		ADD3384324EBCC6400295B40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AD007F5A2525C13F0024DFCB /* LoginObject.swift */,
-				AD007F592525C13F0024DFCB /* LoginObjectReturn.swift */,
+				3E24A12A252727AC00F4FDBD /* LoginObjectReturn.swift */,
+				3E24A128252727A100F4FDBD /* LoginObject.swift */,
 				3E54344E250247090016969B /* JobCategoryListAll.swift */,
 				3E543450250247500016969B /* JobCategoryMain.swift */,
 				ADD3383D24EBAB2100295B40 /* DetailPersonal.swift */,
@@ -713,11 +713,12 @@
 				ADCCA5C82511FF2F00536170 /* ActionButtonItem.swift in Sources */,
 				AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */,
 				AD47DA7324FCE2250097F283 /* DetailController.swift in Sources */,
-				AD007F5C2525C13F0024DFCB /* LoginObject.swift in Sources */,
+				3E24A129252727A100F4FDBD /* LoginObject.swift in Sources */,
 				AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */,
 				AD9FCB3825077BFC0025A866 /* JobListAllController.swift in Sources */,
 				AD32BB9224ECDB0100D78982 /* UserSingle.swift in Sources */,
 				ADC218E424F35F760044DE42 /* JobCategory.swift in Sources */,
+				3E24A12B252727AC00F4FDBD /* LoginObjectReturn.swift in Sources */,
 				AD47DA7524FCECBC0097F283 /* AcceptedController.swift in Sources */,
 				AD3A533D24F78F2100F3D80E /* SupportList.swift in Sources */,
 				AD36C91F24FF89B0001DDA72 /* JobProgress.swift in Sources */,
@@ -732,7 +733,6 @@
 				AD47DA7724FCEDB50097F283 /* DoneController.swift in Sources */,
 				AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */,
 				AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */,
-				AD007F5B2525C13F0024DFCB /* LoginObjectReturn.swift in Sources */,
 				AD468EF124F7BA2000EF2CD8 /* PaymentDetailController.swift in Sources */,
 				AD4B4E8E251336D2000EC2FA /* SupportItemController.swift in Sources */,
 				ADD3384024EBAE1A00295B40 /* PersonalDetailCell.swift in Sources */,

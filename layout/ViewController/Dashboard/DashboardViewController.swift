@@ -16,6 +16,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     
     var jobList:Job!
     var dataUser:UserSingle!
+    var indexPathNow: Int?
     
     var expandedCellPaths = Set<IndexPath>()
     
@@ -51,7 +52,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         TVJobList.dataSource = self
     }
     
-    func getUser(completed: @escaping () -> ()){
+    private func getUser(completed: @escaping () -> ()){
         let url = URL(string: GlobalVariable.urlGetAccount)
             
         var request = URLRequest(url:url!)
@@ -60,8 +61,6 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
             
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error == nil {
-                let output = String(data: data!, encoding: String.Encoding.utf8) as String?
-                print(output!)
                 do {
                     self.dataUser = try JSONDecoder().decode(UserSingle.self, from: data!)
                     DispatchQueue.main.async {
@@ -108,7 +107,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         stackView.addArrangedSubview(stackViewButton)
     }
     
-    func getData(completed: @escaping () -> ()){
+    private func getData(completed: @escaping () -> ()){
         let url = URL(string: GlobalVariable.urlGetJobListSumm)
             
         var request = URLRequest(url:url!)
@@ -165,6 +164,9 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         cell.LocLabel.text = jobList.job![indexPath.row].location?.long_location
         cell.FeeLabel.text = formattedJobPrice
         
+        cell.delegate = self
+        cell.indexPath = indexPath.row
+        
         return cell
     }
     
@@ -177,7 +179,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
                 expandedCellPaths.remove(indexPath)
             } else {
                 expandedCellPaths.insert(indexPath)
-                performSegue(withIdentifier: "toDetailJobList", sender: self)
+//                    performSegue(withIdentifier: "toDetailJobList", sender: self)
             }
             tableView.beginUpdates()
             tableView.endUpdates()
@@ -192,8 +194,17 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
 ////            print(jobList.job![(TVJobList.indexPathForSelectedRow?.row)!])
 //        }
         if let destination = segue.destination as? DetailJobListController {
-//            print(TVJobList.indexPathForSelectedRow?.row)
-            destination.jobListFromSegue = jobList.job![1]
+            print(TVJobList.indexPathForSelectedRow?.row as Any)
+//            destination.jobListFromSegue = jobList.job![1]
+            destination.jobListFromSegue = jobList.job![indexPathNow!]
         }
+    }
+}
+
+extension DashboardViewController: JobListCellDelegate {
+    func didSeeMoreBtn(indexPath: Int) {
+        indexPathNow = indexPath
+        print("this is " + String(indexPath))
+        performSegue(withIdentifier: "toDetailJobList", sender: self)
     }
 }
