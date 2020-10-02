@@ -20,9 +20,14 @@ class DetailJobListController: UIViewController {
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PICLabel: UILabel!
     @IBOutlet weak var FeeLabel: UILabel!
+
     
     var jobListFromSegue:JobList!
     var jobDetail:JobSingle!
+    
+    @IBAction func btnApply(_ sender: Any) {
+        self.dialogMessage()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +96,47 @@ class DetailJobListController: UIViewController {
                     }
                 } catch {
                     print("JSON Error")
+                }
+            }
+        }.resume()
+    }
+    
+    func dialogMessage() {
+        let dialogMessage = UIAlertController(title: "Are you sure to take this job?", message: jobListFromSegue!.job_name , preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "Accept", style: .default, handler: { (action) -> Void in
+            self.applyJob {
+                self.navigationController?.popViewController(animated: true)
+            }
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+        }
+        
+        dialogMessage.addAction(submit)
+        dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func applyJob(completed: @escaping () -> ()) {
+        let url = GlobalVariable.urlApplyJob
+
+        var components = URLComponents(string: url)!
+        components.queryItems = [
+            URLQueryItem(name: "id_job", value: String(jobListFromSegue!.id))
+        ]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+
+        var request = URLRequest(url:components.url!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    completed()
                 }
             }
         }.resume()

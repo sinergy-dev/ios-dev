@@ -20,6 +20,14 @@ class AcceptedDetailController: UIViewController {
     @IBOutlet weak var PICLabel: UILabel!
     @IBOutlet weak var FeeLabel: UILabel!
     
+    @IBAction func btnStart(_ sender: Any) {
+        self.startJob {
+            self.dialogMessage()
+            
+        }
+        
+    }
+    
     var jobDetail:JobSingle!
     var jobAcceptedFromSegue:JobList!
 
@@ -89,6 +97,41 @@ class AcceptedDetailController: UIViewController {
                     }
                 } catch {
                     print("JSON Error")
+                }
+            }
+        }.resume()
+    }
+    
+    func dialogMessage() {
+        let dialogMessage = UIAlertController(title: jobAcceptedFromSegue.job_name, message: "Successfully Start Job", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        })
+        
+        dialogMessage.addAction(submit)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func startJob(completed: @escaping () -> ()) {
+        let url = GlobalVariable.urlJobStart
+
+        var components = URLComponents(string: url)!
+        components.queryItems = [
+            URLQueryItem(name: "id_job", value: String(jobAcceptedFromSegue!.id))
+        ]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+
+        var request = URLRequest(url:components.url!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(GlobalVariable.tempToken, forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    completed()
                 }
             }
         }.resume()
