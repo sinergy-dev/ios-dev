@@ -88,7 +88,12 @@ class DoneDetailController: UIViewController {
                                 )
                             )
                         } else {
-                            tempDetail_activity += " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
+                            if(progres.id_activity != "5"){
+                                tempDetail_activity += " - " + progres.detail_activity + "\n"
+                            } else {
+                                tempDetail_activity += " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
+                            }
+                            
                             jobProgresTemp[jobProgresTemp.count - 1].detail_activity = tempDetail_activity
                         }
 
