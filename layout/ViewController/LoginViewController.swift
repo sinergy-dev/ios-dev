@@ -18,6 +18,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         textEmail.delegate = self
         textPassword.delegate = self
+        
+        if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+            UIApplication.shared.windows.first?.rootViewController = viewController
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
     }
     
     @IBAction func doLogin(_ sender: Any) {
@@ -42,6 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     UserDefaults.standard.set("Bearer " + self.loginObject.response.token!, forKey: "Token")
                     UserDefaults.standard.set(self.loginObject.response.id_user, forKey: "id_user")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    UserDefaults.standard.synchronize()
                     
                     let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
                     UIApplication.shared.windows.first?.rootViewController = viewController
