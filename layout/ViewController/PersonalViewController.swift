@@ -95,5 +95,14 @@ class PersonalViewController: UIViewController {
             }
         }.resume()
     }
-
+    
+    @IBAction func doLogout(_ sender: Any) {
+        UserDefaults.standard.set(false,forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+        
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
+        UIApplication.shared.windows.first?.rootViewController = viewController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
 }
