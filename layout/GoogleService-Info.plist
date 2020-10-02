@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>609091469814-6nc6k69h45jjtoh3kqmnc5r5hrahcn34.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.609091469814-6nc6k69h45jjtoh3kqmnc5r5hrahcn34</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>609091469814-rcjh5814tfctb264job9fj6peilsutr5.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDOIIYbnWpuwjlj60Fc-_taBHwZC1FedP8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>609091469814</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>id.co.sinergy.layoutTest2</string>
+	<key>PROJECT_ID</key>
+	<string>eod-dev-e021a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eod-dev-e021a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:609091469814:ios:de0c266debdebf54f3c7d7</string>
+	<key>DATABASE_URL</key>
+	<string>https://eod-dev-e021a.firebaseio.com</string>
+</dict>
+</plist>
