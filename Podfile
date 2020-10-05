@@ -7,6 +7,7 @@ target 'layout' do
 pod 'CarbonKit'
 pod 'Firebase/Core'
 pod 'FirebaseUI/Auth'
+pod 'Firebase/Messaging'
 #pod 'Floaty'
   # Pods for layout
 
