@@ -21,9 +21,27 @@ class DoneController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             self.TVDone.reloadData()
         }
+        
+        TVDone.refreshControl = refresher
                     
         TVDone.delegate = self
         TVDone.dataSource = self
+    }
+    
+    let refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+            self.TVDone.reloadData()
+        }
+        sender.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
