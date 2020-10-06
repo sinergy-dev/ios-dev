@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -27,8 +28,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func doLogin(_ sender: Any) {
-        print("Email " + textEmail.text!)
-        print("Paassword " + textPassword.text!)
+//        print("Email " + textEmail.text!)
+//        print("Paassword " + textPassword.text!)
         
         if (textEmail.text == ""){
             let alert = UIAlertController(title: "Email Empty", message: "Please provide valid email!", preferredStyle: .alert)
@@ -51,9 +52,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     UserDefaults.standard.synchronize()
                     
-                    let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
-                    UIApplication.shared.windows.first?.rootViewController = viewController
-                    UIApplication.shared.windows.first?.makeKeyAndVisible()
+                    Auth.auth().signIn(withEmail: self.textEmail.text!, password: self.textPassword.text!) { authResult, error in
+                        if let error = error as NSError? {
+                            if error.code == 17011 {
+                                Auth.auth().createUser(withEmail: self.textEmail.text!, password: self.textPassword.text!) { authResult, error in
+                                    print(Auth.auth().currentUser?.uid ?? "Nil")
+                                    print("Create User Success")
+                                    let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+                                    UIApplication.shared.windows.first?.rootViewController = viewController
+                                    UIApplication.shared.windows.first?.makeKeyAndVisible()
+                                }
+                            } else {
+                                print("Somethings wrong")
+                            }
+                        } else {
+                            print(Auth.auth().currentUser?.uid ?? "Nil")
+                            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+                            UIApplication.shared.windows.first?.rootViewController = viewController
+                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+                        }
+                    }
+                    
+                    
                 }
             }
         }
@@ -87,9 +107,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let output = String(data: data!, encoding: String.Encoding.utf8) as String?
                 print(output!)
                 do {
-                    print(data!)
                     self.loginObject = try JSONDecoder().decode(LoginObject.self, from: data!)
-                    print(self.loginObject.response.success)
                     DispatchQueue.main.async {
                         completed()
                     }

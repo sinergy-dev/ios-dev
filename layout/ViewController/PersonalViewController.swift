@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class PersonalViewController: UIViewController {
     
@@ -99,6 +100,14 @@ class PersonalViewController: UIViewController {
     @IBAction func doLogout(_ sender: Any) {
         UserDefaults.standard.set(false,forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+
         
         let viewController = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
         UIApplication.shared.windows.first?.rootViewController = viewController
