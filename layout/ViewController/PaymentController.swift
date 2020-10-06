@@ -14,15 +14,35 @@ class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var paymentList:Payment!
     
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData {
 //            print("Successfull")
             self.TVPayment.reloadData()
         }
+        
+        TVPayment.refreshControl = refresher
                     
         TVPayment.delegate = self
         TVPayment.dataSource = self
+    }
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+    //            print("Successfull")
+            self.TVPayment.reloadData()
+        }
+        sender.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

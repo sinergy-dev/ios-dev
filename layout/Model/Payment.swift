@@ -9,5 +9,5 @@
 import Foundation
 
 struct Payment:Decodable{
-    let payment:[PaymentList]?
+    var payment:[PaymentList]?
 }
