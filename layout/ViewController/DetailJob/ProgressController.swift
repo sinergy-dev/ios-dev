@@ -22,9 +22,27 @@ class ProgressController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.TVProgress.reloadData()
         }
+        
+        TVProgress.refreshControl = refresher
                     
         TVProgress.delegate = self
         TVProgress.dataSource = self
+    }
+    
+    let refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+            self.TVProgress.reloadData()
+        }
+        sender.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
