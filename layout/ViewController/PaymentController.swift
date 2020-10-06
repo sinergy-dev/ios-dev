@@ -39,7 +39,6 @@ class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataS
     @objc
     private func refresh(sender: UIRefreshControl){
         getData {
-    //            print("Successfull")
             self.TVPayment.reloadData()
         }
         sender.endRefreshing()

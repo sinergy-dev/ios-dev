@@ -25,6 +25,22 @@ class SupportController: UIViewController, UITableViewDelegate, UITableViewDataS
         TVSupport.dataSource = self
     }
     
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+            self.TVSupport.reloadData()
+        }
+        sender.endRefreshing()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.supportList == nil {
             return 0
