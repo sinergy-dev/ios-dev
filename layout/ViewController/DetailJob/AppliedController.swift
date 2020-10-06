@@ -19,12 +19,29 @@ class AppliedController: UIViewController, UITableViewDelegate, UITableViewDataS
         getData {
 //            print("Successfull")
             
-//            self.jobList.job = self.jobList.job!.filter{$0.job_status == "Open"}
             self.TVApllied.reloadData()
         }
+        
+        TVApllied.refreshControl = refresher
                     
         TVApllied.delegate = self
         TVApllied.dataSource = self
+    }
+    
+    let refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+            self.TVApllied.reloadData()
+        }
+        sender.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

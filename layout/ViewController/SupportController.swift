@@ -20,6 +20,8 @@ class SupportController: UIViewController, UITableViewDelegate, UITableViewDataS
 //            print("Successfull")
             self.TVSupport.reloadData()
         }
+        
+        TVSupport.refreshControl = refresher
                     
         TVSupport.delegate = self
         TVSupport.dataSource = self
