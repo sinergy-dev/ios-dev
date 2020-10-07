@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SkeletonView
 
-class SupportController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SupportController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
     
     @IBOutlet weak var TVSupport: UITableView!
     
@@ -16,9 +17,11 @@ class SupportController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.showAnimatedGradientSkeleton()
         getData {
 //            print("Successfull")
             self.TVSupport.reloadData()
+            self.view.hideSkeleton()
         }
         
         TVSupport.refreshControl = refresher
@@ -27,7 +30,7 @@ class SupportController: UIViewController, UITableViewDelegate, UITableViewDataS
         TVSupport.dataSource = self
     }
     
-    lazy var refresher: UIRefreshControl = {
+    let refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
@@ -41,6 +44,10 @@ class SupportController: UIViewController, UITableViewDelegate, UITableViewDataS
             self.TVSupport.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "SupportCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

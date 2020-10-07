@@ -15,7 +15,7 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
     
     var paymentList:Payment!
     
-    lazy var refresher: UIRefreshControl = {
+    let refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)

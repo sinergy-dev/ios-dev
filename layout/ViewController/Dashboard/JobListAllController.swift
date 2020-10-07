@@ -19,9 +19,27 @@ class JobListAllController: UIViewController, UITableViewDelegate, UITableViewDa
         getData {
             self.TVJobListAll.reloadData()
         }
+        
+        TVJobListAll.refreshControl = refresher
                     
         TVJobListAll.delegate = self
         TVJobListAll.dataSource = self
+    }
+    
+    let refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc
+    private func refresh(sender: UIRefreshControl){
+        getData {
+            self.TVJobListAll.reloadData()
+        }
+        sender.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
