@@ -24,7 +24,7 @@ class DetailImagePaymentController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        DispatchQueue.global(priority: .background).async {
+        DispatchQueue.global(qos: .background).async {
             let imageUrl = NSURL(string: self.selectedImage)
             let imageData = NSData(contentsOf: imageUrl! as URL)
             

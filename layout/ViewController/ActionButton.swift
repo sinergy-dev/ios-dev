@@ -190,12 +190,12 @@ open class ActionButton: NSObject {
     }
     
     fileprivate func animateMenu() {
-        let rotation = self.active ? 0 : CGFloat(M_PI_4)
+        let rotation = self.active ? 0 : Double.pi / 4
         
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: UIView.AnimationOptions.allowAnimatedContent, animations: {
             
             if self.floatButton.imageView?.image == nil {
-                self.floatButton.transform = CGAffineTransform(rotationAngle: rotation)
+                self.floatButton.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
             }
     
             self.showActive(false)

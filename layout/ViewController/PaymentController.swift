@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SkeletonView
 
-class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource  {
     
     @IBOutlet weak var TVPayment: UITableView!
     
@@ -25,11 +26,12 @@ class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.showAnimatedGradientSkeleton()
         getData {
 //            print("Successfull")
             self.TVPayment.reloadData()
+            self.view.hideSkeleton()
         }
-        
         TVPayment.refreshControl = refresher
                     
         TVPayment.delegate = self
@@ -42,6 +44,32 @@ class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataS
             self.TVPayment.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    func getData(completed: @escaping () -> ()){
+        
+        let url = URL(string: GlobalVariable.urlGetPayment)
+        
+        var request = URLRequest(url:url!)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
+            
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    self.paymentList = try JSONDecoder().decode(Payment.self, from: data!)
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                } catch {
+                    print("JSON Error")
+                }
+            }
+        }.resume()
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "PaymentCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,28 +104,6 @@ class PaymentController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         
         return cell
-    }
-    
-    func getData(completed: @escaping () -> ()){
-        
-        let url = URL(string: GlobalVariable.urlGetPayment)
-        
-        var request = URLRequest(url:url!)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
-            
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error == nil {
-                do {
-                    self.paymentList = try JSONDecoder().decode(Payment.self, from: data!)
-                    DispatchQueue.main.async {
-                        completed()
-                    }
-                } catch {
-                    print("JSON Error")
-                }
-            }
-        }.resume()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
