@@ -108,9 +108,15 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     private func getData(completed: @escaping () -> ()){
-        let url = URL(string: GlobalVariable.urlGetJobListSumm)
+        let url = GlobalVariable.urlGetJobListSumm
+        
+        var components = URLComponents(string: url)!
+        components.queryItems = [
+            URLQueryItem(name: "job_status", value: "Open")
+        ]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
             
-        var request = URLRequest(url:url!)
+        var request = URLRequest(url:components.url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
             
