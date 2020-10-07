@@ -14,6 +14,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var NameLabel: UILabel!
     
+    var jobAll = 5
     var jobList:Job!
     var dataUser:UserSingle!
     var indexPathNow: Int?
@@ -40,7 +41,6 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         TVJobList.estimatedRowHeight = 50.0
 
         getData {
-//            print(self.jobList.job![0].category?.category_name)
             self.TVJobList.reloadData()
         }
         
@@ -138,7 +138,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         if self.jobList == nil {
             return 0
         }
-        return self.jobList.job!.count
+        return jobAll
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -172,6 +172,19 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         
         cell.delegate = self
         cell.indexPath = indexPath.row
+        
+//        if indexPath.row == jobAll - 1 {
+//            if self.jobList.job!.count > jobAll {
+//              let result = self.jobList.job!.count - jobAll
+//              if result > jobAll {
+//                 jobAll = jobAll
+//              }
+//              else {
+//                 jobAll = result
+//              }
+//              self.TVJobList.reloadData()
+//           }
+//        }
         
         return cell
     }
