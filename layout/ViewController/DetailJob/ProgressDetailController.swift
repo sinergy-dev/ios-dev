@@ -72,6 +72,14 @@ class ProgressDetailController: UIViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toJobDoneView" {
+            if let destination = segue.destination as? JobDoneController {
+                destination.jobProgressFromSegue = self.jobProgressFromSegue
+            }
+        }
+    }
+    
     func RequestItem() {
         performSegue(withIdentifier: "toJobRequestItemView", sender: nil)
     }
@@ -130,12 +138,12 @@ class ProgressDetailController: UIViewController{
                 do {
                     print(data!)
                     let jobProgressTemp:JobProgress = try JSONDecoder().decode(JobProgress.self, from: data!)
-                    print(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10))
-                    print(jobProgressTemp.date_time.prefix(10))
-                    if(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10) == jobProgressTemp.date_time.prefix(10)){
-                        self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity = self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity + " - " +  String(jobProgressTemp.detail_activity.components(separatedBy: " - ")[1])
-                    } else {
-                        self.jobDetail.job!.progress?.append(jobProgressTemp)
+                    if(self.jobDetail.job!.progress!.count != 0){
+                        if(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10) == jobProgressTemp.date_time.prefix(10)){
+                            self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity = self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity + " - " +  String(jobProgressTemp.detail_activity.components(separatedBy: " - ")[1])
+                        } else {
+                            self.jobDetail.job!.progress?.append(jobProgressTemp)
+                        }
                     }
                     DispatchQueue.main.async {
                         completed()
