@@ -17,7 +17,7 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
     
     let refresher: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .black
+        //refreshControl.tintColor = .black
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         
         return refreshControl
@@ -26,16 +26,21 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.showAnimatedGradientSkeleton()
-        getData {
-//            print("Successfull")
-            self.TVPayment.reloadData()
-            self.view.hideSkeleton()
-        }
+        
         TVPayment.refreshControl = refresher
-                    
+        
         TVPayment.delegate = self
         TVPayment.dataSource = self
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVPayment.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
+        
+        
+        
     }
     
     @objc
@@ -44,6 +49,19 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
             self.TVPayment.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.paymentList == nil {
+            TVPayment.isSkeletonable = true
+            TVPayment.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVPayment.reloadData()
+        }
+        
+        
     }
     
     func getData(completed: @escaping () -> ()){
