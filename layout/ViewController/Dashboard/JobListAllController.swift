@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SkeletonView
 
-class JobListAllController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
     
     var jobList:Job!
 
@@ -16,8 +17,10 @@ class JobListAllController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.showAnimatedGradientSkeleton()
         getData {
             self.TVJobListAll.reloadData()
+            self.view.hideSkeleton()
         }
         
         TVJobListAll.refreshControl = refresher
@@ -40,6 +43,10 @@ class JobListAllController: UIViewController, UITableViewDelegate, UITableViewDa
             self.TVJobListAll.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "JobListAllCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
