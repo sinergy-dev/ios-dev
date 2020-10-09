@@ -7,26 +7,27 @@
 //
 
 import UIKit
+import SkeletonView
 
 @available(iOS 13.0, *)
-class ProgressController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProgressController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
 
     @IBOutlet weak var TVProgress: UITableView!
     var jobList:Job!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getData {
-//            print("Successfull")
-            
-            self.TVProgress.reloadData()
-        }
         
         TVProgress.refreshControl = refresher
                     
         TVProgress.delegate = self
         TVProgress.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVProgress.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -43,6 +44,21 @@ class ProgressController: UIViewController, UITableViewDelegate, UITableViewData
             self.TVProgress.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.jobList == nil {
+            TVProgress.isSkeletonable = true
+            TVProgress.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVProgress.reloadData()
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "ProgressCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

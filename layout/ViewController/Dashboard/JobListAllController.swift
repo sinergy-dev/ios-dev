@@ -14,28 +14,29 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
     var jobList:Job!
 
     @IBOutlet weak var TVJobListAll: UITableView!
+    
+    let refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.showAnimatedGradientSkeleton()
-        getData {
-            self.TVJobListAll.reloadData()
-            self.view.hideSkeleton()
-        }
         
         TVJobListAll.refreshControl = refresher
                     
         TVJobListAll.delegate = self
         TVJobListAll.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVJobListAll.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
-    let refresher: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .black
-        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
-        
-        return refreshControl
-    }()
     
     @objc
     private func refresh(sender: UIRefreshControl){
@@ -43,6 +44,17 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
             self.TVJobListAll.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.jobList == nil {
+            TVJobListAll.isSkeletonable = true
+            TVJobListAll.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVJobListAll.reloadData()
+        }
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
