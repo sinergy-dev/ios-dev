@@ -138,7 +138,7 @@ class ProgressDetailController: UIViewController{
                 do {
                     print(data!)
                     let jobProgressTemp:JobProgress = try JSONDecoder().decode(JobProgress.self, from: data!)
-                    if(self.jobDetail.job!.progress!.count != 0){
+                    if(self.jobDetail != nil){
                         if(self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].date_time.prefix(10) == jobProgressTemp.date_time.prefix(10)){
                             self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity = self.jobDetail.job!.progress![self.jobDetail.job!.progress!.count - 1].detail_activity + " - " +  String(jobProgressTemp.detail_activity.components(separatedBy: " - ")[1])
                         } else {
