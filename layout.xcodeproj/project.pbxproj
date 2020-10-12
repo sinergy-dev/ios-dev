@@ -40,6 +40,8 @@
 		AD3A533D24F78F2100F3D80E /* SupportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A533C24F78F2100F3D80E /* SupportList.swift */; };
 		AD3A533F24F79CC800F3D80E /* SupportDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */; };
 		AD45CCB724FE41780005A6BB /* JobPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD45CCB624FE41780005A6BB /* JobPIC.swift */; };
+		AD45F5BA253461C400EC451C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD45F5B9253461C400EC451C /* NotificationController.swift */; };
+		AD45F5BF2534621500EC451C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD45F5BE2534621500EC451C /* NotificationCell.swift */; };
 		AD468EED24F7B6BE00EF2CD8 /* PaymentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD468EEC24F7B6BE00EF2CD8 /* PaymentDetailCell.swift */; };
 		AD468EF124F7BA2000EF2CD8 /* PaymentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD468EF024F7BA2000EF2CD8 /* PaymentDetailController.swift */; };
 		AD47DA6D24FCE04E0097F283 /* AppliedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD47DA6C24FCE04E0097F283 /* AppliedController.swift */; };
@@ -144,6 +146,8 @@
 		AD3A533C24F78F2100F3D80E /* SupportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportList.swift; sourceTree = "<group>"; };
 		AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDetailController.swift; sourceTree = "<group>"; };
 		AD45CCB624FE41780005A6BB /* JobPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPIC.swift; sourceTree = "<group>"; };
+		AD45F5B9253461C400EC451C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		AD45F5BE2534621500EC451C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		AD468EEC24F7B6BE00EF2CD8 /* PaymentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailCell.swift; sourceTree = "<group>"; };
 		AD468EF024F7BA2000EF2CD8 /* PaymentDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailController.swift; sourceTree = "<group>"; };
 		AD47DA6C24FCE04E0097F283 /* AppliedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 				3E54344A250236F80016969B /* DashboardViewController.swift */,
 				AD9FCB3325075D410025A866 /* DetailJobListController.swift */,
 				AD9FCB3725077BFC0025A866 /* JobListAllController.swift */,
+				AD45F5B9253461C400EC451C /* NotificationController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				AD34DB472500EC1500BA8FC6 /* DoneDetailCell.swift */,
 				AD34FEF92505EE9900A19FC7 /* JobListCell.swift */,
 				AD9FCB3525077B760025A866 /* JobListAllCell.swift */,
+				AD45F5BE2534621500EC451C /* NotificationCell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -661,12 +667,14 @@
 				AD38A7AF24F3C5AB005D0D5C /* PaymentController.swift in Sources */,
 				AD311B8425132409005D2920 /* RequestItemController.swift in Sources */,
 				3E543451250247500016969B /* JobCategoryMain.swift in Sources */,
+				AD45F5BF2534621500EC451C /* NotificationCell.swift in Sources */,
 				AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */,
 				ADC218EA24F35FD30044DE42 /* JobLocation.swift in Sources */,
 				AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */,
 				AD33053424FE0261004C9B1F /* ProgressCell.swift in Sources */,
 				AD34FEFA2505EE9900A19FC7 /* JobListCell.swift in Sources */,
 				ADC218F024F3609A0044DE42 /* JobList.swift in Sources */,
+				AD45F5BA253461C400EC451C /* NotificationController.swift in Sources */,
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,
 				AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */,
