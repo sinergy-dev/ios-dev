@@ -3,4 +3,114 @@
    uuid = "8500BA52-863C-467B-8237-12FCE8B2F687"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "layout/ViewController/Dashboard/JobListAllController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - 670e24132f573911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.TVJobListAll.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - 7fa452535d891565"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.TVJobListAll.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - 3727a7bdd995ee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.TVJobListAll.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - a0a0510837d9387d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.TVJobListAll.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - 94867a540a279e30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; layout.JobListAllController"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "289">
+               </Location>
+               <Location
+                  uuid = "6E48D860-6BE9-4818-B243-2CF4DF82F3DD - a78ec524415166c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "layout.JobListAllController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;layout.JobListAllController&gt;"
+                  moduleName = "layout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramaagastya/Documents/IOS/ios-dev/layout/ViewController/Dashboard/JobListAllController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -7,25 +7,26 @@
 //
 
 import UIKit
+import SkeletonView
 
-class AcceptedController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AcceptedController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
  
     @IBOutlet weak var TVAccepted: UITableView!
     var jobList:Job!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getData {
-//            print("Successfull")
-            
-            self.TVAccepted.reloadData()
-        }
         
         TVAccepted.refreshControl = refresher
                             
         TVAccepted.delegate = self
         TVAccepted.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVAccepted.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -42,6 +43,21 @@ class AcceptedController: UIViewController, UITableViewDelegate, UITableViewData
             self.TVAccepted.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.jobList == nil {
+            TVAccepted.isSkeletonable = true
+            TVAccepted.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVAccepted.reloadData()
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "AcceptedCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,25 +7,26 @@
 //
 
 import UIKit
+import SkeletonView
 
-class AppliedController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AppliedController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
 
     @IBOutlet weak var TVApllied: UITableView!
     var jobList:Job!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getData {
-//            print("Successfull")
-            
-            self.TVApllied.reloadData()
-        }
         
         TVApllied.refreshControl = refresher
                     
         TVApllied.delegate = self
         TVApllied.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVApllied.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -42,6 +43,21 @@ class AppliedController: UIViewController, UITableViewDelegate, UITableViewDataS
             self.TVApllied.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.jobList == nil {
+            TVApllied.isSkeletonable = true
+            TVApllied.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVApllied.reloadData()
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "AppliedCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -38,9 +38,6 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
             self.TVPayment.stopSkeletonAnimation()
             self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
         })
-        
-        
-        
     }
     
     @objc
@@ -60,8 +57,6 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
         getData {
             self.TVPayment.reloadData()
         }
-        
-        
     }
     
     func getData(completed: @escaping () -> ()){

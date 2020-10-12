@@ -7,25 +7,26 @@
 //
 
 import UIKit
+import SkeletonView
 
-class DoneController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DoneController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
 
     @IBOutlet weak var TVDone: UITableView!
     var jobList:Job!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getData {
-//            print("Successfull")
-            
-            self.TVDone.reloadData()
-        }
         
         TVDone.refreshControl = refresher
                     
         TVDone.delegate = self
         TVDone.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVDone.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -42,6 +43,21 @@ class DoneController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.TVDone.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.jobList == nil {
+            TVDone.isSkeletonable = true
+            TVDone.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVDone.reloadData()
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "DoneCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

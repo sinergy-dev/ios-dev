@@ -17,17 +17,17 @@ class SupportController: UIViewController, UITableViewDelegate, SkeletonTableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.showAnimatedGradientSkeleton()
-        getData {
-//            print("Successfull")
-            self.TVSupport.reloadData()
-            self.view.hideSkeleton()
-        }
         
         TVSupport.refreshControl = refresher
                     
         TVSupport.delegate = self
         TVSupport.dataSource = self
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVSupport.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -44,6 +44,17 @@ class SupportController: UIViewController, UITableViewDelegate, SkeletonTableVie
             self.TVSupport.reloadData()
         }
         sender.endRefreshing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.supportList == nil {
+            TVSupport.isSkeletonable = true
+            TVSupport.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVSupport.reloadData()
+        }
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
