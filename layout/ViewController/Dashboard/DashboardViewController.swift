@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var TVJobList: UITableView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var jobAll = 5
     var jobList:Job!
@@ -20,6 +21,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
     var indexPathNow: Int?
     
     var expandedCellPaths = Set<IndexPath>()
+    
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +53,19 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         
         TVJobList.delegate = self
         TVJobList.dataSource = self
+        
+        scrollView.alwaysBounceVertical = true
+        scrollView.bounces = true
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        self.scrollView.addSubview(refreshControl)
+    }
+    
+    @objc func didPullToRefresh(){
+        setupView()
+        getData {
+            self.TVJobList.reloadData()
+        }
     }
     
     private func getUser(completed: @escaping () -> ()){
@@ -105,6 +121,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         stackViewButton.addArrangedSubview(textButtonCategory)
         stackViewButton.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(stackViewButton)
+        
+        self.refreshControl?.endRefreshing()
     }
     
     private func getData(completed: @escaping () -> ()){
@@ -132,6 +150,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }.resume()
+        
+        self.refreshControl?.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
