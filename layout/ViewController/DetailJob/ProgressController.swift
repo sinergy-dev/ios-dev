@@ -50,7 +50,7 @@ class ProgressController: UIViewController, UITableViewDelegate, SkeletonTableVi
         super.viewDidAppear(animated)
         if self.jobList == nil {
             TVProgress.isSkeletonable = true
-            TVProgress.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+            TVProgress.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
         }
         getData {
             self.TVProgress.reloadData()

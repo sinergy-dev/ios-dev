@@ -49,7 +49,7 @@ class DoneController: UIViewController, UITableViewDelegate, SkeletonTableViewDa
         super.viewDidAppear(animated)
         if self.jobList == nil {
             TVDone.isSkeletonable = true
-            TVDone.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+            TVDone.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
         }
         getData {
             self.TVDone.reloadData()

@@ -49,7 +49,7 @@ class AcceptedController: UIViewController, UITableViewDelegate, SkeletonTableVi
         super.viewDidAppear(animated)
         if self.jobList == nil {
             TVAccepted.isSkeletonable = true
-            TVAccepted.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+            TVAccepted.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
         }
         getData {
             self.TVAccepted.reloadData()

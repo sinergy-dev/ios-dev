@@ -50,7 +50,7 @@ class SupportController: UIViewController, UITableViewDelegate, SkeletonTableVie
         super.viewDidAppear(animated)
         if self.supportList == nil {
             TVSupport.isSkeletonable = true
-            TVSupport.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+            TVSupport.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
         }
         getData {
             self.TVSupport.reloadData()

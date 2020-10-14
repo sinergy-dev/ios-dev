@@ -52,7 +52,7 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
         super.viewDidAppear(animated)
         if self.paymentList == nil {
             TVPayment.isSkeletonable = true
-            TVPayment.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .concrete), animation: nil, transition: .crossDissolve(0.2))
+            TVPayment.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
         }
         getData {
             self.TVPayment.reloadData()
