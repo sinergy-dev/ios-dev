@@ -26,5 +26,6 @@ enum GlobalVariable {
     static var urlApplyJob = hostServer + "/api/job/postJobApply"
     
     static var urlLogin = hostServer + "/api/api_login"
+    static var urlUpdateProfile = hostServer + "/api/users/postProfileUpdate"
 }
 
