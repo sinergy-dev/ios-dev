@@ -7,22 +7,63 @@
 //
 
 import UIKit
+import SkeletonView
 
-class DashboardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DashboardViewController: UIViewController, SkeletonTableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var TVJobList: UITableView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var Label2: UILabel!
+    @IBOutlet weak var jobCat: UILabel!
+    @IBOutlet weak var jobListLabel: UILabel!
+    @IBOutlet weak var dashboardView: UIView!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
     
     var jobAll = 5
     var jobList:Job!
     var dataUser:UserSingle!
     var indexPathNow: Int?
+    @IBOutlet weak var hiLabel: UILabel!
     
     var expandedCellPaths = Set<IndexPath>()
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.Label2.isSkeletonable = true
+        self.Label2.showAnimatedGradientSkeleton()
+        self.NameLabel.isSkeletonable = true
+        self.NameLabel.showAnimatedGradientSkeleton()
+        self.jobCat.isSkeletonable = true
+        self.jobCat.showAnimatedGradientSkeleton()
+        self.jobListLabel.isSkeletonable = true
+        self.jobListLabel.showAnimatedGradientSkeleton()
+        self.stackView.isSkeletonable = true
+        self.stackView.showAnimatedGradientSkeleton()
+        self.hiLabel.isSkeletonable = true
+        self.hiLabel.showAnimatedGradientSkeleton()
+        self.btn1.isSkeletonable = true
+        self.btn1.showAnimatedGradientSkeleton()
+        self.btn2.isSkeletonable = true
+        self.btn2.showAnimatedGradientSkeleton()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            self.Label2.hideSkeleton()
+            self.NameLabel.hideSkeleton()
+            self.jobCat.hideSkeleton()
+            self.jobListLabel.hideSkeleton()
+            self.stackView.hideSkeleton()
+            self.hiLabel.hideSkeleton()
+            self.btn2.hideSkeleton()
+            self.btn1.hideSkeleton()
+//            self.TVJobList.stopSkeletonAnimation()
+//            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
         
         setupView()
         setupView()
@@ -39,17 +80,43 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         
         TVJobList.rowHeight = UITableView.automaticDimension
         TVJobList.estimatedRowHeight = 50.0
-
-        getData {
-            self.TVJobList.reloadData()
-        }
         
         getUser {
             self.NameLabel.text? = self.dataUser!.user.name
         }
         
+        getData {
+            self.TVJobList.reloadData()
+        }
+        
         TVJobList.delegate = self
         TVJobList.dataSource = self
+        
+        scrollView.alwaysBounceVertical = true
+        scrollView.bounces = true
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        self.scrollView.addSubview(refreshControl)
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        TVJobList.isSkeletonable = true
+//        TVJobList.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
+//        getData {
+//            self.TVJobList.reloadData()
+//        }
+//    }
+    
+    @objc func didPullToRefresh(){
+        setupView()
+        getData {
+            self.TVJobList.reloadData()
+        }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "JobListCell"
     }
     
     private func getUser(completed: @escaping () -> ()){
@@ -105,6 +172,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
         stackViewButton.addArrangedSubview(textButtonCategory)
         stackViewButton.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(stackViewButton)
+        
+        self.refreshControl?.endRefreshing()
     }
     
     private func getData(completed: @escaping () -> ()){
@@ -132,6 +201,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }.resume()
+        
+        self.refreshControl?.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

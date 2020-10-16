@@ -16,6 +16,11 @@ class EditProfileController: UIViewController {
     @IBOutlet weak var ETNumber: UITextField!
     @IBOutlet weak var ETAddress: UITextField!
     
+    @IBAction func btnSubmit(_ sender: Any) {
+        self.updateProfile(updateEmail: (ETEmail.text ?? ""), updateName: (ETName.text ?? ""), updatePhone: (ETNumber.text ?? ""), updateAddress: (ETAddress.text ?? "")){
+            self.dialogMessage()
+        }
+    }
     var dataUser:UserSingle!
     
     override func viewDidLoad() {
@@ -40,6 +45,44 @@ class EditProfileController: UIViewController {
                 }
             }
         }
+    }
+    
+    func dialogMessage() {
+        let dialogMessage = UIAlertController(title: "Hi " + dataUser!.user.name, message: "Successfully Update Profile", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.navigationController?.popViewController(animated: true)
+        })
+        
+        dialogMessage.addAction(submit)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func updateProfile(updateEmail:String, updateName:String, updatePhone:String, updateAddress:String, completed: @escaping () -> ()) {
+        let url = GlobalVariable.urlUpdateProfile
+
+        var components = URLComponents(string: url)!
+        components.queryItems = [
+            URLQueryItem(name: "email", value: updateEmail),
+            URLQueryItem(name: "name", value: updateName),
+            URLQueryItem(name: "phone", value: updatePhone),
+            URLQueryItem(name: "address", value: updateAddress)
+        ]
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+
+        var request = URLRequest(url:components.url!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                DispatchQueue.main.async {
+                    completed()
+                }
+            }
+        }.resume()
     }
     
     func getData(completed: @escaping () -> ()){
