@@ -12,7 +12,6 @@
         <!--Dashboard-->
         <scene sceneID="J5o-h7-dnC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n5y-zo-jDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="erK-c2-jgs" customClass="DashboardViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5i-Xx-MJv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -266,7 +265,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="9bi-ri-cP2"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-9H-3Ye">
-                                <rect key="frame" x="353.5" y="147" width="34.5" height="30"/>
+                                <rect key="frame" x="354" y="147" width="34" height="30"/>
                                 <state key="normal" title="Notif">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -289,11 +288,9 @@
                             <constraint firstItem="WFZ-Dq-YYi" firstAttribute="centerY" secondItem="xGB-Gq-pBU" secondAttribute="centerY" id="VwO-1d-k1l"/>
                             <constraint firstItem="6aq-CL-UrZ" firstAttribute="top" secondItem="sgG-0O-oG7" secondAttribute="bottom" constant="15" id="hO7-w5-HLf"/>
                             <constraint firstItem="sgG-0O-oG7" firstAttribute="top" secondItem="xGB-Gq-pBU" secondAttribute="bottom" constant="5" id="hr4-pw-bSw"/>
-                            <constraint firstItem="ihC-9H-3Ye" firstAttribute="leading" secondItem="WFZ-Dq-YYi" secondAttribute="trailing" constant="193" id="npl-ml-ELD"/>
                             <constraint firstItem="kUr-MJ-OqG" firstAttribute="trailing" secondItem="6aq-CL-UrZ" secondAttribute="trailing" id="qYm-ru-w95"/>
                             <constraint firstItem="kUr-MJ-OqG" firstAttribute="trailing" secondItem="ihC-9H-3Ye" secondAttribute="trailing" constant="26" id="u4C-Bh-1LZ"/>
                             <constraint firstItem="6aq-CL-UrZ" firstAttribute="leading" secondItem="kUr-MJ-OqG" secondAttribute="leading" id="ymb-Xd-lyV"/>
-                            <constraint firstItem="kUr-MJ-OqG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WFZ-Dq-YYi" secondAttribute="trailing" symbolic="YES" id="yzp-jW-hEC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="8ga-3d-VLp"/>
@@ -312,13 +309,13 @@
                         <segue destination="geG-wh-SKR" kind="show" identifier="toDetailJobList" id="6ku-dH-5Wv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5y-zo-jDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1357.9710144927537" y="1704.9107142857142"/>
         </scene>
         <!--Job Category All-->
         <scene sceneID="O1A-nO-iYn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gih-0N-Xuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Bmm-E1-SsQ" customClass="JobCategoryAllViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rs2-oO-lUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -328,13 +325,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Job Category All" id="SCo-bl-Anb"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gih-0N-Xuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4197" y="1705"/>
         </scene>
         <!--Job List All-->
         <scene sceneID="Qb2-Tu-iQQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KfW-dY-b0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0HR-ay-Oew" customClass="JobListAllController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WLf-ld-okW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -465,13 +462,13 @@
                         <segue destination="geG-wh-SKR" kind="show" identifier="toDetailJobListAll" id="Y8v-bJ-odM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfW-dY-b0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3423" y="1705"/>
         </scene>
         <!--Detail Job List-->
         <scene sceneID="qKz-MG-dLP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lpV-aJ-WAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Detail Job List" id="geG-wh-SKR" customClass="DetailJobListController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aqa-Bi-tV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -710,13 +707,13 @@
                         <outlet property="PICLabel" destination="kZv-aH-iDp" id="2dM-Vd-NDf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpV-aJ-WAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2639.130434782609" y="1704.9107142857142"/>
         </scene>
         <!--Notification-->
         <scene sceneID="nwM-Rq-om8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uH1-eR-rS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="c9n-Lw-GdN" customClass="NotificationController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dv8-w1-49I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -789,13 +786,13 @@
                         <outlet property="TVNotif" destination="LA0-tG-ZjZ" id="Un0-KM-byY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uH1-eR-rS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2639" y="899"/>
         </scene>
         <!--Home-->
         <scene sceneID="dR4-4G-Qpy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gnl-kY-xZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKG-de-Q7e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="qn7-mp-uv6"/>
                     <toolbarItems/>
@@ -809,12 +806,13 @@
                         <segue destination="erK-c2-jgs" kind="relationship" relationship="rootViewController" id="ykW-g0-H3W"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnl-kY-xZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1355.625" y="898.94366197183103"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Y8v-bJ-odM"/>
+        <segue reference="6ku-dH-5Wv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="android" width="144" height="144"/>
