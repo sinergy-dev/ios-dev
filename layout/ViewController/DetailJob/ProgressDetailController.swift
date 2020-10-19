@@ -45,6 +45,8 @@ class ProgressDetailController: UIViewController{
         
         getData {
             self.TVProgressJob.reloadData()
+//            self.TVProgressJob.layoutIfNeeded()
+//            self.TVProgressJob.heightAnchor.constraint(equalToConstant: self.TVProgressJob.contentSize.height).isActive = true
         }
         
         TVProgressJob.delegate = self
@@ -257,7 +259,8 @@ extension ProgressDetailController : UITableViewDataSource {
         
         let dateTime = destinationFormat.string(from: sourceFormat.date(from:self.jobDetail.job!.progress![indexPath.row].date_time)!)
     
-        cell.DayLabel.text = dayCounter[indexPath.row]
+//        cell.DayLabel.text = dayCounter[indexPath.row]
+        cell.DayLabel.text = "1"
         cell.DateLabel.text = dateTime
         cell.ActivityLabel.text = jobDetail.job!.progress![indexPath.row].detail_activity
         //if the cell is expanded
