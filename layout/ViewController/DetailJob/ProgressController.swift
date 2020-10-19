@@ -145,7 +145,6 @@ extension UITableView {
     func setemptyView(title: String, message: String, messageImage: UIImage) {
         
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
-        
         let messageImageView = UIImageView()
         let titleLabel = UILabel()
         let messageLabel = UILabel()

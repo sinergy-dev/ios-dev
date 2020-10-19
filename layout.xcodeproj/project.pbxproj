@@ -85,6 +85,11 @@
 		ADD55B0824C5548C0063BC99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */; };
 		ADD55B1324C5548C0063BC99 /* layoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1224C5548C0063BC99 /* layoutTests.swift */; };
 		ADD55B1E24C5548C0063BC99 /* layoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */; };
+		ADEAF5C7253D35E60079C39E /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */; };
+		ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5CB253D3C150079C39E /* Detail.storyboard */; };
+		ADEAF5D1253D3C1F0079C39E /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */; };
+		ADEAF5D6253D3C2A0079C39E /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5D5253D3C2A0079C39E /* Support.storyboard */; };
+		ADEAF5DB253D3C340079C39E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5DA253D3C340079C39E /* Account.storyboard */; };
 		B0D7ADC8502386B6B3752976 /* Pods_layout_layoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEC495D868DC604F5EB20CB /* Pods_layout_layoutUITests.framework */; };
 		E71A3F1968F1FB88D1ACCA6B /* Pods_layoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB347C14B2FB34F865BFE5A3 /* Pods_layoutTests.framework */; };
 /* End PBXBuildFile section */
@@ -197,6 +202,11 @@
 		ADD55B1924C5548C0063BC99 /* layoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = layoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layoutUITests.swift; sourceTree = "<group>"; };
 		ADD55B1F24C5548C0063BC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		ADEAF5CB253D3C150079C39E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		ADEAF5D5253D3C2A0079C39E /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		ADEAF5DA253D3C340079C39E /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		D66648B0C3E878D2E877C025 /* Pods-layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout.release.xcconfig"; path = "Target Support Files/Pods-layout/Pods-layout.release.xcconfig"; sourceTree = "<group>"; };
 		EB347C14B2FB34F865BFE5A3 /* Pods_layoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -380,13 +390,13 @@
 		ADD55AFA24C5548A0063BC99 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				ADEAF5BA253D333D0079C39E /* Storyboards */,
 				ADD3384824EBD36B00295B40 /* Variable */,
 				ADD3384424EBCC7300295B40 /* ViewController */,
 				ADD3384324EBCC6400295B40 /* Model */,
 				ADD55AFB24C5548A0063BC99 /* AppDelegate.swift */,
 				ADD55AFD24C5548A0063BC99 /* SceneDelegate.swift */,
 				ADD55AFF24C5548A0063BC99 /* ViewController.swift */,
-				ADD55B0124C5548A0063BC99 /* Main.storyboard */,
 				ADD55B0424C5548C0063BC99 /* Assets.xcassets */,
 				ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */,
 				ADB647BA2526FF41007A21A4 /* GoogleService-Info.plist */,
@@ -411,6 +421,19 @@
 				ADD55B1F24C5548C0063BC99 /* Info.plist */,
 			);
 			path = layoutUITests;
+			sourceTree = "<group>";
+		};
+		ADEAF5BA253D333D0079C39E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ADD55B0124C5548A0063BC99 /* Main.storyboard */,
+				ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */,
+				ADEAF5CB253D3C150079C39E /* Detail.storyboard */,
+				ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */,
+				ADEAF5D5253D3C2A0079C39E /* Support.storyboard */,
+				ADEAF5DA253D3C340079C39E /* Account.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F800768D3801A724766ABD5A /* Frameworks */ = {
@@ -533,9 +556,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD55B0824C5548C0063BC99 /* LaunchScreen.storyboard in Resources */,
+				ADEAF5D1253D3C1F0079C39E /* Payment.storyboard in Resources */,
+				ADEAF5C7253D35E60079C39E /* Dashboard.storyboard in Resources */,
 				ADB647BB2526FF41007A21A4 /* GoogleService-Info.plist in Resources */,
 				ADD55B0524C5548C0063BC99 /* Assets.xcassets in Resources */,
 				ADD55B0324C5548A0063BC99 /* Main.storyboard in Resources */,
+				ADEAF5D6253D3C2A0079C39E /* Support.storyboard in Resources */,
+				ADEAF5DB253D3C340079C39E /* Account.storyboard in Resources */,
+				ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
