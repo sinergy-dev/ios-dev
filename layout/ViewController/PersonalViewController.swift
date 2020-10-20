@@ -12,7 +12,8 @@ import FirebaseAuth
 class PersonalViewController: UIViewController {
     
     var dataUser:UserSingle!
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
     @IBOutlet weak var PhoneLabel: UILabel!
