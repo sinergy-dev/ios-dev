@@ -558,7 +558,13 @@
         <scene sceneID="ZTV-Xy-Vr8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d6i-at-rYb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="profile_2" id="cbh-YO-ycs"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="profile_2" id="cbh-YO-ycs">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nC2-8U-BaT">

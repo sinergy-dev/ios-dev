@@ -130,6 +130,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="MIN-qb-Yla" kind="relationship" relationship="viewControllers" id="GsS-xx-QVB"/>
@@ -147,7 +152,13 @@
         <scene sceneID="GhP-4f-i2M">
             <objects>
                 <viewControllerPlaceholder storyboardName="Account" id="6Dg-cI-NIb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cxY-ZY-CHO"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="cxY-ZY-CHO">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLS-Zg-Hn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +168,13 @@
         <scene sceneID="hEd-EN-s30">
             <objects>
                 <viewControllerPlaceholder storyboardName="Detail" id="HdJ-nx-VjI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Uud-Te-q8K"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Uud-Te-q8K">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl2-ap-g3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +184,13 @@
         <scene sceneID="YPP-vJ-4pp">
             <objects>
                 <viewControllerPlaceholder storyboardName="Payment" id="82X-Tj-qWN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dfo-AV-ijl"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="dfo-AV-ijl">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI9-4z-kVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +200,13 @@
         <scene sceneID="Krw-dq-0ow">
             <objects>
                 <viewControllerPlaceholder storyboardName="Support" id="0IO-Fk-diN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="79w-GQ-Ywp"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="79w-GQ-Ywp">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTV-bX-YE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,7 +216,13 @@
         <scene sceneID="N4v-uh-FLd">
             <objects>
                 <viewControllerPlaceholder storyboardName="Dashboard" id="MIN-qb-Yla" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DHW-dL-InQ"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="DHW-dL-InQ">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqf-eI-o7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

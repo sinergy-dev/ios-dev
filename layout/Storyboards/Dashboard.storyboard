@@ -794,7 +794,13 @@
         <scene sceneID="dR4-4G-Qpy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKG-de-Q7e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="qn7-mp-uv6"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="qn7-mp-uv6">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aw5-1G-lSs">

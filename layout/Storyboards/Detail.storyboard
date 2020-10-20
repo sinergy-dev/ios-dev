@@ -12,7 +12,6 @@
         <!--Accepted Job-->
         <scene sceneID="1S5-LM-utD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jHM-tY-4Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AcceptedController" title="Accepted Job" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3ug-b2-lMo" customClass="AcceptedController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OyR-4Q-4uR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -132,13 +131,13 @@
                         <segue destination="S6j-ai-re1" kind="show" identifier="toAcceptedDetail" id="ldP-uV-GXf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHM-tY-4Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="2433"/>
         </scene>
         <!--Accepted Detail-->
         <scene sceneID="54N-OK-bfk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezU-lo-sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Accepted Detail" id="S6j-ai-re1" customClass="AcceptedDetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FSQ-tq-ZDt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -396,6 +395,7 @@
                         <outlet property="PICLabel" destination="vbQ-b0-zIE" id="e22-NT-flS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezU-lo-sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="3187"/>
         </scene>
@@ -751,7 +751,6 @@
         <!--Progress Detail-->
         <scene sceneID="ghm-fU-aEd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Stf-1C-YG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Progress Detail" id="uWN-eN-Nio" customClass="ProgressDetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CqV-4n-87x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -993,6 +992,7 @@
                         <outlet property="TVProgressJob" destination="mEC-Zz-Jsn" id="Ged-DA-YcX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Stf-1C-YG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="286.95652173913044" y="3186.8303571428569"/>
         </scene>
@@ -1206,7 +1206,6 @@
         <!--Done Detail-->
         <scene sceneID="ayr-Ch-JDc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8KN-lP-MTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Done Detail" id="d2t-bJ-Kd8" customClass="DoneDetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7P-pQ-OYM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1378,13 +1377,13 @@
                         <outlet property="TVDetailDone" destination="u6a-N9-WsQ" id="UCQ-wa-0ym"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8KN-lP-MTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153.6231884057972" y="3186.8303571428569"/>
         </scene>
         <!--Progress Job-->
         <scene sceneID="cpA-NZ-1Gt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nQO-hp-IQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProgressController" title="Progress Job" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RPp-L4-9k5" customClass="ProgressController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r3U-Hc-Nd1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1504,13 +1503,13 @@
                         <segue destination="uWN-eN-Nio" kind="show" identifier="toProgressDetail" id="Fhp-E3-tuj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQO-hp-IQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="287" y="2433"/>
         </scene>
         <!--Applied Job-->
         <scene sceneID="i6G-R5-BOG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u7C-5R-Y6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AppliedController" title="Applied Job" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rM6-Uo-SD6" customClass="AppliedController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lMJ-Aw-kzg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1630,13 +1629,13 @@
                         <segue destination="Too-7c-m77" kind="show" identifier="toAppliedDetail" id="J7v-T2-dT3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7C-5R-Y6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2639" y="2433"/>
         </scene>
         <!--Applied Detail-->
         <scene sceneID="RdE-DG-acf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDM-kn-jOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Applied Detail" id="Too-7c-m77" customClass="AppliedDetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqE-L8-lZl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1855,13 +1854,13 @@
                         <outlet property="PICLabel" destination="n7q-i1-w1T" id="mXT-uf-8sD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDM-kn-jOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2639.130434782609" y="3186.8303571428569"/>
         </scene>
         <!--Done Job-->
         <scene sceneID="HgW-Su-Aqw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-5b-iL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DoneController" title="Done Job" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Fb-Px-uLA" customClass="DoneController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fbm-u0-qeS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1982,13 +1981,13 @@
                         <segue destination="d2t-bJ-Kd8" kind="show" identifier="toDoneDetail" id="uOm-cT-fJr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dp-5b-iL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="2433"/>
         </scene>
         <!--Job Detail-->
         <scene sceneID="R8c-xe-3hX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjw-bo-He5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="8En-Ma-CSy" customClass="DetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zik-HN-45Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1998,15 +1997,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Job Detail" id="PEm-DX-FMY"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjw-bo-He5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-609" y="1705"/>
         </scene>
         <!--Detail-->
         <scene sceneID="YT1-Eh-GIV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l08-uy-ucN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEl-Rr-fbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Detail" image="task" id="5HR-Oa-3eC"/>
+                    <tabBarItem key="tabBarItem" title="Detail" image="task" id="5HR-Oa-3eC">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IV9-x2-Tng">
@@ -2021,13 +2026,13 @@
                         <segue destination="8En-Ma-CSy" kind="relationship" relationship="rootViewController" id="sao-rd-ElV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l08-uy-ucN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-609.375" y="898.94366197183103"/>
         </scene>
         <!--Navigation Controller Applied-->
         <scene sceneID="eIV-yZ-31d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MpU-8P-Wfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Navigation Controller Applied" automaticallyAdjustsScrollViewInsets="NO" id="A17-HZ-Hmk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cL9-UZ-ID3">
@@ -2039,13 +2044,13 @@
                         <segue destination="rM6-Uo-SD6" kind="relationship" relationship="rootViewController" id="faa-xd-Idg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpU-8P-Wfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3423" y="2433"/>
         </scene>
         <!--Navigation Controller Accepted-->
         <scene sceneID="9en-Vf-O9X">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nVr-Hk-9vu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Navigation Controller Accepted" automaticallyAdjustsScrollViewInsets="NO" id="ERV-rr-VGl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SQg-oh-vbT">
@@ -2057,13 +2062,13 @@
                         <segue destination="3ug-b2-lMo" kind="relationship" relationship="rootViewController" id="HNE-eb-mK0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVr-Hk-9vu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1357" y="2433"/>
         </scene>
         <!--Navigation Controller Progress-->
         <scene sceneID="lg7-i0-FDR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yQL-h1-67I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Navigation Controller Progress" automaticallyAdjustsScrollViewInsets="NO" id="Vop-js-f1S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pgh-pn-qze">
@@ -2075,13 +2080,13 @@
                         <segue destination="RPp-L4-9k5" kind="relationship" relationship="rootViewController" id="BV3-8Z-bB5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQL-h1-67I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="287" y="1705"/>
         </scene>
         <!--Navigation Controller Done-->
         <scene sceneID="26N-zb-B43">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NTj-di-12g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Navigation Controller Done" automaticallyAdjustsScrollViewInsets="NO" id="cbz-Tg-Yqg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IJW-03-ESV">
@@ -2093,6 +2098,7 @@
                         <segue destination="5Fb-Px-uLA" kind="relationship" relationship="rootViewController" id="A62-0x-gV2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTj-di-12g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="1705"/>
         </scene>

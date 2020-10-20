@@ -329,7 +329,13 @@
         <scene sceneID="xyl-NT-t9w">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i1C-YK-kmT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Support" image="chat" id="dZd-3G-LXE"/>
+                    <tabBarItem key="tabBarItem" title="Support" image="chat" id="dZd-3G-LXE">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2bS-og-Z3o">
@@ -371,6 +377,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

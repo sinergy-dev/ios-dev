@@ -334,7 +334,13 @@
         <scene sceneID="w5z-SH-jaO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DRQ-14-jsS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Payment" image="payment" id="ogJ-wB-hhh"/>
+                    <tabBarItem key="tabBarItem" title="Payment" image="payment" id="ogJ-wB-hhh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Aca-sO-C34">
@@ -376,6 +382,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
