@@ -85,6 +85,7 @@
 		ADD55B0824C5548C0063BC99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */; };
 		ADD55B1324C5548C0063BC99 /* layoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1224C5548C0063BC99 /* layoutTests.swift */; };
 		ADD55B1E24C5548C0063BC99 /* layoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */; };
+		ADEA60C3254012EE0087E9D6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */; };
 		ADEAF5C7253D35E60079C39E /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */; };
 		ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5CB253D3C150079C39E /* Detail.storyboard */; };
 		ADEAF5D1253D3C1F0079C39E /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */; };
@@ -202,6 +203,7 @@
 		ADD55B1924C5548C0063BC99 /* layoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = layoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layoutUITests.swift; sourceTree = "<group>"; };
 		ADD55B1F24C5548C0063BC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ADEAF5CB253D3C150079C39E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				AD3756FD2510A53D0012B48D /* DetailImagePaymentController.swift */,
 				ADCCA5C52511FEE700536170 /* ActionButton.swift */,
 				ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */,
+				ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				ADBC403824F76BBB00A90810 /* SupportCell.swift in Sources */,
 				ADD3384224EBAFDD00295B40 /* PersonalDetailController.swift in Sources */,
 				AD3756FC25109B2B0012B48D /* UIImage.swift in Sources */,
+				ADEA60C3254012EE0087E9D6 /* ChatViewController.swift in Sources */,
 				AD3A533B24F78F1400F3D80E /* Support.swift in Sources */,
 				AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */,
 				ADD55AFE24C5548A0063BC99 /* SceneDelegate.swift in Sources */,

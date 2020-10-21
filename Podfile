@@ -8,6 +8,7 @@ target 'layout' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'SkeletonView'
+  pod 'MessageKit'
   # Pods for layout
 
   target 'layoutTests' do

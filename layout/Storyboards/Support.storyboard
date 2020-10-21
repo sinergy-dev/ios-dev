@@ -277,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="2716" y="2433"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="nod-OY-hvZ">
             <objects>
-                <viewController id="cuL-lr-fLc" sceneMemberID="viewController">
+                <viewController id="cuL-lr-fLc" customClass="ChatViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyH-on-quD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

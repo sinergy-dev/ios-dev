@@ -63,7 +63,7 @@ class SupportDetailController: UIViewController {
     }
     
     func setupButtons() {
-        let chat = ActionButtonItem(title: "Chat", image: #imageLiteral(resourceName: "chat_2"))
+        let chat = ActionButtonItem(title: "Chat", image: #imageLiteral(resourceName: "Exclusion_2"))
         chat.action = {
             item in self.Chat()
             self.actionButton.toggleMenu()
