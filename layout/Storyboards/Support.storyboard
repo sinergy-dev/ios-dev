@@ -134,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-nK-dkH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ddX-IP-VCW">
                                                 <rect key="frame" x="15" y="5" width="40" height="40"/>
@@ -197,6 +197,14 @@
                                                     <action selector="Button:" destination="y1t-g5-e0T" eventType="touchUpInside" id="zhi-e5-R6x"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-vl-Zom">
+                                                <rect key="frame" x="15" y="627" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="cuL-lr-fLc" kind="show" identifier="toChatView" id="LbG-pH-zQE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -214,7 +222,7 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="47x-4V-6gr" secondAttribute="trailing" constant="20" symbolic="YES" id="Oji-eA-7qy"/>
                                             <constraint firstItem="ugP-Bm-2Ml" firstAttribute="leading" secondItem="gMn-Aw-yby" secondAttribute="leading" id="TfU-kK-64V"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hho-py-Ake" secondAttribute="trailing" constant="20" symbolic="YES" id="VKy-ue-0Qv"/>
-                                            <constraint firstAttribute="height" constant="800" id="XMC-AG-D3c"/>
+                                            <constraint firstAttribute="height" constant="700" id="XMC-AG-D3c"/>
                                             <constraint firstItem="47x-4V-6gr" firstAttribute="top" secondItem="ddX-IP-VCW" secondAttribute="bottom" constant="20" id="cFG-fQ-MPd"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IU5-VY-eR9" secondAttribute="trailing" constant="20" symbolic="YES" id="hJk-WK-d3T"/>
                                             <constraint firstItem="ugP-Bm-2Ml" firstAttribute="top" secondItem="gMn-Aw-yby" secondAttribute="bottom" constant="3" id="jTe-ST-cPU"/>
@@ -228,6 +236,11 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ugP-Bm-2Ml" secondAttribute="trailing" constant="20" symbolic="YES" id="q8o-We-Ufl"/>
                                             <constraint firstItem="hho-py-Ake" firstAttribute="top" secondItem="ugP-Bm-2Ml" secondAttribute="bottom" constant="20" id="tz2-ax-mf6"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="DuW-vl-Zom"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -263,6 +276,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFw-YV-9zu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2716" y="2433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nod-OY-hvZ">
+            <objects>
+                <viewController id="cuL-lr-fLc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyH-on-quD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jVM-RA-NO7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2d5-pB-Tso"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poF-Kd-kFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="2433"/>
         </scene>
         <!--Detail Image Support Controller-->
         <scene sceneID="y1w-lE-Zpo">

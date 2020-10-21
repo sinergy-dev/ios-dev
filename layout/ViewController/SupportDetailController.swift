@@ -11,6 +11,7 @@ import UIKit
 class SupportDetailController: UIViewController {
 
     var supportFromSegue:SupportList!
+    var actionButton : ActionButton!
     
     @IBOutlet weak var IVSupportDetail: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
@@ -57,6 +58,25 @@ class SupportDetailController: UIViewController {
                 }
             }
         }
+        
+        setupButtons()
+    }
+    
+    func setupButtons() {
+        let chat = ActionButtonItem(title: "Chat", image: #imageLiteral(resourceName: "chat_2"))
+        chat.action = {
+            item in self.Chat()
+            self.actionButton.toggleMenu()
+        }
+        actionButton = ActionButton(attachedToView: self.view, items: [chat])
+        actionButton.setTitle("+", forState: UIControl.State())
+        actionButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        actionButton.action = { button in button.toggleMenu()}
+        
+    }
+    
+    func Chat() {
+        performSegue(withIdentifier: "toChatView", sender: nil)
     }
 
 }
