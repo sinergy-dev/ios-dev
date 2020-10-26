@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="2716" y="2433"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="nod-OY-hvZ">
             <objects>
                 <viewController id="cuL-lr-fLc" customClass="ChatViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
@@ -287,7 +287,7 @@
                         <viewLayoutGuide key="safeArea" id="jVM-RA-NO7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2d5-pB-Tso"/>
+                    <navigationItem key="navigationItem" title="Chat" id="2d5-pB-Tso"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poF-Kd-kFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

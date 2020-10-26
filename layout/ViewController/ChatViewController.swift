@@ -2,12 +2,13 @@
 //  ChatViewController.swift
 //  layout
 //
-//  Created by Rama Agastya on 21/10/20.
+//  Created by Rama Agastya on 23/10/20.
 //  Copyright © 2020 Rama Agastya. All rights reserved.
 //
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 struct Sender: SenderType {
     var senderId: String
@@ -20,7 +21,8 @@ struct Message: MessageType {
     var sentDate: Date
     var kind: MessageKind
 }
-class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
+
+class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate, InputBarAccessoryViewDelegate {
     
     let currentUser = Sender(senderId: "self", displayName: "Engineer")
     
@@ -61,9 +63,35 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
                                sentDate: Date().addingTimeInterval(-26400),
                                kind: .text("This is the last message.")))
         
+        messageInputBar.delegate = self
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+    }
+    
+    private func insertNewMessage(_ messag: Message) {
+        message.append(messag)
+        messagesCollectionView.reloadData()
+
+        DispatchQueue.main.async {
+          self.messagesCollectionView.scrollToBottom(animated: true)
+        }
+    }
+    
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        print(text)
+
+        let message =  Message(sender: currentUser,
+        messageId: "6",
+        sentDate: Date().addingTimeInterval(-26400),
+        kind: .text(text))
+          //messages.append(message)
+        insertNewMessage(message)
+        //                  save(message)
+        
+        inputBar.inputTextView.text = ""
+        messagesCollectionView.reloadData()
+        messagesCollectionView.scrollToBottom(animated: true)
     }
     
     func currentSender() -> SenderType {

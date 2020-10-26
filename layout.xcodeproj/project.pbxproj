@@ -55,6 +55,7 @@
 		AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568C24F5FDBD008E596D /* PaymentList.swift */; };
 		AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */; };
 		AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B569424F64280008E596D /* PaymentProgress.swift */; };
+		AD6E78282542B9D400E26250 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E78272542B9D400E26250 /* ChatViewController.swift */; };
 		AD732A992510740800374459 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD732A982510740800374459 /* AlertController.swift */; };
 		AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3325075D410025A866 /* DetailJobListController.swift */; };
 		AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3525077B760025A866 /* JobListAllCell.swift */; };
@@ -85,7 +86,6 @@
 		ADD55B0824C5548C0063BC99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */; };
 		ADD55B1324C5548C0063BC99 /* layoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1224C5548C0063BC99 /* layoutTests.swift */; };
 		ADD55B1E24C5548C0063BC99 /* layoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */; };
-		ADEA60C3254012EE0087E9D6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */; };
 		ADEAF5C7253D35E60079C39E /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */; };
 		ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5CB253D3C150079C39E /* Detail.storyboard */; };
 		ADEAF5D1253D3C1F0079C39E /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */; };
@@ -167,6 +167,7 @@
 		AD6B568C24F5FDBD008E596D /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
 		AD6B568E24F5FE05008E596D /* PaymentLastestProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLastestProgress.swift; sourceTree = "<group>"; };
 		AD6B569424F64280008E596D /* PaymentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProgress.swift; sourceTree = "<group>"; };
+		AD6E78272542B9D400E26250 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AD732A982510740800374459 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD9FCB3525077B760025A866 /* JobListAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllCell.swift; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 		ADD55B1924C5548C0063BC99 /* layoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = layoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD55B1D24C5548C0063BC99 /* layoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layoutUITests.swift; sourceTree = "<group>"; };
 		ADD55B1F24C5548C0063BC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ADEAF5C6253D35E60079C39E /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ADEAF5CB253D3C150079C39E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 				AD3756FD2510A53D0012B48D /* DetailImagePaymentController.swift */,
 				ADCCA5C52511FEE700536170 /* ActionButton.swift */,
 				ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */,
-				ADEA60C2254012EE0087E9D6 /* ChatViewController.swift */,
+				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -461,6 +461,7 @@
 				ADD55AF524C5548A0063BC99 /* Frameworks */,
 				ADD55AF624C5548A0063BC99 /* Resources */,
 				F02AB70A3E389716FE7526A4 /* [CP] Embed Pods Frameworks */,
+				2F4F54DBD65B8F37EE4B09E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +500,7 @@
 				ADD55B1624C5548C0063BC99 /* Frameworks */,
 				ADD55B1724C5548C0063BC99 /* Resources */,
 				735F5AA5370BC48C503CF1BF /* [CP] Embed Pods Frameworks */,
+				B63AF91920EBC5DA4180DC14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -587,6 +589,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2F4F54DBD65B8F37EE4B09E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-layout/Pods-layout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D233455373911CE74F7DE30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +689,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B63AF91920EBC5DA4180DC14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F02AB70A3E389716FE7526A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -728,7 +764,6 @@
 				ADBC403824F76BBB00A90810 /* SupportCell.swift in Sources */,
 				ADD3384224EBAFDD00295B40 /* PersonalDetailController.swift in Sources */,
 				AD3756FC25109B2B0012B48D /* UIImage.swift in Sources */,
-				ADEA60C3254012EE0087E9D6 /* ChatViewController.swift in Sources */,
 				AD3A533B24F78F1400F3D80E /* Support.swift in Sources */,
 				AD2D5D79250F57EC0045735C /* EditProfileController.swift in Sources */,
 				ADD55AFE24C5548A0063BC99 /* SceneDelegate.swift in Sources */,
@@ -737,6 +772,7 @@
 				AD47DA7724FCEDB50097F283 /* DoneController.swift in Sources */,
 				AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */,
 				AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */,
+				AD6E78282542B9D400E26250 /* ChatViewController.swift in Sources */,
 				AD468EF124F7BA2000EF2CD8 /* PaymentDetailController.swift in Sources */,
 				AD4B4E8E251336D2000EC2FA /* SupportItemController.swift in Sources */,
 				ADD3384024EBAE1A00295B40 /* PersonalDetailCell.swift in Sources */,
