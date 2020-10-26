@@ -78,5 +78,13 @@ class SupportDetailController: UIViewController {
     func Chat() {
         performSegue(withIdentifier: "toChatView", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChatView" {
+            if let destination = segue.destination as? ChatViewController {
+                destination.chatSupportFromSegue = self.supportFromSegue
+            }
+        }
+    }
 
 }

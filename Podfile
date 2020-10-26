@@ -9,10 +9,7 @@ target 'layout' do
   pod 'Firebase/Auth'
   pod 'SkeletonView'
   pod 'MessageKit'
-  pod 'Firebase/Firestore'
-  pod 'SDWebImage'
   pod 'Firebase/Database'
-  pod 'GoogleSignIn'
   # Pods for layout
 
   target 'layoutTests' do
