@@ -14,16 +14,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textEmail: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     var loginObject:LoginObject!
+    var validityToken: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textEmail.delegate = self
         textPassword.delegate = self
         
+        
         if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
-            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
-            UIApplication.shared.windows.first?.rootViewController = viewController
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            checkTokenValidity(userToken: UserDefaults.standard.string(forKey: "Token")! ){
+                if (self.validityToken!){
+                    let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+                    UIApplication.shared.windows.first?.rootViewController = viewController
+                    UIApplication.shared.windows.first?.makeKeyAndVisible()
+                }
+            }
         }
     }
     
@@ -72,8 +78,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             UIApplication.shared.windows.first?.makeKeyAndVisible()
                         }
                     }
-                    
-                    
                 }
             }
         }
@@ -113,6 +117,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 } catch {
                     print("JSON Error 1")
+                }
+            }
+        }.resume()
+    }
+    
+    func checkTokenValidity(userToken:String, completed: @escaping () -> ()){
+        let url = GlobalVariable.urlGetCheckToken
+        var request = URLRequest(url:URL(string:url)!)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(userToken, forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                if((response as! HTTPURLResponse).statusCode == 200) {
+                    self.validityToken = true
+                } else {
+                    self.validityToken = false
+                }
+                DispatchQueue.main.async {
+                    completed()
                 }
             }
         }.resume()

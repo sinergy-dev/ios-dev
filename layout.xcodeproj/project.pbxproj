@@ -156,7 +156,7 @@
 		AD45F5BE2534621500EC451C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		AD468EEC24F7B6BE00EF2CD8 /* PaymentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailCell.swift; sourceTree = "<group>"; };
 		AD468EF024F7BA2000EF2CD8 /* PaymentDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailController.swift; sourceTree = "<group>"; };
-		AD47DA6C24FCE04E0097F283 /* AppliedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedController.swift; sourceTree = "<group>"; };
+		AD47DA6C24FCE04E0097F283 /* AppliedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD47DA7224FCE2250097F283 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		AD47DA7424FCECBC0097F283 /* AcceptedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedController.swift; sourceTree = "<group>"; };
 		AD47DA7624FCEDB50097F283 /* DoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneController.swift; sourceTree = "<group>"; };
