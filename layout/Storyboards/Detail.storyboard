@@ -2005,7 +2005,7 @@
         <scene sceneID="YT1-Eh-GIV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEl-Rr-fbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Detail" image="task" id="5HR-Oa-3eC">
+                    <tabBarItem key="tabBarItem" title="Detail" image="task_small" id="5HR-Oa-3eC">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -46251,7 +46251,7 @@ Go4ABBqQAAQamQAEGp4ABBqkAAQarAAEGq4ABBqwAAQasgAEGrQABCwgAAQsJQAELDIABCw1AAQsQgAE
 LEcABCxPAAQsUgAELFcABCxfAAAAAAAABAEAAAAAAAAAZwAAAAAAAAAAAAAAAAAELGI
 </mutableData>
         </image>
-        <image name="task" width="28" height="28"/>
+        <image name="task_small" width="24" height="24"/>
         <image name="upload" width="1356" height="1136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -334,7 +334,7 @@
         <scene sceneID="w5z-SH-jaO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DRQ-14-jsS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Payment" image="payment" id="ogJ-wB-hhh">
+                    <tabBarItem key="tabBarItem" title="Payment" image="payment_small" id="ogJ-wB-hhh">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -376,7 +376,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="payment" width="27" height="28"/>
+        <image name="payment_small" width="24" height="28"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

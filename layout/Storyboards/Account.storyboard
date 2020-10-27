@@ -558,7 +558,7 @@
         <scene sceneID="ZTV-Xy-Vr8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d6i-at-rYb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="profile_2" id="cbh-YO-ycs">
+                    <tabBarItem key="tabBarItem" title="Account" image="profile_small" id="cbh-YO-ycs">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -589,7 +589,7 @@
         <image name="mail" width="96" height="96"/>
         <image name="maps" width="48" height="48"/>
         <image name="phone" width="96" height="96"/>
-        <image name="profile_2" width="28" height="28"/>
+        <image name="profile_small" width="24" height="24"/>
         <image name="star" width="72" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
