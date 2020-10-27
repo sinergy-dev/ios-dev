@@ -86,6 +86,12 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
         }
     }
     
+    func backgroundColor(for message: MessageType, at  indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor{
+        
+        return isFromCurrentSender(message: message) ? .carrot : UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+    }
+
+    
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
             print(text)
         let locationRef = ref.child("job_support").child(String(chatSupportFromSegue!.id)).child("chat").childByAutoId()

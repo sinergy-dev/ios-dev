@@ -793,8 +793,8 @@
         <!--Home-->
         <scene sceneID="dR4-4G-Qpy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKG-de-Q7e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="qn7-mp-uv6">
+                <navigationController storyboardIdentifier="DashboardPage" automaticallyAdjustsScrollViewInsets="NO" id="JKG-de-Q7e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home_small" id="qn7-mp-uv6">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -824,6 +824,7 @@
         <image name="android" width="144" height="144"/>
         <image name="calender_black" width="96" height="96"/>
         <image name="home" width="28" height="28"/>
+        <image name="home_small" width="24" height="24"/>
         <image name="level" width="96" height="96"/>
         <image name="location" width="96" height="96"/>
         <image name="path_money" width="53" height="87"/>

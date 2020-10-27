@@ -57,6 +57,7 @@
 		AD6B569524F64280008E596D /* PaymentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B569424F64280008E596D /* PaymentProgress.swift */; };
 		AD6E78282542B9D400E26250 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E78272542B9D400E26250 /* ChatViewController.swift */; };
 		AD732A992510740800374459 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD732A982510740800374459 /* AlertController.swift */; };
+		AD775F4B2547CAAE0009F448 /* IntroScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD775F4A2547CAAE0009F448 /* IntroScreenController.swift */; };
 		AD9FCB3425075D410025A866 /* DetailJobListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3325075D410025A866 /* DetailJobListController.swift */; };
 		AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3525077B760025A866 /* JobListAllCell.swift */; };
 		AD9FCB3825077BFC0025A866 /* JobListAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCB3725077BFC0025A866 /* JobListAllController.swift */; };
@@ -169,6 +170,7 @@
 		AD6B569424F64280008E596D /* PaymentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProgress.swift; sourceTree = "<group>"; };
 		AD6E78272542B9D400E26250 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AD732A982510740800374459 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		AD775F4A2547CAAE0009F448 /* IntroScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD9FCB3325075D410025A866 /* DetailJobListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobListController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		AD9FCB3525077B760025A866 /* JobListAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllCell.swift; sourceTree = "<group>"; };
 		AD9FCB3725077BFC0025A866 /* JobListAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListAllController.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				ADCCA5C52511FEE700536170 /* ActionButton.swift */,
 				ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */,
 				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
+				AD775F4A2547CAAE0009F448 /* IntroScreenController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				ADC218E824F35FB60044DE42 /* JobCustomerLocation.swift in Sources */,
 				AD47DA6D24FCE04E0097F283 /* AppliedController.swift in Sources */,
 				ADC218E624F35F940044DE42 /* JobCustomer.swift in Sources */,
+				AD775F4B2547CAAE0009F448 /* IntroScreenController.swift in Sources */,
 				AD468EED24F7B6BE00EF2CD8 /* PaymentDetailCell.swift in Sources */,
 				AD3756FE2510A53D0012B48D /* DetailImagePaymentController.swift in Sources */,
 				ADC218F224F360BC0044DE42 /* Job.swift in Sources */,

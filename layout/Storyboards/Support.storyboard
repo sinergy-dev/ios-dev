@@ -358,7 +358,7 @@
         <scene sceneID="xyl-NT-t9w">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i1C-YK-kmT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Support" image="chat" id="dZd-3G-LXE">
+                    <tabBarItem key="tabBarItem" title="Support" image="chat_small" id="dZd-3G-LXE">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -400,7 +400,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chat" width="28" height="28"/>
+        <image name="chat_small" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
