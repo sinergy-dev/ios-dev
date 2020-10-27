@@ -192,7 +192,7 @@
 		ADD3384124EBAFDC00295B40 /* PersonalDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailController.swift; sourceTree = "<group>"; };
 		ADD3384624EBCCBD00295B40 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		ADD3384924EBD3AA00295B40 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
-		ADD55AF824C5548A0063BC99 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD55AF824C5548A0063BC99 /* EOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD55AFB24C5548A0063BC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD55AFD24C5548A0063BC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADD55AFF24C5548A0063BC99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -386,7 +386,7 @@
 		ADD55AF924C5548A0063BC99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADD55AF824C5548A0063BC99 /* layout.app */,
+				ADD55AF824C5548A0063BC99 /* EOD.app */,
 				ADD55B0E24C5548C0063BC99 /* layoutTests.xctest */,
 				ADD55B1924C5548C0063BC99 /* layoutUITests.xctest */,
 			);
@@ -471,7 +471,7 @@
 			);
 			name = layout;
 			productName = layout;
-			productReference = ADD55AF824C5548A0063BC99 /* layout.app */;
+			productReference = ADD55AF824C5548A0063BC99 /* EOD.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ADD55B0D24C5548C0063BC99 /* layoutTests */ = {
@@ -946,15 +946,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MT3XWRFFP;
+				DEVELOPMENT_TEAM = 27B52XR7K3;
 				INFOPLIST_FILE = layout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest1;
+				PRODUCT_NAME = EOD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -973,8 +973,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest1;
+				PRODUCT_NAME = EOD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
