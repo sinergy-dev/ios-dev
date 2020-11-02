@@ -21,5 +21,5 @@ class PersonalDetailCell: UITableViewCell {
         IVPersonalDetail.image = data.image
         JobLabel.text = data.title
         CategoryLabel.text = data.category
-    }
+    } 
 }
