@@ -110,7 +110,7 @@ class PersonalViewController: UIViewController {
         }
 
         
-        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "loginView")
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginView")
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
