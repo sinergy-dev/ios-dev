@@ -34,8 +34,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func doLogin(_ sender: Any) {
-//        print("Email " + textEmail.text!)
-//        print("Paassword " + textPassword.text!)
         
         if (textEmail.text == ""){
             let alert = UIAlertController(title: "Email Empty", message: "Please provide valid email!", preferredStyle: .alert)
