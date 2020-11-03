@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 Auth.auth().createUser(withEmail: self.textEmail.text!, password: self.textPassword.text!) { authResult, error in
                                     print(Auth.auth().currentUser?.uid ?? "Nil")
                                     print("Create User Success")
-                                    let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+                                    let viewController = self.storyboard!.instantiateViewController(withIdentifier: "launchscreen") as! UINavigationController
                                     UIApplication.shared.windows.first?.rootViewController = viewController
                                     UIApplication.shared.windows.first?.makeKeyAndVisible()
                                 }
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             }
                         } else {
                             print(Auth.auth().currentUser?.uid ?? "Nil")
-                            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarcontroller") as! UITabBarController
+                            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "launchscreen") as! UINavigationController
                             UIApplication.shared.windows.first?.rootViewController = viewController
                             UIApplication.shared.windows.first?.makeKeyAndVisible()
                         }
