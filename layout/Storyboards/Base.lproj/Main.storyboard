@@ -244,7 +244,6 @@
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-93-Oko">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9FU-0y-Mzp">
                                 <rect key="frame" x="146.33333333333334" y="751.66666666666663" width="121.33333333333334" height="27.333333333333371"/>
@@ -304,7 +303,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RHh-7v-aDt"/>
-                        <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9FU-0y-Mzp" firstAttribute="centerX" secondItem="DVm-eh-51Q" secondAttribute="centerX" id="1vF-Ap-OHW"/>
                             <constraint firstItem="eau-tv-Y5z" firstAttribute="trailing" secondItem="RHh-7v-aDt" secondAttribute="trailing" id="2sr-GF-4Su"/>
