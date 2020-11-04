@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jhe-ks-kkg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MYY-JV-qYS">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,6 +9,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="KJV-BA-TXL">
+            <objects>
+                <viewController id="MYY-JV-qYS" customClass="LaunchScreenViewController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VnK-Wa-Zo0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freelance_logoaja" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-px-KUA">
+                                <rect key="frame" x="132" y="408" width="150" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ejU-ij-NkQ"/>
+                                    <constraint firstAttribute="height" constant="90" id="waO-NU-rf4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9g-4w-enj"/>
+                        <color key="backgroundColor" red="0.80788040159999996" green="0.84173423049999996" blue="0.98663228749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AMh-px-KUA" firstAttribute="centerX" secondItem="e9g-4w-enj" secondAttribute="centerX" id="B7z-sV-bOl"/>
+                            <constraint firstItem="AMh-px-KUA" firstAttribute="centerY" secondItem="e9g-4w-enj" secondAttribute="centerY" id="QGq-Hf-SXT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E97-dU-tn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1771" y="98"/>
+        </scene>
         <!--Login-->
         <scene sceneID="gBe-IG-fQo">
             <objects>
