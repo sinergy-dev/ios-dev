@@ -23,28 +23,11 @@ class IntroScreenController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var aaa = UIImage(named: 'android')
-        arrImages.append(UIImage(named:"slide_1")!)
-        arrImages.append(UIImage(named:"slide_2")!)
-        arrImages.append(UIImage(named:"slide_3")!)
-        arrImages.append(UIImage(named:"slide_4")!)
+        arrImages.append(UIImage(named:"onboard1")!)
+        arrImages.append(UIImage(named:"onboard2")!)
+        arrImages.append(UIImage(named:"onboard3")!)
+        arrImages.append(UIImage(named:"onboard4")!)
 
-//        let fm = FileManager.default
-//        let path = Bundle.main.resourcePath! + "/images"
-//        print("cek bundle "+Bundle.main.resourcePath!)
-//        print(path)
-//        do{
-//            let item = try fm.contentsOfDirectory(atPath: path).filter{$0.lowercased().hasSuffix(".png") || $0.lowercased().hasSuffix(".jpg")}
-//            print(item)
-//            arrImages.removeAll()
-//            for imgs in item{
-//                print(imgs)
-//                arrImages.append(UIImage(named:"images/\(imgs)")!)
-//                print(arrImages)
-//            }
-//        }catch let e{
-//            print("error  : \(e)")
-//        }
         btnNext.isHidden = true
         btnPrevious.isHidden = true
         btnSkip.roundCorners()
@@ -61,7 +44,7 @@ class IntroScreenController: UIViewController, UIScrollViewDelegate {
         let pageCount = arrImages.count
         imgScrollView.frame = view.bounds
         imgScrollView.delegate = self
-        imgScrollView.backgroundColor = UIColor.clear
+//        imgScrollView.backgroundColor = UIColor.white
         imgScrollView.isPagingEnabled = true
         imgScrollView.showsHorizontalScrollIndicator = false
         imgScrollView.showsVerticalScrollIndicator = false
@@ -74,7 +57,6 @@ class IntroScreenController: UIViewController, UIScrollViewDelegate {
                 Int(self.view.frame.size.width) , height: Int(self.view.frame.size.height/1.2))
             imageView.contentMode = .scaleAspectFit
             imageView.image = arrImages[i]
-//            imageView.backgroundColor = UIColor.white
             self.imgScrollView.addSubview(imageView)
         }
         
@@ -171,7 +153,7 @@ class IntroScreenController: UIViewController, UIScrollViewDelegate {
 
 extension UIButton {
     func roundCorners() {
-        self.layer.cornerRadius = self.frame.size.height / 2
+        self.layer.cornerRadius = 5
         self.clipsToBounds = true
     }
     
