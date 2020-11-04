@@ -85,9 +85,9 @@ class DashboardViewController: UIViewController, SkeletonTableViewDataSource, UI
             self.NameLabel.text? = self.dataUser!.user.name
         }
         
-        getData {
-            self.TVJobList.reloadData()
-        }
+//        getData {
+//            self.TVJobList.reloadData()
+//        }
         
         TVJobList.delegate = self
         TVJobList.dataSource = self

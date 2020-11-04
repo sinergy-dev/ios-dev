@@ -295,6 +295,9 @@
                                                                 <integer key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnDownload:" destination="S6j-ai-re1" eventType="touchUpInside" id="e7F-Pk-ifH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

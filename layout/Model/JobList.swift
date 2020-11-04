@@ -24,6 +24,7 @@ struct JobList:Decodable {
     let date_start:String
     let date_end:String
     let date_add:String
+    let letter_of_assignment:String
     let category:JobCategory?
     let customer:JobCustomer?
     let location:JobLocation?
