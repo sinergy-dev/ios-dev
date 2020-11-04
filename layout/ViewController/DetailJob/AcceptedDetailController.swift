@@ -28,6 +28,10 @@ class AcceptedDetailController: UIViewController {
         
     }
     
+    @IBAction func btnDownload(_ sender: Any) {
+        UIApplication.shared.open(URL(string: self.jobDetail.job!.letter_of_assignment)!)
+    }
+    
     var jobDetail:JobSingle!
     var jobAcceptedFromSegue:JobList!
 
