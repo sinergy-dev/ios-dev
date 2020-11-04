@@ -22,6 +22,7 @@ enum GlobalVariable {
     
     static var urlUpdateJobProgress = hostServer + "/api/job/postJobUpdate"
     static var urlUpdateJobDone = hostServer + "/api/job/postJobFinish"
+    static var urlUpdateJobSupport = hostServer + "/api/job/postJobRequestSupport"
     
     static var urlJobStart = hostServer + "/api/job/postJobStart"
     static var urlApplyJob = hostServer + "/api/job/postJobApply"

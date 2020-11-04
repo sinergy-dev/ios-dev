@@ -92,6 +92,12 @@ class ProgressDetailController: UIViewController{
                 destination.jobProgressFromSegue = self.jobProgressFromSegue
             }
         }
+        
+        if segue.identifier == "toJobRequestSupportView" {
+            if let destination = segue.destination as? SupportItemController {
+                destination.jobProgressFromSegue = self.jobProgressFromSegue
+            }
+        }
     }
     
     func RequestItem() {

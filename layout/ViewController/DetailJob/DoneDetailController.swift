@@ -99,12 +99,7 @@ class DoneDetailController: UIViewController {
 
                     }
                     self.jobDetail.job!.progress! = jobProgresTemp
-//                    for progressTemp in jobProgresTemp {
-//                        print("Date " + progressTemp.date_time)
-//                        print("Activity \n" + progressTemp.detail_activity)
-//                    }
-                    
-                    
+                   
                     DispatchQueue.main.async {
                         completed()
                     }
