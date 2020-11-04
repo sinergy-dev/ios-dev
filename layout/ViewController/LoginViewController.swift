@@ -51,10 +51,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.present(alert, animated: true)
                 } else {
                     
-//                    UserDefaults.standard.set("Bearer " + self.loginObject.response.token!, forKey: "Token")
-//                    UserDefaults.standard.set(self.loginObject.response.id_user, forKey: "id_user")
-//                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
-//                    UserDefaults.standard.synchronize()
+                    UserDefaults.standard.set("Bearer " + self.loginObject.response.token!, forKey: "Token")
+                    UserDefaults.standard.set(self.loginObject.response.id_user, forKey: "id_user")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    UserDefaults.standard.synchronize()
                     
                     Auth.auth().signIn(withEmail: self.textEmail.text!, password: self.textPassword.text!) { authResult, error in
                         if let error = error as NSError? {
