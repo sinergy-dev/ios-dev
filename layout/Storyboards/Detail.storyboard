@@ -482,6 +482,12 @@
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just JPEG, PNG are accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-Kh-THg">
+                                                <rect key="frame" x="135.5" y="863.5" width="143" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image size should be within 10 mb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzV-7x-Mta">
                                                 <rect key="frame" x="124.5" y="879.5" width="165.5" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -492,12 +498,6 @@
                                                 <rect key="frame" x="154.5" y="901.5" width="105" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just JPEG, PNG are accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-Kh-THg">
-                                                <rect key="frame" x="135.5" y="863.5" width="143" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-m5-cxi">
@@ -599,16 +599,16 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hod-sU-Kup">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="799.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1082"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT REQUEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5O-fO-ORk">
-                                                <rect key="frame" x="136" y="20" width="142" height="19.5"/>
+                                                <rect key="frame" x="136.5" y="20" width="141.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This form is submit by your request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-dM-H6S">
-                                                <rect key="frame" x="78" y="46.5" width="258" height="18"/>
+                                                <rect key="frame" x="78" y="46.5" width="258.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -639,7 +639,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="3Sz-zo-2Hm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hp-9n-lCr">
                                                 <rect key="frame" x="20" y="274.5" width="48" height="17"/>
@@ -661,15 +661,47 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-1v-XJO">
-                                                <rect key="frame" x="50" y="410.5" width="314" height="250"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="jg4-aG-AhL"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="upload"/>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vta-aw-m5B">
+                                                <rect key="frame" x="50" y="410.5" width="314" height="520"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-1v-XJO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="250"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="jg4-aG-AhL"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="upload"/>
+                                                        <connections>
+                                                            <action selector="jobRequestPicturePick:" destination="plx-d3-xO9" eventType="touchUpInside" id="c3H-ou-dxq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-lJ-aiT">
+                                                        <rect key="frame" x="0.0" y="270" width="314" height="250"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="Jsk-0Z-JG5"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just JPEG, PNG are accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOU-Xe-wDK">
+                                                <rect key="frame" x="135.5" y="950.5" width="143" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image size should be within 10 mb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-uS-luQ">
+                                                <rect key="frame" x="124.5" y="966.5" width="165.5" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-cZ-Hda">
+                                                <rect key="frame" x="154.5" y="988.5" width="105" height="13.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-v4-1cq">
-                                                <rect key="frame" x="40" y="739.5" width="334" height="30"/>
+                                                <rect key="frame" x="40" y="1022" width="334" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Submit">
@@ -680,38 +712,24 @@
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="jobRequestSubmit:" destination="plx-d3-xO9" eventType="touchUpInside" id="8hF-Q7-mrp"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just JPEG, PNG are accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOU-Xe-wDK">
-                                                <rect key="frame" x="135.5" y="668.5" width="143" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image size should be within 10 mb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-uS-luQ">
-                                                <rect key="frame" x="124" y="684.5" width="166" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-cZ-Hda">
-                                                <rect key="frame" x="154.5" y="706.5" width="105" height="13"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="lYk-IM-Psy" firstAttribute="top" secondItem="V7b-wK-zrA" secondAttribute="bottom" constant="15" id="0eE-de-YB9"/>
                                             <constraint firstAttribute="trailing" secondItem="V7b-wK-zrA" secondAttribute="trailing" constant="20" id="1ws-8z-eGy"/>
+                                            <constraint firstItem="OOU-Xe-wDK" firstAttribute="centerX" secondItem="Vta-aw-m5B" secondAttribute="centerX" id="2mW-5j-C9n"/>
                                             <constraint firstAttribute="bottom" secondItem="cOD-v4-1cq" secondAttribute="bottom" constant="30" id="6xZ-Jp-kr5"/>
-                                            <constraint firstAttribute="trailing" secondItem="8tr-1v-XJO" secondAttribute="trailing" constant="50" id="7bu-W7-JWy"/>
                                             <constraint firstAttribute="trailing" secondItem="cOD-v4-1cq" secondAttribute="trailing" constant="40" id="8ME-h6-IA4"/>
                                             <constraint firstItem="6SG-WV-IeD" firstAttribute="top" secondItem="lYk-IM-Psy" secondAttribute="bottom" constant="8" id="Aun-Ln-Hzw"/>
                                             <constraint firstItem="1c4-dM-H6S" firstAttribute="top" secondItem="M5O-fO-ORk" secondAttribute="bottom" constant="7" id="E3Y-pU-xUH"/>
                                             <constraint firstItem="E5n-6T-rkq" firstAttribute="leading" secondItem="w6J-ia-u0Q" secondAttribute="leading" id="EwL-OY-erH"/>
                                             <constraint firstItem="cOD-v4-1cq" firstAttribute="top" secondItem="Zem-cZ-Hda" secondAttribute="bottom" constant="20" id="K3w-LA-GfI"/>
                                             <constraint firstItem="E5n-6T-rkq" firstAttribute="top" secondItem="w6J-ia-u0Q" secondAttribute="bottom" constant="15" id="LTu-xw-hct"/>
+                                            <constraint firstItem="Vta-aw-m5B" firstAttribute="leading" secondItem="hod-sU-Kup" secondAttribute="leading" constant="50" id="N1l-vq-ZPs"/>
                                             <constraint firstItem="V7b-wK-zrA" firstAttribute="top" secondItem="Bht-3x-WXk" secondAttribute="bottom" constant="8" id="NPF-dB-3Ba"/>
                                             <constraint firstItem="1c4-dM-H6S" firstAttribute="centerX" secondItem="M5O-fO-ORk" secondAttribute="centerX" id="O0w-Ve-RcK"/>
                                             <constraint firstItem="V7b-wK-zrA" firstAttribute="leading" secondItem="Bht-3x-WXk" secondAttribute="leading" id="OGu-hc-4yu"/>
@@ -719,27 +737,26 @@
                                             <constraint firstItem="M5O-fO-ORk" firstAttribute="top" secondItem="hod-sU-Kup" secondAttribute="top" constant="20" id="PeP-Vh-UKc"/>
                                             <constraint firstItem="w6J-ia-u0Q" firstAttribute="leading" secondItem="6hp-9n-lCr" secondAttribute="leading" id="SRi-ad-4s6"/>
                                             <constraint firstItem="6hp-9n-lCr" firstAttribute="top" secondItem="6SG-WV-IeD" secondAttribute="bottom" constant="12.999999999999744" id="UzS-uO-PlZ"/>
+                                            <constraint firstItem="Vta-aw-m5B" firstAttribute="top" secondItem="E5n-6T-rkq" secondAttribute="bottom" constant="20" id="VsC-IQ-ate"/>
                                             <constraint firstItem="w6J-ia-u0Q" firstAttribute="leading" secondItem="hod-sU-Kup" secondAttribute="leading" constant="20" id="Z2a-Iq-9Rb"/>
-                                            <constraint firstItem="OOU-Xe-wDK" firstAttribute="centerX" secondItem="8tr-1v-XJO" secondAttribute="centerX" id="dtu-va-GBI"/>
                                             <constraint firstItem="cOD-v4-1cq" firstAttribute="leading" secondItem="hod-sU-Kup" secondAttribute="leading" constant="40" id="eZd-V7-r6J"/>
                                             <constraint firstItem="n6n-uS-luQ" firstAttribute="centerX" secondItem="OOU-Xe-wDK" secondAttribute="centerX" id="fyV-hI-sEj"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E5n-6T-rkq" secondAttribute="trailing" constant="20" symbolic="YES" id="gbP-nj-sE0"/>
                                             <constraint firstItem="n6n-uS-luQ" firstAttribute="top" secondItem="OOU-Xe-wDK" secondAttribute="bottom" constant="4" id="hM6-3E-By9"/>
-                                            <constraint firstItem="OOU-Xe-wDK" firstAttribute="top" secondItem="8tr-1v-XJO" secondAttribute="bottom" constant="8" id="hVv-nu-egs"/>
                                             <constraint firstItem="Bht-3x-WXk" firstAttribute="top" secondItem="1c4-dM-H6S" secondAttribute="top" constant="40" id="hZa-TB-p0o"/>
                                             <constraint firstItem="6SG-WV-IeD" firstAttribute="leading" secondItem="lYk-IM-Psy" secondAttribute="leading" id="jVr-pt-oPz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vta-aw-m5B" secondAttribute="trailing" constant="50" id="lTU-V9-YnV"/>
                                             <constraint firstItem="w6J-ia-u0Q" firstAttribute="top" secondItem="6hp-9n-lCr" secondAttribute="bottom" constant="7.0000000000002842" id="nCo-Iu-bWQ"/>
-                                            <constraint firstItem="8tr-1v-XJO" firstAttribute="top" secondItem="E5n-6T-rkq" secondAttribute="bottom" constant="20" id="odn-Jm-BjS"/>
                                             <constraint firstItem="Bht-3x-WXk" firstAttribute="leading" secondItem="hod-sU-Kup" secondAttribute="leading" constant="20" id="pEc-Vv-Me3"/>
                                             <constraint firstAttribute="trailing" secondItem="w6J-ia-u0Q" secondAttribute="trailing" constant="20" id="rGY-uU-Is7"/>
                                             <constraint firstItem="Zem-cZ-Hda" firstAttribute="top" secondItem="n6n-uS-luQ" secondAttribute="bottom" constant="10" id="rev-a5-90A"/>
                                             <constraint firstItem="lYk-IM-Psy" firstAttribute="leading" secondItem="V7b-wK-zrA" secondAttribute="leading" id="sSF-2M-SZe"/>
                                             <constraint firstItem="Zem-cZ-Hda" firstAttribute="centerX" secondItem="n6n-uS-luQ" secondAttribute="centerX" id="vGd-di-G9c"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lYk-IM-Psy" secondAttribute="trailing" constant="20" symbolic="YES" id="vsZ-rU-LPd"/>
+                                            <constraint firstItem="OOU-Xe-wDK" firstAttribute="top" secondItem="Vta-aw-m5B" secondAttribute="bottom" constant="20" id="wYE-xt-OwW"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6hp-9n-lCr" secondAttribute="trailing" constant="20" symbolic="YES" id="xOr-cU-tvk"/>
                                             <constraint firstItem="M5O-fO-ORk" firstAttribute="centerX" secondItem="hod-sU-Kup" secondAttribute="centerX" id="xqq-hC-B4h"/>
                                             <constraint firstAttribute="trailing" secondItem="6SG-WV-IeD" secondAttribute="trailing" constant="20" id="zCs-w9-0yN"/>
-                                            <constraint firstItem="8tr-1v-XJO" firstAttribute="leading" secondItem="hod-sU-Kup" secondAttribute="leading" constant="50" id="zIM-3g-zbH"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -765,6 +782,13 @@
                         <viewLayoutGuide key="safeArea" id="R3z-6Z-VQe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Form Request item" id="7Ai-Xn-vVu"/>
+                    <connections>
+                        <outlet property="inputName" destination="V7b-wK-zrA" id="jUx-zR-Dh0"/>
+                        <outlet property="inputNominal" destination="6SG-WV-IeD" id="8RJ-HG-u4C"/>
+                        <outlet property="inputReason" destination="w6J-ia-u0Q" id="ESz-Rg-vrk"/>
+                        <outlet property="jobRequestPicture" destination="Lc7-lJ-aiT" id="mYa-NR-LwQ"/>
+                        <outlet property="jobRequestPicturePickButton" destination="8tr-1v-XJO" id="iqX-wj-Oll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsB-yP-psY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
