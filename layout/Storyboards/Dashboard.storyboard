@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Dashboard-->
         <scene sceneID="J5o-h7-dnC">
             <objects>
-                <viewController id="erK-c2-jgs" customClass="DashboardViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="erK-c2-jgs" customClass="DashboardViewController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5i-Xx-MJv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,14 +91,14 @@
                                                     <segue destination="0HR-ay-Oew" kind="show" id="GUt-ZG-cvb"/>
                                                 </connections>
                                             </button>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ee-55-GZ8">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ee-55-GZ8">
                                                 <rect key="frame" x="10" y="181" width="394" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="rdI-cL-vRy"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListCell" rowHeight="110" id="fDK-Wa-3HD" customClass="JobListCell" customModule="layout" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListCell" rowHeight="110" id="fDK-Wa-3HD" customClass="JobListCell" customModule="EOD" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="394" height="110"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fDK-Wa-3HD" id="AtN-jn-m2y">
@@ -316,7 +316,7 @@
         <!--Job Category All-->
         <scene sceneID="O1A-nO-iYn">
             <objects>
-                <viewController id="Bmm-E1-SsQ" customClass="JobCategoryAllViewController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bmm-E1-SsQ" customClass="JobCategoryAllViewController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rs2-oO-lUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +332,7 @@
         <!--Job List All-->
         <scene sceneID="Qb2-Tu-iQQ">
             <objects>
-                <viewController id="0HR-ay-Oew" customClass="JobListAllController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0HR-ay-Oew" customClass="JobListAllController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WLf-ld-okW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListAllCell" id="ERg-KF-Xwu" customClass="JobListAllCell" customModule="layout" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobListAllCell" id="ERg-KF-Xwu" customClass="JobListAllCell" customModule="EOD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="89.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ERg-KF-Xwu" id="Vbv-Bq-70Y">
@@ -469,7 +469,7 @@
         <!--Detail Job List-->
         <scene sceneID="qKz-MG-dLP">
             <objects>
-                <viewController title="Detail Job List" id="geG-wh-SKR" customClass="DetailJobListController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail Job List" id="geG-wh-SKR" customClass="DetailJobListController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aqa-Bi-tV0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -714,7 +714,7 @@
         <!--Notification-->
         <scene sceneID="nwM-Rq-om8">
             <objects>
-                <viewController id="c9n-Lw-GdN" customClass="NotificationController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c9n-Lw-GdN" customClass="NotificationController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dv8-w1-49I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,7 +723,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotificationCell" rowHeight="70" id="7Tu-Bm-bvt" customClass="NotificationCell" customModule="layout" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotificationCell" rowHeight="70" id="7Tu-Bm-bvt" customClass="NotificationCell" customModule="EOD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Tu-Bm-bvt" id="XxG-2D-2IL">

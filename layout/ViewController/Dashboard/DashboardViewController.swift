@@ -85,9 +85,9 @@ class DashboardViewController: UIViewController, SkeletonTableViewDataSource, UI
             self.NameLabel.text? = self.dataUser!.user.name
         }
         
-//        getData {
-//            self.TVJobList.reloadData()
-//        }
+        getData {
+            self.TVJobList.reloadData()
+        }
         
         TVJobList.delegate = self
         TVJobList.dataSource = self
@@ -208,8 +208,12 @@ class DashboardViewController: UIViewController, SkeletonTableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.jobList == nil {
             return 0
+        } else if jobList.job!.count <= jobAll {
+            return jobList.job!.count
+        } else {
+            return jobAll
         }
-        return jobAll
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
