@@ -12,6 +12,7 @@ enum GlobalVariable {
     static let hostServer = "https://development-api.sifoma.id"
     static let urlGetCheckToken = hostServer + "/api/check_token"
     static var urlGetJobList = hostServer + "/api/job/getJobByCategory"
+    static var urlGetCategoryAll = hostServer + "/dashboard/getJobCategoryAll"
     static var urlGetJobDetail = hostServer + "/api/job/getJobOpen"
     static var urlGetAccount = hostServer + "/api/users/getProfileDetail"
     static var urlGetPayment = hostServer + "/api/payment/getJobPayment"

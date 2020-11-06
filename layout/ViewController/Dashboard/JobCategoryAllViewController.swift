@@ -27,7 +27,7 @@ class JobCategoryAllViewController: UIViewController {
         }
     }
     func getDataCategory(completed: @escaping () -> ()){
-        let url = "https://sinergy-dev.xyz:2096/dashboard/getJobCategoryAll"
+        let url = GlobalVariable.urlGetCategoryAll
         
         let components = URLComponents(string: url)!
         let request = URLRequest(url: components.url!)
