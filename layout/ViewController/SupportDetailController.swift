@@ -59,7 +59,10 @@ class SupportDetailController: UIViewController {
             }
         }
         
-        setupButtons()
+        if self.supportFromSegue.status != "Open" {
+            setupButtons()
+        }
+        
     }
     
     func setupButtons() {
