@@ -10,9 +10,17 @@ import UIKit
 
 class SupportItemController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backgroundView: UIView!
     var jobProgressFromSegue:JobList!
     
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var progressView: UIProgressView!
     var imagePicker  = UIImagePickerController()
+    
+    let progress = Progress(totalUnitCount: 10)
     
     @IBOutlet weak var inputProblem: UITextField!
     @IBOutlet weak var inputReason: UITextField!
@@ -22,8 +30,10 @@ class SupportItemController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backgroundView.isHidden = true
         jobSupportPicture.isHidden = true
         imagePicker.delegate = self
+        
     }
     
     @IBAction func jobSupportPicturePick(_ sender: Any) {
@@ -46,9 +56,29 @@ class SupportItemController: UIViewController, UIImagePickerControllerDelegate, 
         
         let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
-            self.submitJobSupport(image: self.jobSupportPicture.image!){
-                _ = self.navigationController?.popViewController(animated: true)
+            self.backgroundView.isHidden = false
+            self.scrollView.isHidden = true
+            
+            self.activityIndicator.center = self.backgroundView.center
+            self.activityIndicator.hidesWhenStopped = true
+            if #available(iOS 13.0, *) {
+                self.activityIndicator.style = .large
+            } else {
+                // Fallback on earlier versions
             }
+            self.activityIndicator.color = .black
+            self.backgroundView.addSubview(self.activityIndicator)
+            self.activityIndicator.startAnimating()
+            self.navigationController?.navigationBar.isHidden = true
+            self.submitJobSupport(image: self.jobSupportPicture.image!){
+                self.activityIndicator.stopAnimating()
+                self.backgroundView.isHidden = true
+                self.scrollView.isHidden = false
+                self.showAlertSuccess()
+//                _ = self.navigationController?.popViewController(animated: true)
+                
+            }
+            
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
@@ -57,6 +87,20 @@ class SupportItemController: UIViewController, UIImagePickerControllerDelegate, 
         
         dialogMessage.addAction(submit)
         dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func showAlertSuccess() {
+        let dialogMessage = UIAlertController(title: "Success", message: "Data telah ditambah", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            
+            _ = self.navigationController?.popViewController(animated: true)
+        })
+        
+        dialogMessage.addAction(submit)
         
         self.present(dialogMessage, animated: true, completion: nil)
     }

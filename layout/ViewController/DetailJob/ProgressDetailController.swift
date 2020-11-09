@@ -22,6 +22,8 @@ class ProgressDetailController: UIViewController{
     var jobProgressFromSegue:JobList!
     var jobDetail:JobSingle!
     
+    var isJobDone = false
+    
     var expandedIndexSet : IndexSet = []
     var dayCounter=[String]()
     
@@ -43,6 +45,9 @@ class ProgressDetailController: UIViewController{
             }
         }
         
+        print(self.isJobDone)
+        print("tes")
+        
         getData {
             self.TVProgressJob.reloadData()
 //            self.TVProgressJob.layoutIfNeeded()
@@ -55,7 +60,11 @@ class ProgressDetailController: UIViewController{
         TVProgressJob.rowHeight = UITableView.automaticDimension
         TVProgressJob.estimatedRowHeight = 280.0
         
-        setupButtons()
+        if !isJobDone {
+            setupButtons()
+        }
+        print(self.isJobDone)
+        
     }
     
     func setupButtons() {
@@ -204,6 +213,12 @@ class ProgressDetailController: UIViewController{
                 do {
                     self.jobDetail = try JSONDecoder().decode(JobSingle.self, from: data!)
                     
+                    for progresTemp in self.jobDetail.job!.progress! {
+                        if progresTemp.id_activity == "6" {
+                            self.isJobDone = true
+                        }
+                    }
+                    print(self.isJobDone)
                     var jobTemp = try JSONDecoder().decode(JobSingle.self, from: data!)
                     jobTemp.job!.progress = jobTemp.job!.progress!.filter{$0.id_activity == "5"}
                     var dateTemp = [String]()
