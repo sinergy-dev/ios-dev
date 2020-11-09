@@ -12,8 +12,10 @@ class JobDoneController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     var jobProgressFromSegue:JobList!
     
+    @IBOutlet weak var backgroundView: UIView!
     var imagePicker  = UIImagePickerController()
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var inputSummary: UITextField!
     @IBOutlet weak var inputRootCause: UITextField!
     @IBOutlet weak var inputCounterMeasure: UITextField!
@@ -21,8 +23,11 @@ class JobDoneController: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var jobDonePicture: UIImageView!
     @IBOutlet weak var jobDonePicturePickButton: UIButton!
     
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundView.isHidden = true
         jobDonePicture.isHidden = true
         imagePicker.delegate = self
 
@@ -49,8 +54,27 @@ class JobDoneController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            self.backgroundView.isHidden = false
+            self.scrollView.isHidden = true
+            
+            self.activityIndicator.center = self.backgroundView.center
+            self.activityIndicator.hidesWhenStopped = true
+            if #available(iOS 13.0, *) {
+                self.activityIndicator.style = .large
+            } else {
+                // Fallback on earlier versions
+            }
+            self.activityIndicator.color = .black
+            self.backgroundView.addSubview(self.activityIndicator)
+            self.activityIndicator.startAnimating()
+            self.navigationController?.navigationBar.isHidden = true
             self.submitJobDone(image: self.jobDonePicture.image!){
-                _ = self.navigationController?.popViewController(animated: true)
+                self.activityIndicator.stopAnimating()
+                self.backgroundView.isHidden = true
+                self.scrollView.isHidden = false
+                self.navigationController?.navigationBar.isHidden = false
+                self.showAlertSuccess()
+//                _ = self.navigationController?.popViewController(animated: true)
             }
         })
         
@@ -60,6 +84,20 @@ class JobDoneController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         dialogMessage.addAction(submit)
         dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func showAlertSuccess() {
+        let dialogMessage = UIAlertController(title: "Success", message: "Data telah ditambah", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            
+            _ = self.navigationController?.popViewController(animated: true)
+        })
+        
+        dialogMessage.addAction(submit)
         
         self.present(dialogMessage, animated: true, completion: nil)
     }
