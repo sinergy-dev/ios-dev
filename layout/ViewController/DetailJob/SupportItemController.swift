@@ -74,6 +74,7 @@ class SupportItemController: UIViewController, UIImagePickerControllerDelegate, 
                 self.activityIndicator.stopAnimating()
                 self.backgroundView.isHidden = true
                 self.scrollView.isHidden = false
+                self.navigationController?.navigationBar.isHidden = false
                 self.showAlertSuccess()
 //                _ = self.navigationController?.popViewController(animated: true)
                 

@@ -794,23 +794,33 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="PRL-ri-vTX"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="tfA-tr-Wcs"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9W-Ec-bh6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3z-6Z-VQe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="R3z-6Z-VQe" firstAttribute="bottom" secondItem="cjy-tb-fhu" secondAttribute="bottom" id="7VI-Ra-1hv"/>
+                            <constraint firstItem="l9W-Ec-bh6" firstAttribute="top" secondItem="R3z-6Z-VQe" secondAttribute="top" id="9TP-o7-8yK"/>
                             <constraint firstItem="cjy-tb-fhu" firstAttribute="leading" secondItem="R3z-6Z-VQe" secondAttribute="leading" id="BBA-Na-Fh9"/>
+                            <constraint firstItem="l9W-Ec-bh6" firstAttribute="leading" secondItem="R3z-6Z-VQe" secondAttribute="leading" id="DRf-uR-keF"/>
+                            <constraint firstItem="R3z-6Z-VQe" firstAttribute="bottom" secondItem="l9W-Ec-bh6" secondAttribute="bottom" id="Wx5-Si-gtK"/>
                             <constraint firstItem="R3z-6Z-VQe" firstAttribute="trailing" secondItem="cjy-tb-fhu" secondAttribute="trailing" id="bnD-Pf-aiZ"/>
                             <constraint firstItem="cjy-tb-fhu" firstAttribute="top" secondItem="R3z-6Z-VQe" secondAttribute="top" id="hv8-BO-Ukv"/>
+                            <constraint firstItem="R3z-6Z-VQe" firstAttribute="trailing" secondItem="l9W-Ec-bh6" secondAttribute="trailing" id="nQf-7H-3Iq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Form Request item" id="7Ai-Xn-vVu"/>
                     <connections>
+                        <outlet property="backgroundView" destination="l9W-Ec-bh6" id="6HT-TH-JH9"/>
                         <outlet property="inputName" destination="V7b-wK-zrA" id="jUx-zR-Dh0"/>
                         <outlet property="inputNominal" destination="6SG-WV-IeD" id="8RJ-HG-u4C"/>
                         <outlet property="inputReason" destination="w6J-ia-u0Q" id="ESz-Rg-vrk"/>
                         <outlet property="jobRequestPicture" destination="Lc7-lJ-aiT" id="mYa-NR-LwQ"/>
                         <outlet property="jobRequestPicturePickButton" destination="8tr-1v-XJO" id="iqX-wj-Oll"/>
+                        <outlet property="scrollView" destination="cjy-tb-fhu" id="f3T-zo-SeC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsB-yP-psY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1249,23 +1259,33 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="EqA-VP-Rbf"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="PCO-7h-PwQ"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEq-S9-4pR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tue-Ma-toS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tue-Ma-toS" firstAttribute="bottom" secondItem="fEq-S9-4pR" secondAttribute="bottom" id="7i0-SC-Azm"/>
+                            <constraint firstItem="fEq-S9-4pR" firstAttribute="leading" secondItem="tue-Ma-toS" secondAttribute="leading" id="9M2-L4-lpi"/>
                             <constraint firstItem="tue-Ma-toS" firstAttribute="bottom" secondItem="hll-Bp-9TX" secondAttribute="bottom" id="AS1-mR-yO8"/>
                             <constraint firstItem="hll-Bp-9TX" firstAttribute="top" secondItem="tue-Ma-toS" secondAttribute="top" id="BvS-aR-q0H"/>
+                            <constraint firstItem="fEq-S9-4pR" firstAttribute="top" secondItem="tue-Ma-toS" secondAttribute="top" id="Vwc-1I-1do"/>
                             <constraint firstItem="tue-Ma-toS" firstAttribute="trailing" secondItem="hll-Bp-9TX" secondAttribute="trailing" id="ZDm-sx-1Ft"/>
                             <constraint firstItem="hll-Bp-9TX" firstAttribute="leading" secondItem="tue-Ma-toS" secondAttribute="leading" id="hfT-9E-JVr"/>
+                            <constraint firstItem="tue-Ma-toS" firstAttribute="trailing" secondItem="fEq-S9-4pR" secondAttribute="trailing" id="oeG-kQ-nx4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Form Job Done" id="fce-kD-hMJ"/>
                     <connections>
+                        <outlet property="backgroundView" destination="fEq-S9-4pR" id="Eom-UO-Oh7"/>
                         <outlet property="inputCounterMeasure" destination="y4g-ZJ-NU5" id="2zj-fF-ngi"/>
                         <outlet property="inputRootCause" destination="TnK-FM-I1A" id="qUl-AP-5fT"/>
                         <outlet property="inputSummary" destination="2sR-VM-9MW" id="Ezp-2a-riY"/>
                         <outlet property="jobDonePicture" destination="61t-DH-9aM" id="P1X-BU-FND"/>
                         <outlet property="jobDonePicturePickButton" destination="VcH-hQ-25X" id="hTb-8Z-RRx"/>
+                        <outlet property="scrollView" destination="hll-Bp-9TX" id="PDB-u1-5nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMr-mS-Ndm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
