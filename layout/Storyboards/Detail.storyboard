@@ -517,13 +517,6 @@
                                                     <action selector="jobSupportSubmit:" destination="Xur-4s-Bjs" eventType="touchUpInside" id="gAk-cq-X7L"/>
                                                 </connections>
                                             </button>
-                                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0fP-Qk-GWD">
-                                                <rect key="frame" x="57" y="320" width="300" height="4"/>
-                                                <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="ADK-N6-OgA"/>
-                                                </constraints>
-                                            </progressView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -531,12 +524,10 @@
                                             <constraint firstItem="AF5-wf-EVs" firstAttribute="centerX" secondItem="9zZ-Rb-MS5" secondAttribute="centerX" id="3ke-rN-0HT"/>
                                             <constraint firstItem="sUb-Nt-xAO" firstAttribute="top" secondItem="ACd-UG-R9D" secondAttribute="top" constant="40" id="5Q0-Em-LFJ"/>
                                             <constraint firstAttribute="trailing" secondItem="LMx-qd-Nf3" secondAttribute="trailing" constant="20" id="6pC-Kc-P31"/>
-                                            <constraint firstItem="0fP-Qk-GWD" firstAttribute="centerX" secondItem="9zZ-Rb-MS5" secondAttribute="centerX" id="939-PN-DEx"/>
                                             <constraint firstItem="ACd-UG-R9D" firstAttribute="top" secondItem="AF5-wf-EVs" secondAttribute="bottom" constant="7" id="99L-Kt-Ezy"/>
                                             <constraint firstAttribute="trailing" secondItem="CVK-m5-cxi" secondAttribute="trailing" constant="40" id="9at-Io-EmU"/>
                                             <constraint firstItem="LaE-h3-RqS" firstAttribute="top" secondItem="LMx-qd-Nf3" secondAttribute="bottom" constant="15" id="CPY-O9-LL1"/>
                                             <constraint firstItem="CVK-m5-cxi" firstAttribute="leading" secondItem="9zZ-Rb-MS5" secondAttribute="leading" constant="40" id="DKU-fI-qYW"/>
-                                            <constraint firstItem="0fP-Qk-GWD" firstAttribute="top" secondItem="9zZ-Rb-MS5" secondAttribute="top" constant="320" id="E0j-a4-JV6"/>
                                             <constraint firstItem="LMx-qd-Nf3" firstAttribute="top" secondItem="efz-Pt-ab5" secondAttribute="bottom" constant="8" id="Fpd-o2-XOl"/>
                                             <constraint firstItem="rhu-Qp-TcJ" firstAttribute="top" secondItem="LaE-h3-RqS" secondAttribute="bottom" constant="20" id="IMy-nt-z3I"/>
                                             <constraint firstItem="sG8-O4-9WY" firstAttribute="top" secondItem="KzV-7x-Mta" secondAttribute="bottom" constant="10" id="KUw-Yr-gQS"/>
@@ -575,7 +566,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="6TM-1L-bm9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZnU-FN-XDW"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fs3-mH-ESW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eng-W4-8Y6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -583,25 +574,24 @@
                         <viewLayoutGuide key="safeArea" id="W9T-rV-5AS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W9T-rV-5AS" firstAttribute="bottom" secondItem="Fs3-mH-ESW" secondAttribute="bottom" id="7Yd-Ip-kgL"/>
                             <constraint firstItem="HIj-nz-VkK" firstAttribute="leading" secondItem="W9T-rV-5AS" secondAttribute="leading" id="DGI-i4-xrl"/>
                             <constraint firstItem="W9T-rV-5AS" firstAttribute="trailing" secondItem="HIj-nz-VkK" secondAttribute="trailing" id="ElB-yz-6XQ"/>
-                            <constraint firstItem="W9T-rV-5AS" firstAttribute="trailing" secondItem="Fs3-mH-ESW" secondAttribute="trailing" id="ieZ-Xk-nYe"/>
+                            <constraint firstItem="W9T-rV-5AS" firstAttribute="bottom" secondItem="eng-W4-8Y6" secondAttribute="bottom" id="HlE-0i-sPh"/>
+                            <constraint firstItem="eng-W4-8Y6" firstAttribute="leading" secondItem="W9T-rV-5AS" secondAttribute="leading" id="ItB-v3-AW1"/>
+                            <constraint firstItem="eng-W4-8Y6" firstAttribute="top" secondItem="W9T-rV-5AS" secondAttribute="top" id="gOv-rF-iMD"/>
                             <constraint firstItem="HIj-nz-VkK" firstAttribute="top" secondItem="W9T-rV-5AS" secondAttribute="top" id="pj4-NG-Ral"/>
+                            <constraint firstItem="W9T-rV-5AS" firstAttribute="trailing" secondItem="eng-W4-8Y6" secondAttribute="trailing" id="q9r-Up-jRg"/>
                             <constraint firstItem="W9T-rV-5AS" firstAttribute="bottom" secondItem="HIj-nz-VkK" secondAttribute="bottom" id="sHP-7H-UNt"/>
-                            <constraint firstItem="Fs3-mH-ESW" firstAttribute="leading" secondItem="W9T-rV-5AS" secondAttribute="leading" id="wTh-3t-DlM"/>
-                            <constraint firstItem="Fs3-mH-ESW" firstAttribute="top" secondItem="W9T-rV-5AS" secondAttribute="top" id="wgu-qb-owd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Form Support Item" id="SpD-ah-fQ2"/>
                     <connections>
-                        <outlet property="backgroundView" destination="Fs3-mH-ESW" id="1bT-h1-DSm"/>
+                        <outlet property="backgroundView" destination="eng-W4-8Y6" id="4VH-oJ-VrN"/>
                         <outlet property="baseView" destination="9zZ-Rb-MS5" id="S28-Tr-u52"/>
                         <outlet property="inputProblem" destination="EWg-fS-Sj3" id="GT9-Eq-nOW"/>
                         <outlet property="inputReason" destination="LMx-qd-Nf3" id="nEw-NG-0Tb"/>
                         <outlet property="jobSupportPicture" destination="vMb-U2-IIS" id="dqh-LL-hRg"/>
                         <outlet property="jobSupportPicturePickButton" destination="Cdp-nH-u6f" id="dc2-8a-Zkp"/>
-                        <outlet property="progressView" destination="0fP-Qk-GWD" id="TY2-qD-Zox"/>
                         <outlet property="scrollView" destination="HIj-nz-VkK" id="eZP-Gj-kky"/>
                         <outlet property="view" destination="9zZ-Rb-MS5" id="RhW-gp-OWO"/>
                     </connections>

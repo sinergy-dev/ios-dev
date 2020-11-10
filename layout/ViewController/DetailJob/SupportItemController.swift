@@ -11,16 +11,13 @@ import UIKit
 class SupportItemController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var backgroundView: UIView!
     var jobProgressFromSegue:JobList!
     
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var baseView: UIView!
-    @IBOutlet weak var progressView: UIProgressView!
     var imagePicker  = UIImagePickerController()
-    
-    let progress = Progress(totalUnitCount: 10)
     
     @IBOutlet weak var inputProblem: UITextField!
     @IBOutlet weak var inputReason: UITextField!
@@ -58,7 +55,6 @@ class SupportItemController: UIViewController, UIImagePickerControllerDelegate, 
             print("Ok button tapped")
             self.backgroundView.isHidden = false
             self.scrollView.isHidden = true
-            
             self.activityIndicator.center = self.backgroundView.center
             self.activityIndicator.hidesWhenStopped = true
             if #available(iOS 13.0, *) {
