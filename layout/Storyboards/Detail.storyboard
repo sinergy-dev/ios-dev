@@ -371,14 +371,22 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="cHv-3d-9nC"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="PeG-jE-6TT"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuS-HK-Ser">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u5B-cY-VZ2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5tM-w7-19y" firstAttribute="top" secondItem="u5B-cY-VZ2" secondAttribute="top" id="EZF-3H-5bt"/>
+                            <constraint firstItem="u5B-cY-VZ2" firstAttribute="trailing" secondItem="nuS-HK-Ser" secondAttribute="trailing" id="HaM-CH-Dkq"/>
                             <constraint firstItem="5tM-w7-19y" firstAttribute="leading" secondItem="u5B-cY-VZ2" secondAttribute="leading" id="dUa-yP-2ws"/>
+                            <constraint firstItem="nuS-HK-Ser" firstAttribute="top" secondItem="u5B-cY-VZ2" secondAttribute="top" id="h4G-ba-Fb2"/>
                             <constraint firstItem="u5B-cY-VZ2" firstAttribute="bottom" secondItem="5tM-w7-19y" secondAttribute="bottom" id="tyb-g0-pei"/>
                             <constraint firstItem="u5B-cY-VZ2" firstAttribute="trailing" secondItem="5tM-w7-19y" secondAttribute="trailing" id="x33-1k-QZu"/>
+                            <constraint firstItem="nuS-HK-Ser" firstAttribute="leading" secondItem="u5B-cY-VZ2" secondAttribute="leading" id="x3P-nx-7vl"/>
+                            <constraint firstItem="u5B-cY-VZ2" firstAttribute="bottom" secondItem="nuS-HK-Ser" secondAttribute="bottom" id="xUk-BC-Jby"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="dxn-5o-d8p"/>
@@ -393,6 +401,8 @@
                         <outlet property="LevelLabel" destination="k88-Ss-rAI" id="Yjt-q4-k6h"/>
                         <outlet property="LocLabel" destination="7gF-Us-HKc" id="4YR-wH-83W"/>
                         <outlet property="PICLabel" destination="vbQ-b0-zIE" id="e22-NT-flS"/>
+                        <outlet property="backgroundView" destination="nuS-HK-Ser" id="Bdj-2r-M5l"/>
+                        <outlet property="scrollView" destination="5tM-w7-19y" id="Gff-Fo-2u1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezU-lo-sku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

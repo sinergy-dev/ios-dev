@@ -19,14 +19,15 @@ class AcceptedDetailController: UIViewController {
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PICLabel: UILabel!
     @IBOutlet weak var FeeLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBAction func btnStart(_ sender: Any) {
-        self.startJob {
-            self.dialogMessage()
-            
-        }
+        self.dialogMessage()
         
     }
+    
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBAction func btnDownload(_ sender: Any) {
         UIApplication.shared.open(URL(string: self.jobDetail.job!.letter_of_assignment)!)
@@ -37,6 +38,8 @@ class AcceptedDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundView.isHidden = true
 
         JobLabel.text? = jobAcceptedFromSegue!.job_name
         JobdesLabel.text? = jobAcceptedFromSegue!.job_description
@@ -107,10 +110,61 @@ class AcceptedDetailController: UIViewController {
     }
     
     func dialogMessage() {
-        let dialogMessage = UIAlertController(title: jobAcceptedFromSegue.job_name, message: "Successfully Start Job", preferredStyle: .alert)
+//        let dialogMessage = UIAlertController(title: jobAcceptedFromSegue.job_name, message: "Successfully Start Job", preferredStyle: .alert)
+//
+//        let submit = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+//            self.navigationController?.popViewController(animated: true)
+//        })
+//
+//        dialogMessage.addAction(submit)
+//
+//        self.present(dialogMessage, animated: true, completion: nil)
         
-        let submit = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            self.navigationController?.popViewController(animated: true)
+        let dialogMessage = UIAlertController(title: "Are you sure to start this job?", message: jobAcceptedFromSegue!.job_name , preferredStyle: .alert)
+        
+        
+        
+        let submit = UIAlertAction(title: "Accept", style: .default, handler: { (action) -> Void in
+            self.backgroundView.isHidden = false
+            self.scrollView.isHidden = true
+            
+            self.activityIndicator.center = self.backgroundView.center
+            self.activityIndicator.hidesWhenStopped = true
+            if #available(iOS 13.0, *) {
+                self.activityIndicator.style = .large
+            } else {
+                // Fallback on earlier versions
+            }
+            self.activityIndicator.color = .black
+            self.backgroundView.addSubview(self.activityIndicator)
+            self.activityIndicator.startAnimating()
+            self.navigationController?.navigationBar.isHidden = true
+            
+            self.startJob {
+                self.activityIndicator.stopAnimating()
+                self.backgroundView.isHidden = true
+                self.scrollView.isHidden = false
+                self.navigationController?.navigationBar.isHidden = false
+                self.showAlertSuccess()
+            }
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+        }
+        
+        dialogMessage.addAction(submit)
+        dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func showAlertSuccess() {
+        let dialogMessage = UIAlertController(title: "Success", message: "Data telah ditambah", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            
+            _ = self.navigationController?.popViewController(animated: true)
         })
         
         dialogMessage.addAction(submit)
