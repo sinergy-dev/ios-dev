@@ -1447,7 +1447,7 @@
                             <constraint firstItem="fig-gw-3bV" firstAttribute="trailing" secondItem="a2v-jo-BqU" secondAttribute="trailing" id="y4i-fd-rG4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Qjw-HP-H8K"/>
+                    <navigationItem key="navigationItem" title="Detail" id="Qjw-HP-H8K"/>
                     <connections>
                         <outlet property="IVDetailDone" destination="PKY-wu-7qS" id="3aE-Bi-4e9"/>
                         <outlet property="JobLabel" destination="sgM-fI-fHE" id="oGt-ZU-V2n"/>

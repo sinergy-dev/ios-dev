@@ -76,7 +76,7 @@ class DoneDetailController: UIViewController {
                     for progres in jobTemp.job!.progress! {
                         if !dateTemp.contains(String(progres.date_time.prefix(10))) {
                             dateTemp.append(String(progres.date_time.prefix(10)))
-                            tempDetail_activity = " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
+                            tempDetail_activity = " - " + progres.detail_activity + "\n"
                             jobProgresTemp.append(
                                 JobProgress(
                                     id: progres.id,
@@ -84,14 +84,14 @@ class DoneDetailController: UIViewController {
                                     id_user: progres.id_user,
                                     id_activity: progres.id_activity,
                                     date_time: progres.date_time,
-                                    detail_activity: " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
+                                    detail_activity: " - " + progres.detail_activity + "\n"
                                 )
                             )
                         } else {
                             if(progres.id_activity != "5"){
                                 tempDetail_activity += " - " + progres.detail_activity + "\n"
                             } else {
-                                tempDetail_activity += " - " + String(progres.detail_activity.components(separatedBy: " - ")[1]) + "\n"
+                                tempDetail_activity += " - " + progres.detail_activity + "\n"
                             }
                             
                             jobProgresTemp[jobProgresTemp.count - 1].detail_activity = tempDetail_activity

@@ -21,9 +21,13 @@ class DetailJobListController: UIViewController {
     @IBOutlet weak var PICLabel: UILabel!
     @IBOutlet weak var FeeLabel: UILabel!
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backgroundView: UIView!
     
     var jobListFromSegue:JobList!
     var jobDetail:JobSingle!
+    
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBAction func btnApply(_ sender: Any) {
         self.dialogMessage()
@@ -33,6 +37,7 @@ class DetailJobListController: UIViewController {
         super.viewDidLoad()
 //        print(jobListFromSegue!)
 
+        backgroundView.isHidden = true
         JobLabel.text? = jobListFromSegue!.job_name
         JobDescLabel.text? = jobListFromSegue!.job_description
         JobReqLabel.text? = jobListFromSegue!.job_requrment
@@ -104,9 +109,30 @@ class DetailJobListController: UIViewController {
     func dialogMessage() {
         let dialogMessage = UIAlertController(title: "Are you sure to take this job?", message: jobListFromSegue!.job_name , preferredStyle: .alert)
         
+        
+        
         let submit = UIAlertAction(title: "Accept", style: .default, handler: { (action) -> Void in
+            self.backgroundView.isHidden = false
+            self.scrollView.isHidden = true
+            
+            self.activityIndicator.center = self.backgroundView.center
+            self.activityIndicator.hidesWhenStopped = true
+            if #available(iOS 13.0, *) {
+                self.activityIndicator.style = .large
+            } else {
+                // Fallback on earlier versions
+            }
+            self.activityIndicator.color = .black
+            self.backgroundView.addSubview(self.activityIndicator)
+            self.activityIndicator.startAnimating()
+            self.navigationController?.navigationBar.isHidden = true
+            
             self.applyJob {
-                self.navigationController?.popViewController(animated: true)
+                self.activityIndicator.stopAnimating()
+                self.backgroundView.isHidden = true
+                self.scrollView.isHidden = false
+                self.navigationController?.navigationBar.isHidden = false
+                self.showAlertSuccess()
             }
         })
         
@@ -115,6 +141,20 @@ class DetailJobListController: UIViewController {
         
         dialogMessage.addAction(submit)
         dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func showAlertSuccess() {
+        let dialogMessage = UIAlertController(title: "Success", message: "Data telah ditambah", preferredStyle: .alert)
+        
+        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+            
+            _ = self.navigationController?.popViewController(animated: true)
+        })
+        
+        dialogMessage.addAction(submit)
         
         self.present(dialogMessage, animated: true, completion: nil)
     }
