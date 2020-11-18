@@ -21,6 +21,7 @@ enum GlobalVariable {
     static var urlGetJobListSumm = hostServer + "/dashboard/getJobListAndSumary"
     static var urlGetJobOpen = hostServer + "/job/getJobOpen"
     
+    static var urlGetJobListbyEngineer = hostServer + "/api/dashboard/getJobListAndSumaryEngineer"
     static var urlUpdateJobProgress = hostServer + "/api/job/postJobUpdate"
     static var urlUpdateJobDone = hostServer + "/api/job/postJobFinish"
     static var urlUpdateJobSupport = hostServer + "/api/job/postJobRequestSupport"

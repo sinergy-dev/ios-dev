@@ -177,15 +177,9 @@ class DashboardViewController: UIViewController, SkeletonTableViewDataSource, UI
     }
     
     private func getData(completed: @escaping () -> ()){
-        let url = GlobalVariable.urlGetJobListSumm
-        
-        var components = URLComponents(string: url)!
-        components.queryItems = [
-            URLQueryItem(name: "job_status", value: "Open")
-        ]
-        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        let url = URL(string: GlobalVariable.urlGetJobListbyEngineer)
             
-        var request = URLRequest(url:components.url!)
+        var request = URLRequest(url:url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(UserDefaults.standard.string(forKey: "Token")!, forHTTPHeaderField: "Authorization")
             
