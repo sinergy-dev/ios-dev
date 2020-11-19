@@ -13,6 +13,7 @@
 		3E54344D250245E10016969B /* JobCategoryAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344C250245E10016969B /* JobCategoryAllViewController.swift */; };
 		3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344E250247090016969B /* JobCategoryListAll.swift */; };
 		3E543451250247500016969B /* JobCategoryMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E543450250247500016969B /* JobCategoryMain.swift */; };
+		71007B1C25662B05002FE421 /* freelance_logoaja.png in Resources */ = {isa = PBXBuildFile; fileRef = 71007B1B25662B05002FE421 /* freelance_logoaja.png */; };
 		71C6126825529EFE006D917D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C6126725529EFE006D917D /* icon.png */; };
 		71C6126D2552A634006D917D /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6126C2552A634006D917D /* LaunchScreenViewController.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
@@ -125,6 +126,7 @@
 		3E54344C250245E10016969B /* JobCategoryAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryAllViewController.swift; sourceTree = "<group>"; };
 		3E54344E250247090016969B /* JobCategoryListAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryListAll.swift; sourceTree = "<group>"; };
 		3E543450250247500016969B /* JobCategoryMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryMain.swift; sourceTree = "<group>"; };
+		71007B1B25662B05002FE421 /* freelance_logoaja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = freelance_logoaja.png; sourceTree = "<group>"; };
 		71C6126725529EFE006D917D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		71C6126C2552A634006D917D /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				ADD55B0624C5548C0063BC99 /* LaunchScreen.storyboard */,
 				ADB647BA2526FF41007A21A4 /* GoogleService-Info.plist */,
 				ADD55B0924C5548C0063BC99 /* Info.plist */,
+				71007B1B25662B05002FE421 /* freelance_logoaja.png */,
 				71C6126725529EFE006D917D /* icon.png */,
 			);
 			path = layout;
@@ -576,6 +579,7 @@
 				71C6126825529EFE006D917D /* icon.png in Resources */,
 				ADEAF5D6253D3C2A0079C39E /* Support.storyboard in Resources */,
 				ADEAF5DB253D3C340079C39E /* Account.storyboard in Resources */,
+				71007B1C25662B05002FE421 /* freelance_logoaja.png in Resources */,
 				ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
