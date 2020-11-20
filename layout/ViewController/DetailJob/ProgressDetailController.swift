@@ -24,6 +24,8 @@ class ProgressDetailController: UIViewController{
     
     var isJobDone = false
     
+    let alertService = AlertService()
+    
     var expandedIndexSet : IndexSet = []
     var dayCounter=[String]()
     
@@ -128,30 +130,42 @@ class ProgressDetailController: UIViewController{
     }
     
     func Progress() {
-        // Declare Alert message
-        let dialogMessage = UIAlertController(title: "Job Progress", message: "Please Insert your progress", preferredStyle: .alert)
-        // Add text field
-        dialogMessage.addTextField(configurationHandler: { textField in
-            textField.placeholder = "Add Progress Here"
-        })
-        
-        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
-            print("Ok button tapped")
-            self.updateJobProgress(updateNote: (dialogMessage.textFields?.first?.text ?? "")){
+        let alert = alertService.alert(title: "Job Progress", buttonTitle: "Submit"){
+            print("you tapped submit button")
+            print(self.alertService.getInput())
+            self.updateJobProgress(updateNote: (self.alertService.getInput())){
                 self.TVProgressJob.reloadData()
             }
-            print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
-        })
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
-            print("Cancel button tapped")
         }
+        present(alert, animated: true)
         
-        dialogMessage.addAction(submit)
-        dialogMessage.addAction(cancel)
-        
-        self.present(dialogMessage, animated: true, completion: nil)
     }
+    
+//    func Progress() {
+//        // Declare Alert message
+//        let dialogMessage = UIAlertController(title: "Job Progress", message: "Please Insert your progress", preferredStyle: .alert)
+//        // Add text field
+//        dialogMessage.addTextField(configurationHandler: { textField in
+//            textField.placeholder = "Add Progress Here"
+//        })
+//
+//        let submit = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+//            print("Ok button tapped")
+//            self.updateJobProgress(updateNote: (dialogMessage.textFields?.first?.text ?? "")){
+//                self.TVProgressJob.reloadData()
+//            }
+//            print("Job Progress = \(dialogMessage.textFields?.first?.text ?? "")")
+//        })
+//
+//        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+//            print("Cancel button tapped")
+//        }
+//
+//        dialogMessage.addAction(submit)
+//        dialogMessage.addAction(cancel)
+//
+//        self.present(dialogMessage, animated: true, completion: nil)
+//    }
     
     func updateJobProgress(updateNote:String, completed: @escaping () -> ()){
         let url = GlobalVariable.urlUpdateJobProgress

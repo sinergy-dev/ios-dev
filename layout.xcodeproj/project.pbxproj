@@ -14,6 +14,9 @@
 		3E54344F250247090016969B /* JobCategoryListAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54344E250247090016969B /* JobCategoryListAll.swift */; };
 		3E543451250247500016969B /* JobCategoryMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E543450250247500016969B /* JobCategoryMain.swift */; };
 		71007B1C25662B05002FE421 /* freelance_logoaja.png in Resources */ = {isa = PBXBuildFile; fileRef = 71007B1B25662B05002FE421 /* freelance_logoaja.png */; };
+		7146F9E62567AC24002E9356 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7146F9E52567AC24002E9356 /* Alert.storyboard */; };
+		7146F9EB2567AC4D002E9356 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146F9EA2567AC4D002E9356 /* AlertViewController.swift */; };
+		7146F9F02567B11B002E9356 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146F9EF2567B11B002E9356 /* AlertService.swift */; };
 		71C6126825529EFE006D917D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C6126725529EFE006D917D /* icon.png */; };
 		71C6126D2552A634006D917D /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6126C2552A634006D917D /* LaunchScreenViewController.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
@@ -127,6 +130,9 @@
 		3E54344E250247090016969B /* JobCategoryListAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryListAll.swift; sourceTree = "<group>"; };
 		3E543450250247500016969B /* JobCategoryMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryMain.swift; sourceTree = "<group>"; };
 		71007B1B25662B05002FE421 /* freelance_logoaja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = freelance_logoaja.png; sourceTree = "<group>"; };
+		7146F9E52567AC24002E9356 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		7146F9EA2567AC4D002E9356 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		7146F9EF2567B11B002E9356 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		71C6126725529EFE006D917D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		71C6126C2552A634006D917D /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
 				AD775F4A2547CAAE0009F448 /* IntroScreenController.swift */,
 				71C6126C2552A634006D917D /* LaunchScreenViewController.swift */,
+				7146F9EA2567AC4D002E9356 /* AlertViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -416,6 +423,7 @@
 				ADD55B0924C5548C0063BC99 /* Info.plist */,
 				71007B1B25662B05002FE421 /* freelance_logoaja.png */,
 				71C6126725529EFE006D917D /* icon.png */,
+				7146F9EF2567B11B002E9356 /* AlertService.swift */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -447,6 +455,7 @@
 				ADEAF5D0253D3C1F0079C39E /* Payment.storyboard */,
 				ADEAF5D5253D3C2A0079C39E /* Support.storyboard */,
 				ADEAF5DA253D3C340079C39E /* Account.storyboard */,
+				7146F9E52567AC24002E9356 /* Alert.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -581,6 +590,7 @@
 				ADEAF5DB253D3C340079C39E /* Account.storyboard in Resources */,
 				71007B1C25662B05002FE421 /* freelance_logoaja.png in Resources */,
 				ADEAF5CC253D3C150079C39E /* Detail.storyboard in Resources */,
+				7146F9E62567AC24002E9356 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +768,7 @@
 				AD45CCB724FE41780005A6BB /* JobPIC.swift in Sources */,
 				AD38A7AD24F3C510005D0D5C /* PaymentCell.swift in Sources */,
 				3E54344B250236F80016969B /* DashboardViewController.swift in Sources */,
+				7146F9F02567B11B002E9356 /* AlertService.swift in Sources */,
 				AD34C21E24EBDDBA00B028FB /* User.swift in Sources */,
 				ADC0248024FF3A4400A376A8 /* AcceptedDetailController.swift in Sources */,
 				AD4B4E90251336F6000EC2FA /* JobDoneController.swift in Sources */,
@@ -781,6 +792,7 @@
 				AD36C91B24FF7E4D001DDA72 /* ProgressJobCell.swift in Sources */,
 				ADD3384724EBCCBD00295B40 /* PersonalViewController.swift in Sources */,
 				AD3A533924F78DD400F3D80E /* SupportController.swift in Sources */,
+				7146F9EB2567AC4D002E9356 /* AlertViewController.swift in Sources */,
 				AD33053624FE026C004C9B1F /* DoneCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
