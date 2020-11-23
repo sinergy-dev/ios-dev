@@ -10,6 +10,7 @@ import UIKit
 
 class PaymentDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var paymentLabel: UILabel!
     @IBOutlet weak var IVTransfer: UIImageView!
     @IBOutlet weak var IVPayment: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
@@ -56,6 +57,13 @@ class PaymentDetailController: UIViewController, UITableViewDelegate, UITableVie
                 }
             }
         }
+        
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "id_ID")
+        formatter.numberStyle = .currency
+        let formattedFee = formatter.string(from: NSNumber(value: Int(self.paymentFromSegue.payment_nominal)) as NSNumber)
+        
+        self.paymentLabel.text? = formattedFee!
         
         self.JobLabel.text? = self.paymentFromSegue.job.job_name
         
