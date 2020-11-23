@@ -18,26 +18,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T54-Zh-S9H">
-                                <rect key="frame" x="32" y="345.5" width="350" height="215"/>
+                                <rect key="frame" x="32" y="359" width="350" height="188"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yED-jL-dg3">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="67"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-ji-Zo1">
                                                 <rect key="frame" x="8" y="23" width="116" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="67" id="j7h-my-MNa"/>
+                                            <constraint firstAttribute="height" constant="50" id="j7h-my-MNa"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Task Here" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="xG8-yH-EqD">
-                                        <rect key="frame" x="8" y="97" width="334" height="50"/>
+                                        <rect key="frame" x="8" y="70" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nJD-Py-7KK"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="akA-tZ-wVd">
-                                        <rect key="frame" x="8" y="177" width="334" height="30"/>
+                                        <rect key="frame" x="8" y="150" width="334" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfA-Zc-zCw">
                                                 <rect key="frame" x="0.0" y="0.0" width="159" height="30"/>
@@ -92,7 +92,7 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="akA-tZ-wVd" secondAttribute="bottom" id="eyj-11-LbZ"/>
                                     <constraint firstItem="akA-tZ-wVd" firstAttribute="top" secondItem="xG8-yH-EqD" secondAttribute="bottom" constant="30" id="gaD-BF-dob"/>
                                     <constraint firstItem="xG8-yH-EqD" firstAttribute="leading" secondItem="T54-Zh-S9H" secondAttribute="leading" constant="8" id="tLJ-H4-Zvc"/>
-                                    <constraint firstItem="xG8-yH-EqD" firstAttribute="top" secondItem="yED-jL-dg3" secondAttribute="bottom" constant="30" id="xr9-hV-jZF"/>
+                                    <constraint firstItem="xG8-yH-EqD" firstAttribute="top" secondItem="yED-jL-dg3" secondAttribute="bottom" constant="20" id="xr9-hV-jZF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

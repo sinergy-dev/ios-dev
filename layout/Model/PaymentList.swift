@@ -21,6 +21,7 @@ struct PaymentList:Decodable {
     let date_add:String
     let payment_invoice_URL:String
     let job_category_image:String
+    let date_huminize:String
     let lastest_progress: PaymentLastestProgress
     let job:JobList
     let progress: [PaymentProgress]

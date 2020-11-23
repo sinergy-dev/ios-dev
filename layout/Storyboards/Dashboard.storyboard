@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dashboard-->
+        <!--Home-->
         <scene sceneID="J5o-h7-dnC">
             <objects>
                 <viewController id="erK-c2-jgs" customClass="DashboardViewController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,26 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGB-Gq-pBU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGB-Gq-pBU">
                                 <rect key="frame" x="10" y="150" width="18.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brillian Aditya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-Dq-YYi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Brillian Aditya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-Dq-YYi">
                                 <rect key="frame" x="31" y="150" width="129.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So, what occupation will you choose today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-0O-oG7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="So, what occupation will you choose today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-0O-oG7">
                                 <rect key="frame" x="10" y="179" width="274" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aq-CL-UrZ">
-                                <rect key="frame" x="0.0" y="211" width="414" height="602"/>
+                                <rect key="frame" x="0.0" y="209" width="414" height="604"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fsw-jU-HfY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="533"/>
@@ -264,9 +264,13 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="9rX-RF-CCs"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="9bi-ri-cP2"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-9H-3Ye">
-                                <rect key="frame" x="354" y="147" width="34" height="30"/>
-                                <state key="normal" title="Notif">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-9H-3Ye">
+                                <rect key="frame" x="368" y="155" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="9EA-gL-oRo"/>
+                                    <constraint firstAttribute="height" constant="20" id="V8q-MA-efm"/>
+                                </constraints>
+                                <state key="normal" image="notif">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -278,7 +282,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sgG-0O-oG7" firstAttribute="leading" secondItem="kUr-MJ-OqG" secondAttribute="leading" constant="10" id="0ir-J3-pId"/>
-                            <constraint firstItem="ihC-9H-3Ye" firstAttribute="top" secondItem="kUr-MJ-OqG" secondAttribute="top" constant="7" id="1Oa-xK-0tR"/>
+                            <constraint firstItem="ihC-9H-3Ye" firstAttribute="top" secondItem="kUr-MJ-OqG" secondAttribute="top" constant="15" id="1Oa-xK-0tR"/>
                             <constraint firstItem="xGB-Gq-pBU" firstAttribute="leading" secondItem="kUr-MJ-OqG" secondAttribute="leading" constant="10" id="82T-dw-cag"/>
                             <constraint firstItem="WFZ-Dq-YYi" firstAttribute="leading" secondItem="xGB-Gq-pBU" secondAttribute="trailing" constant="2.5" id="87U-1U-dn9"/>
                             <constraint firstItem="xGB-Gq-pBU" firstAttribute="top" secondItem="kUr-MJ-OqG" secondAttribute="top" constant="10" id="8tX-dj-JJv"/>
@@ -293,7 +297,7 @@
                             <constraint firstItem="6aq-CL-UrZ" firstAttribute="leading" secondItem="kUr-MJ-OqG" secondAttribute="leading" id="ymb-Xd-lyV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dashboard" id="8ga-3d-VLp"/>
+                    <navigationItem key="navigationItem" title="Home" id="8ga-3d-VLp"/>
                     <connections>
                         <outlet property="Label2" destination="sgG-0O-oG7" id="u3y-AV-2sP"/>
                         <outlet property="NameLabel" destination="WFZ-Dq-YYi" id="HxB-Sk-3MW"/>
@@ -836,6 +840,7 @@
         <image name="home_small" width="24" height="24"/>
         <image name="level" width="96" height="96"/>
         <image name="location" width="96" height="96"/>
+        <image name="notif" width="512" height="512"/>
         <image name="path_money" width="53" height="87"/>
         <image name="profile" width="112" height="112"/>
         <systemColor name="darkTextColor">

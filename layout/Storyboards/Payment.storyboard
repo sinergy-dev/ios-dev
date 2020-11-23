@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Payment-->
         <scene sceneID="NL1-9w-fpi">
             <objects>
-                <viewController id="zbQ-nd-F4h" customClass="PaymentController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zbQ-nd-F4h" customClass="PaymentController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3KR-GL-tgA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCell" rowHeight="70" id="K5d-9e-0CX" customClass="PaymentCell" customModule="layout" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentCell" rowHeight="70" id="K5d-9e-0CX" customClass="PaymentCell" customModule="EOD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K5d-9e-0CX" id="a7S-hj-xzO">
@@ -56,6 +56,15 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-Mo-MTv">
+                                                    <rect key="frame" x="362" y="40" width="31" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hEa-LP-L2f" firstAttribute="top" secondItem="a7S-hj-xzO" secondAttribute="top" constant="10" id="8Ic-CP-DoJ"/>
@@ -66,8 +75,9 @@
                                                 <constraint firstItem="FD9-qS-WHj" firstAttribute="leading" secondItem="hEa-LP-L2f" secondAttribute="trailing" constant="15" id="N7u-ST-hae"/>
                                                 <constraint firstAttribute="bottom" secondItem="hEa-LP-L2f" secondAttribute="bottom" constant="10" id="UxY-uJ-Y0a"/>
                                                 <constraint firstItem="FD9-qS-WHj" firstAttribute="top" secondItem="a7S-hj-xzO" secondAttribute="topMargin" constant="7" id="WWF-Yf-jAk"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="yiX-ZI-sxg" secondAttribute="trailing" constant="40" id="fNl-TB-DbJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xFZ-Mo-MTv" secondAttribute="trailing" constant="1" id="fLU-FR-wlG"/>
                                                 <constraint firstItem="hEa-LP-L2f" firstAttribute="leading" secondItem="a7S-hj-xzO" secondAttribute="leading" constant="15" id="rsi-od-6hj"/>
+                                                <constraint firstItem="xFZ-Mo-MTv" firstAttribute="top" secondItem="a7S-hj-xzO" secondAttribute="topMargin" constant="29" id="w3R-4N-ZUq"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -80,6 +90,7 @@
                                             <outlet property="IVPayment" destination="hEa-LP-L2f" id="9lf-Pg-p1p"/>
                                             <outlet property="JobLabel" destination="FD9-qS-WHj" id="tSM-EO-Jgn"/>
                                             <outlet property="StatusLabel" destination="yiX-ZI-sxg" id="Qo0-Qg-DQK"/>
+                                            <outlet property="TimeLabel" destination="xFZ-Mo-MTv" id="hdq-3k-xdO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -119,7 +130,7 @@
         <!--Detail Image Payment Controller-->
         <scene sceneID="Qyv-2M-thI">
             <objects>
-                <viewController storyboardIdentifier="DetailImagePaymentController" id="iiZ-ae-uBt" customClass="DetailImagePaymentController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailImagePaymentController" id="iiZ-ae-uBt" customClass="DetailImagePaymentController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VEW-m0-Civ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +191,7 @@
         <!--Payment Detail-->
         <scene sceneID="ytm-if-Lhy">
             <objects>
-                <viewController title="Payment Detail" id="abD-1U-xVT" customClass="PaymentDetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Payment Detail" id="abD-1U-xVT" customClass="PaymentDetailController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57h-9d-aiT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +225,7 @@
                                                 <rect key="frame" x="0.0" y="460" width="414" height="340"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentDetailCell" rowHeight="70" id="aj4-1y-lfm" customClass="PaymentDetailCell" customModule="layout" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaymentDetailCell" rowHeight="70" id="aj4-1y-lfm" customClass="PaymentDetailCell" customModule="EOD" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aj4-1y-lfm" id="YZh-QP-y60">

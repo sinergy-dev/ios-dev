@@ -10,6 +10,7 @@ import UIKit
 
 class PaymentCell: UITableViewCell {
 
+    @IBOutlet weak var TimeLabel: UILabel!
     @IBOutlet weak var IVPayment: UIImageView!
     @IBOutlet weak var JobLabel: UILabel!
     @IBOutlet weak var StatusLabel: UILabel!

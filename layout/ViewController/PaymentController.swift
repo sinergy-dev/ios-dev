@@ -107,6 +107,7 @@ class PaymentController: UIViewController, UITableViewDelegate, SkeletonTableVie
         }
         cell.JobLabel.text = paymentList.payment![indexPath.row].job.job_name
         cell.StatusLabel.text = paymentList.payment![indexPath.row].lastest_progress.activity
+        cell.TimeLabel.text = paymentList.payment![indexPath.row].date_huminize
         
         
         if paymentList.payment![indexPath.row].lastest_progress.activity == "Update Payment"{
