@@ -98,7 +98,7 @@ class PersonalViewController: UIViewController {
         }.resume()
     }
     
-    @IBAction func doLogout(_ sender: Any) {
+    func logout() {
         UserDefaults.standard.set(false,forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         
@@ -113,6 +113,23 @@ class PersonalViewController: UIViewController {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginView")
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
+    @IBAction func doLogout(_ sender: Any) {
+        let dialogMessage = UIAlertController(title: "Are you sure to logout?", message: "", preferredStyle: .alert)
+
+        let submit = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            self.logout()
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel){ (action) -> Void in
+            print("Cancel button tapped")
+        }
+
+        dialogMessage.addAction(submit)
+        dialogMessage.addAction(cancel)
+
+        self.present(dialogMessage, animated: true, completion: nil)
     }
     
 }
