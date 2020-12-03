@@ -130,14 +130,15 @@ class ProgressDetailController: UIViewController{
     }
     
     func Progress() {
-        let alert = alertService.alert(title: "Job Progress", buttonTitle: "Submit"){
-            print("you tapped submit button")
-            print(self.alertService.getInput())
-            self.updateJobProgress(updateNote: (self.alertService.getInput())){
-                self.TVProgressJob.reloadData()
-            }
-        }
-        present(alert, animated: true)
+//        let alert = alertService.alert(title: "Job Progress", buttonTitle: "Submit"){
+//            print("you tapped submit button")
+//            print(self.alertService.getInput())
+//            self.updateJobProgress(updateNote: (self.alertService.getInput())){
+//                self.TVProgressJob.reloadData()
+//            }
+//        }
+//        present(alert, animated: true)
+        performSegue(withIdentifier: "toJobProgressView", sender: nil)
         
     }
     

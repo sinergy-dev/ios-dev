@@ -17,6 +17,7 @@
 		7146F9E62567AC24002E9356 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7146F9E52567AC24002E9356 /* Alert.storyboard */; };
 		7146F9EB2567AC4D002E9356 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146F9EA2567AC4D002E9356 /* AlertViewController.swift */; };
 		7146F9F02567B11B002E9356 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146F9EF2567B11B002E9356 /* AlertService.swift */; };
+		7197B8E22578C5170058825C /* JobProgressItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197B8E12578C5170058825C /* JobProgressItemController.swift */; };
 		71C6126825529EFE006D917D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C6126725529EFE006D917D /* icon.png */; };
 		71C6126D2552A634006D917D /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6126C2552A634006D917D /* LaunchScreenViewController.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
@@ -133,6 +134,7 @@
 		7146F9E52567AC24002E9356 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		7146F9EA2567AC4D002E9356 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		7146F9EF2567B11B002E9356 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7197B8E12578C5170058825C /* JobProgressItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProgressItemController.swift; sourceTree = "<group>"; };
 		71C6126725529EFE006D917D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		71C6126C2552A634006D917D /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				AD311B8325132409005D2920 /* RequestItemController.swift */,
 				AD4B4E8D251336D2000EC2FA /* SupportItemController.swift */,
 				AD4B4E8F251336F6000EC2FA /* JobDoneController.swift */,
+				7197B8E12578C5170058825C /* JobProgressItemController.swift */,
 			);
 			path = DetailJob;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				ADC218F024F3609A0044DE42 /* JobList.swift in Sources */,
 				AD45F5BA253461C400EC451C /* NotificationController.swift in Sources */,
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
+				7197B8E22578C5170058825C /* JobProgressItemController.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,
 				AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */,
 				AD732A992510740800374459 /* AlertController.swift in Sources */,
