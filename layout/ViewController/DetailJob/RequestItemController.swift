@@ -42,6 +42,11 @@ class RequestItemController: UIViewController,  UIImagePickerControllerDelegate,
         view.endEditing(true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        inputNominal.resignFirstResponder()
+    }
+    
+    
     @IBAction func jobRequestPicturePick(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
@@ -150,4 +155,11 @@ class RequestItemController: UIViewController,  UIImagePickerControllerDelegate,
         }.resume()
     }
 
+}
+
+extension ViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
