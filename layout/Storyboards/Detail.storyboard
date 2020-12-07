@@ -524,6 +524,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="jobProgressSubmit:" destination="aB2-82-vX7" eventType="touchUpInside" id="owL-Me-Uhn"/>
                                                     <action selector="jobSupportSubmit:" destination="Xur-4s-Bjs" eventType="touchUpInside" id="gAk-cq-X7L"/>
                                                 </connections>
                                             </button>
@@ -607,6 +608,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gw5-DI-ufH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aB2-82-vX7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1587" y="3897"/>
         </scene>
@@ -1371,6 +1373,7 @@
                                                         <state key="normal" title="Button" image="upload"/>
                                                         <connections>
                                                             <action selector="jobDonePicturePick:" destination="0ZW-GX-ice" eventType="touchUpInside" id="FgF-6g-eHq"/>
+                                                            <action selector="jobProgressPick:" destination="flp-xb-nFd" eventType="touchUpInside" id="dGY-gg-bOl"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-Vc-Yho">
@@ -1413,6 +1416,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="jobDoneSubmit:" destination="0ZW-GX-ice" eventType="touchUpInside" id="ZO2-u3-g2B"/>
+                                                    <action selector="jobProgressSubmit:" destination="flp-xb-nFd" eventType="touchUpInside" id="IQD-bg-DqF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1480,12 +1484,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Form Progress Job" id="vnP-dA-dYk"/>
                     <connections>
-                        <outlet property="backgroudView" destination="ebt-Au-4Dz" id="4Od-My-LAb"/>
+                        <outlet property="backgroundView" destination="ebt-Au-4Dz" id="iCl-cg-kB2"/>
+                        <outlet property="baseView" destination="0rT-7j-L8d" id="UPx-qZ-C4V"/>
                         <outlet property="btnSelectProgressJob" destination="k4M-N7-R4W" id="C7f-an-cKt"/>
                         <outlet property="btnSubmit" destination="lsd-6R-eNY" id="ew3-fY-Lp8"/>
                         <outlet property="inputProgress" destination="Qf4-dq-XBc" id="Uii-Px-ovU"/>
                         <outlet property="jobProgressPicture" destination="z7a-Vc-Yho" id="gw1-7K-0Cf"/>
                         <outlet property="jobProgressPicturePickButton" destination="mdM-RO-aoQ" id="63E-PS-fby"/>
+                        <outlet property="scrollView" destination="0ox-TQ-gPW" id="of1-Xa-yKc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAc-pL-SVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

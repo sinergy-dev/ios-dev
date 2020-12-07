@@ -115,6 +115,12 @@ class ProgressDetailController: UIViewController{
                 destination.jobProgressFromSegue = self.jobProgressFromSegue
             }
         }
+        
+        if segue.identifier == "toJobProgressView" {
+            if let destination = segue.destination as? JobProgressItemController {
+                destination.jobProgressFromSegue = self.jobProgressFromSegue
+            }
+        }
     }
     
     func RequestItem() {
