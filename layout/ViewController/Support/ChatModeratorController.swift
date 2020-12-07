@@ -22,15 +22,12 @@ class ChatModeratorController: UIViewController, UITableViewDelegate, SkeletonTa
         TVChatModerator.delegate = self
         TVChatModerator.dataSource = self
         
-        getData {
-            self.TVChatModerator.reloadData()
-        }
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-//
-//            self.TVChatModerator.stopSkeletonAnimation()
-//            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
-//        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+
+            self.TVChatModerator.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
+        })
     }
     
     let refresher: UIRefreshControl = {
@@ -53,32 +50,30 @@ class ChatModeratorController: UIViewController, UITableViewDelegate, SkeletonTa
         return "ChatModeratorCell"
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        if self.chatModeratorList == nil {
-//            TVChatModerator.isSkeletonable = true
-//            TVChatModerator.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
-//        }
-//        getData {
-//            self.TVChatModerator.reloadData()
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.chatModeratorList == nil {
+            TVChatModerator.isSkeletonable = true
+            TVChatModerator.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.2))
+        }
+        getData {
+            self.TVChatModerator.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.chatModeratorList == nil {
             return 0
-        } else {
-            print(self.chatModeratorList.chat!.count)
-            return self.chatModeratorList.chat!.count
         }
         
-//        if self.chatModeratorList.chat!.count == 0 {
-//            tableView.setEmptyView_chat(title: "You don't have any chat with moderator.", message: "", messageImage: #imageLiteral(resourceName: "not_found"))
-//        }
-//        else {
-//            tableView.restore_chat()
-//        }
+        if self.chatModeratorList.chat!.count == 0 {
+            tableView.setEmptyView_chat(title: "You don't have any chat with moderator.", message: "", messageImage: #imageLiteral(resourceName: "not_found"))
+        }
+        else {
+            tableView.restore_chat()
+        }
         
+        return self.chatModeratorList.chat!.count
         
     }
     
