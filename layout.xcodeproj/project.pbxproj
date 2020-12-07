@@ -20,6 +20,7 @@
 		7197B8E22578C5170058825C /* JobProgressItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197B8E12578C5170058825C /* JobProgressItemController.swift */; };
 		71C6126825529EFE006D917D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C6126725529EFE006D917D /* icon.png */; };
 		71C6126D2552A634006D917D /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6126C2552A634006D917D /* LaunchScreenViewController.swift */; };
+		71F46225257DDA4000ADB651 /* SupportParentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46224257DDA4000ADB651 /* SupportParentController.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
 		AD007F582525BF160024DFCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F572525BF160024DFCB /* LoginViewController.swift */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
@@ -137,6 +138,7 @@
 		7197B8E12578C5170058825C /* JobProgressItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobProgressItemController.swift; sourceTree = "<group>"; };
 		71C6126725529EFE006D917D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		71C6126C2552A634006D917D /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		71F46224257DDA4000ADB651 /* SupportParentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportParentController.swift; sourceTree = "<group>"; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83428050CAB0584223437941 /* Pods-layoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.debug.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		955BF8E0AD2F11B29E32048E /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +271,17 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		71F46220257DD38B00ADB651 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AD3A533824F78DD400F3D80E /* SupportController.swift */,
+				AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */,
+				71F46224257DDA4000ADB651 /* SupportParentController.swift */,
+				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		87C69E7DF1AEB353612DE100 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +348,7 @@
 		ADD3384424EBCC7300295B40 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				71F46220257DD38B00ADB651 /* Support */,
 				3E54344925022D210016969B /* Dashboard */,
 				AD01193E24FDE58800DB1DEC /* DetailJob */,
 				ADD3384524EBCC8500295B40 /* TableCell */,
@@ -343,8 +357,6 @@
 				ADD3384624EBCCBD00295B40 /* PersonalViewController.swift */,
 				AD38A7AE24F3C5AB005D0D5C /* PaymentController.swift */,
 				AD468EF024F7BA2000EF2CD8 /* PaymentDetailController.swift */,
-				AD3A533824F78DD400F3D80E /* SupportController.swift */,
-				AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */,
 				AD33D6712514A62B00EA4B17 /* DetailImageSupportController.swift */,
 				AD2D5D78250F57EC0045735C /* EditProfileController.swift */,
 				AD732A982510740800374459 /* AlertController.swift */,
@@ -352,7 +364,6 @@
 				AD3756FD2510A53D0012B48D /* DetailImagePaymentController.swift */,
 				ADCCA5C52511FEE700536170 /* ActionButton.swift */,
 				ADCCA5C72511FF2F00536170 /* ActionButtonItem.swift */,
-				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
 				AD775F4A2547CAAE0009F448 /* IntroScreenController.swift */,
 				71C6126C2552A634006D917D /* LaunchScreenViewController.swift */,
 				7146F9EA2567AC4D002E9356 /* AlertViewController.swift */,
@@ -782,6 +793,7 @@
 				AD775F4B2547CAAE0009F448 /* IntroScreenController.swift in Sources */,
 				AD468EED24F7B6BE00EF2CD8 /* PaymentDetailCell.swift in Sources */,
 				AD3756FE2510A53D0012B48D /* DetailImagePaymentController.swift in Sources */,
+				71F46225257DDA4000ADB651 /* SupportParentController.swift in Sources */,
 				ADC218F224F360BC0044DE42 /* Job.swift in Sources */,
 				AD36C91D24FF7F84001DDA72 /* ProgressDetailController.swift in Sources */,
 				AD3A533F24F79CC800F3D80E /* SupportDetailController.swift in Sources */,

@@ -65,14 +65,14 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
         ref.child("job_support").child(String(chatSupportFromSegue!.id)).observeSingleEvent(of: .value, with: { (snapshot) in
           let value = snapshot.value as? NSDictionary
           let id_job = value?["id_job"] as? String ?? ""
-            print(id_job)
+//            print(id_job)
           }) { (error) in
             print(error.localizedDescription)
         }
         
         ref.child("job_support").child(String(chatSupportFromSegue!.id)).child("chat").observe(.childAdded, with: { (snapshot) -> Void in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            print(postDict["message"]!)
+//            print(postDict["message"]!)
 
             if (postDict["from"] as! String == "moderator"){
                 let message =  Message(sender: self.otherUser,
