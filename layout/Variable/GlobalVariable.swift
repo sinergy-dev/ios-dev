@@ -32,5 +32,6 @@ enum GlobalVariable {
     
     static var urlLogin = hostServer + "/api/api_login"
     static var urlUpdateProfile = hostServer + "/api/users/postProfileUpdate"
+    static var urlgetChatModerator = hostServer + "/api/job/getChatModerator";
 }
 

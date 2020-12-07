@@ -21,6 +21,10 @@
 		71C6126825529EFE006D917D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C6126725529EFE006D917D /* icon.png */; };
 		71C6126D2552A634006D917D /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6126C2552A634006D917D /* LaunchScreenViewController.swift */; };
 		71F46225257DDA4000ADB651 /* SupportParentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46224257DDA4000ADB651 /* SupportParentController.swift */; };
+		71F4622D257DE63C00ADB651 /* ChatModerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4622C257DE63C00ADB651 /* ChatModerator.swift */; };
+		71F46232257DE64C00ADB651 /* ChatModeratorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46231257DE64C00ADB651 /* ChatModeratorList.swift */; };
+		71F46237257E074B00ADB651 /* ChatModeratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46236257E074B00ADB651 /* ChatModeratorController.swift */; };
+		71F4623C257E0FD000ADB651 /* ChatModeratorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4623B257E0FD000ADB651 /* ChatModeratorCell.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
 		AD007F582525BF160024DFCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F572525BF160024DFCB /* LoginViewController.swift */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
@@ -139,6 +143,10 @@
 		71C6126725529EFE006D917D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		71C6126C2552A634006D917D /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		71F46224257DDA4000ADB651 /* SupportParentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportParentController.swift; sourceTree = "<group>"; };
+		71F4622C257DE63C00ADB651 /* ChatModerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModerator.swift; sourceTree = "<group>"; };
+		71F46231257DE64C00ADB651 /* ChatModeratorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorList.swift; sourceTree = "<group>"; };
+		71F46236257E074B00ADB651 /* ChatModeratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorController.swift; sourceTree = "<group>"; };
+		71F4623B257E0FD000ADB651 /* ChatModeratorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorCell.swift; sourceTree = "<group>"; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83428050CAB0584223437941 /* Pods-layoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.debug.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		955BF8E0AD2F11B29E32048E /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 				AD3A533E24F79CC800F3D80E /* SupportDetailController.swift */,
 				71F46224257DDA4000ADB651 /* SupportParentController.swift */,
 				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
+				71F46236257E074B00ADB651 /* ChatModeratorController.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -341,6 +350,8 @@
 				AD6B569424F64280008E596D /* PaymentProgress.swift */,
 				AD3A533A24F78F1400F3D80E /* Support.swift */,
 				AD3A533C24F78F2100F3D80E /* SupportList.swift */,
+				71F4622C257DE63C00ADB651 /* ChatModerator.swift */,
+				71F46231257DE64C00ADB651 /* ChatModeratorList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +398,7 @@
 				AD34FEF92505EE9900A19FC7 /* JobListCell.swift */,
 				AD9FCB3525077B760025A866 /* JobListAllCell.swift */,
 				AD45F5BE2534621500EC451C /* NotificationCell.swift */,
+				71F4623B257E0FD000ADB651 /* ChatModeratorCell.swift */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -739,14 +751,17 @@
 				3E543451250247500016969B /* JobCategoryMain.swift in Sources */,
 				AD45F5BF2534621500EC451C /* NotificationCell.swift in Sources */,
 				AD34DB4A2500ECC200BA8FC6 /* DoneDetailController.swift in Sources */,
+				71F4622D257DE63C00ADB651 /* ChatModerator.swift in Sources */,
 				ADC218EA24F35FD30044DE42 /* JobLocation.swift in Sources */,
 				AD6B568D24F5FDBD008E596D /* PaymentList.swift in Sources */,
 				AD33053424FE0261004C9B1F /* ProgressCell.swift in Sources */,
+				71F46232257DE64C00ADB651 /* ChatModeratorList.swift in Sources */,
 				AD34FEFA2505EE9900A19FC7 /* JobListCell.swift in Sources */,
 				ADC218F024F3609A0044DE42 /* JobList.swift in Sources */,
 				AD45F5BA253461C400EC451C /* NotificationController.swift in Sources */,
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				7197B8E22578C5170058825C /* JobProgressItemController.swift in Sources */,
+				71F4623C257E0FD000ADB651 /* ChatModeratorCell.swift in Sources */,
 				ADD55AFC24C5548A0063BC99 /* AppDelegate.swift in Sources */,
 				AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */,
 				AD732A992510740800374459 /* AlertController.swift in Sources */,
@@ -773,6 +788,7 @@
 				ADD55AFE24C5548A0063BC99 /* SceneDelegate.swift in Sources */,
 				AD9FCB3625077B760025A866 /* JobListAllCell.swift in Sources */,
 				ADCCA5C62511FEE700536170 /* ActionButton.swift in Sources */,
+				71F46237257E074B00ADB651 /* ChatModeratorController.swift in Sources */,
 				AD47DA7724FCEDB50097F283 /* DoneController.swift in Sources */,
 				AD34DB482500EC1500BA8FC6 /* DoneDetailCell.swift in Sources */,
 				AD6B568F24F5FE05008E596D /* PaymentLastestProgress.swift in Sources */,
