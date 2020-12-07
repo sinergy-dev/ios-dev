@@ -225,11 +225,28 @@
                     <navigationItem key="navigationItem" id="dhM-BF-Fb1"/>
                     <connections>
                         <outlet property="TVChatModerator" destination="WI9-vf-eoq" id="lRd-fx-pIJ"/>
+                        <segue destination="qMg-ZM-JhW" kind="show" identifier="toChatModeratorDetail" id="EwL-Yk-aN7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsx-MW-oJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5679.7101449275369" y="2353.7946428571427"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="dhO-fG-xM6">
+            <objects>
+                <viewController id="qMg-ZM-JhW" customClass="Chat2ViewController" customModule="EOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Utf-lI-8De">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xqo-IN-5i7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="ZYI-Ll-WiP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1j-EZ-ISt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5223" y="3082"/>
         </scene>
         <!--Support Detail-->
         <scene sceneID="zwr-o5-652">

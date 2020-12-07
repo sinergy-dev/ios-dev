@@ -134,6 +134,16 @@ class ChatModeratorController: UIViewController, UITableViewDelegate, SkeletonTa
         }.resume()
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toChatModeratorDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? Chat2ViewController {
+            destination.chatModeratorFromSegue = chatModeratorList.chat![(TVChatModerator.indexPathForSelectedRow?.row)!]
+        }
+    }
 
 }
 

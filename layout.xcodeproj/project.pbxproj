@@ -25,6 +25,7 @@
 		71F46232257DE64C00ADB651 /* ChatModeratorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46231257DE64C00ADB651 /* ChatModeratorList.swift */; };
 		71F46237257E074B00ADB651 /* ChatModeratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46236257E074B00ADB651 /* ChatModeratorController.swift */; };
 		71F4623C257E0FD000ADB651 /* ChatModeratorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4623B257E0FD000ADB651 /* ChatModeratorCell.swift */; };
+		71F46241257E309E00ADB651 /* Chat2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46240257E309E00ADB651 /* Chat2ViewController.swift */; };
 		A01E42C8ACEC73CBC8D42287 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861B77AE373714F4F986460 /* Pods_layout.framework */; };
 		AD007F582525BF160024DFCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD007F572525BF160024DFCB /* LoginViewController.swift */; };
 		AD01194024FDE6C200DB1DEC /* AppliedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01193F24FDE6C200DB1DEC /* AppliedCell.swift */; };
@@ -147,6 +148,7 @@
 		71F46231257DE64C00ADB651 /* ChatModeratorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorList.swift; sourceTree = "<group>"; };
 		71F46236257E074B00ADB651 /* ChatModeratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorController.swift; sourceTree = "<group>"; };
 		71F4623B257E0FD000ADB651 /* ChatModeratorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModeratorCell.swift; sourceTree = "<group>"; };
+		71F46240257E309E00ADB651 /* Chat2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat2ViewController.swift; sourceTree = "<group>"; };
 		738BF68E6F6EF90B9922CF41 /* Pods-layout-layoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout-layoutUITests.release.xcconfig"; path = "Target Support Files/Pods-layout-layoutUITests/Pods-layout-layoutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83428050CAB0584223437941 /* Pods-layoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.debug.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		955BF8E0AD2F11B29E32048E /* Pods-layoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layoutTests.release.xcconfig"; path = "Target Support Files/Pods-layoutTests/Pods-layoutTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				71F46224257DDA4000ADB651 /* SupportParentController.swift */,
 				AD6E78272542B9D400E26250 /* ChatViewController.swift */,
 				71F46236257E074B00ADB651 /* ChatModeratorController.swift */,
+				71F46240257E309E00ADB651 /* Chat2ViewController.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				AD34FEFA2505EE9900A19FC7 /* JobListCell.swift in Sources */,
 				ADC218F024F3609A0044DE42 /* JobList.swift in Sources */,
 				AD45F5BA253461C400EC451C /* NotificationController.swift in Sources */,
+				71F46241257E309E00ADB651 /* Chat2ViewController.swift in Sources */,
 				ADD55B0024C5548A0063BC99 /* ViewController.swift in Sources */,
 				7197B8E22578C5170058825C /* JobProgressItemController.swift in Sources */,
 				71F4623C257E0FD000ADB651 /* ChatModeratorCell.swift in Sources */,
