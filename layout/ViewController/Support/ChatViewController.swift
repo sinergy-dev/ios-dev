@@ -63,8 +63,6 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
         ref = Database.database().reference()
                 
         ref.child("job_support").child(String(chatSupportFromSegue!.id)).observeSingleEvent(of: .value, with: { (snapshot) in
-          let value = snapshot.value as? NSDictionary
-          let id_job = value?["id_job"] as? String ?? ""
 //            print(id_job)
           }) { (error) in
             print(error.localizedDescription)
@@ -106,7 +104,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessagesLa
 
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-            print(text)
+//            print(text)
         let locationRef = ref.child("job_support").child(String(chatSupportFromSegue!.id)).child("chat").childByAutoId()
         locationRef.setValue(["from":"engineer","message":text,"time":Int(NSDate().timeIntervalSince1970)])
 
