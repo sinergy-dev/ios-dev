@@ -9,10 +9,13 @@
 import UIKit
 import SkeletonView
 
-class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
+class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource, UISearchBarDelegate {
     
     var jobList:Job!
+    var data = [JobList]()
+    var filteredData: [String]!
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var TVJobListAll: UITableView!
     
     let refresher: UIRefreshControl = {
@@ -29,12 +32,15 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
                     
         TVJobListAll.delegate = self
         TVJobListAll.dataSource = self
+        searchBar.delegate = self
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
 
             self.TVJobListAll.stopSkeletonAnimation()
             self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
         })
+        
+        
     }
     
     
@@ -54,6 +60,9 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
         }
         getData {
             self.TVJobListAll.reloadData()
+            
+            
+//
         }
     }
     
@@ -104,6 +113,7 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
             if error == nil {
                 do {
                     self.jobList = try JSONDecoder().decode(Job.self, from: data!)
+                    self.data = self.jobList.job!
                     DispatchQueue.main.async {
                         completed()
                     }
@@ -122,6 +132,28 @@ class JobListAllController: UIViewController, UITableViewDelegate, SkeletonTable
         if let destination = segue.destination as? DetailJobListController {
             destination.jobListFromSegue = jobList.job![(TVJobListAll.indexPathForSelectedRow?.row)!]
         }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = []
+        
+        var temp = [JobList]()
+        if searchText == "" {
+            print("tidak ada input")
+            self.jobList.job = self.data
+        } else {
+            for data in self.jobList.job! {
+                if data.job_name.lowercased().contains(searchText.lowercased()) ||
+                    (data.category!.category_name as String).lowercased().contains(searchText.lowercased()) ||
+                    (data.location!.long_location as String).lowercased().contains(searchText.lowercased()) ||
+                    (data.customer!.customer_name as String).lowercased().contains(searchText.lowercased()) {
+                    temp.append(data)
+                }
+            self.jobList.job! = temp
+            }
+        }
+        
+        self.TVJobListAll.reloadData()
     }
 
 }
