@@ -1006,14 +1006,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27B52XR7K3;
+				DEVELOPMENT_TEAM = KA97ASVN8B;
 				INFOPLIST_FILE = layout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest1;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.eod;
 				PRODUCT_NAME = EOD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1026,14 +1026,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27B52XR7K3;
+				DEVELOPMENT_TEAM = KA97ASVN8B;
 				INFOPLIST_FILE = layout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.layoutTest1;
+				PRODUCT_BUNDLE_IDENTIFIER = id.co.sinergy.eod;
 				PRODUCT_NAME = EOD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

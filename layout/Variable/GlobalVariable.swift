@@ -9,7 +9,12 @@
 import Foundation
 
 enum GlobalVariable {
-    static let hostServer = "https://development-api.sifoma.id"
+    // Ini untuk development
+//    static let hostServer = "https://development-api.sifoma.id"
+    
+    // Ini untuk production
+    static let hostServer = "https://eod-api.sifoma.id"
+    
     static let urlGetCheckToken = hostServer + "/api/check_token"
     static var urlGetJobList = hostServer + "/api/job/getJobByCategory"
     static var urlGetCategoryAll = hostServer + "/dashboard/getJobCategoryAll"
